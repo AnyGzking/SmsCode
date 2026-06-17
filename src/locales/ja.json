@@ -1,0 +1,1708 @@
+{
+  "common": {
+    "success": "成功",
+    "error": "エラー",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "submit": "提出",
+    "update": "更新",
+    "loading": "読み込み中...",
+    "all": "すべて"
+  },
+  "layouts": {
+    "header": {
+      "home": "ホーム",
+      "api": "API",
+      "blog": "ブログ",
+      "help": "ヘルプ",
+      "about": "会社概要",
+      "signIn": "ログイン"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "ログインに失敗しました",
+      "authErr": "認証に失敗しました",
+      "authErrToken": "Tokenの更新に失敗しました。再度ログインしてください",
+      "authTimeOut": "ログイン有効期限が切れました。再度ログインしてください"
+    },
+    "failed": "リクエストに失敗しました",
+    "network": "ネットワークエラー"
+  },
+  "navigation": {
+    "dashboard": "コンソール",
+    "profile": "プロフィール",
+    "appearance": "外観設定",
+    "settings": "システム設定",
+    "balance": "残高センター",
+    "openapi": "OpenAPI",
+    "numberRental": "番号レンタル",
+    "numberrental": "番号レンタル",
+    "receiveNumber": "番号の受発信",
+    "releaseNumber": "番号の解放",
+    "blacklistNumber": "番号のブラックリスト登録",
+    "packageSubscription": "套餐サブスクリプション",
+    "packagesubscription": "套餐サブスクリプション",
+    "packageOrders": "套餐注文",
+    "subscribePlan": "套餐を購読",
+    "subscriptionNumberManagement": "番号管理",
+    "orderManagement": "注文管理",
+    "ordermanagement": "注文管理",
+    "myOrders": "マイオーダー",
+    "orderDownload": "注文ダウンロード",
+    "expenseStatistics": "消費統計",
+    "fundChanges": "資金変動",
+    "apiSupport": "テクニカルサポート",
+    "apiDoc": "API ドキュメント"
+  },
+  "pages": {
+    "balancePage": {
+      "title": "残高センター",
+      "description": "アカウント残高、凍結残高、総残高を確認し、資金変動記録を照会します。",
+      "summary": {
+        "balance": "利用可能残高",
+        "freezeBalance": "凍結残高",
+        "totalBalance": "総残高",
+        "totalRecords": "総レコード数",
+        "freezeAmount": "凍結金額",
+        "unfreezeAmount": "解凍金額",
+        "consumptionAmount": "消費金額"
+      },
+      "recharge": {
+        "title": "チャージセンター",
+        "description": "チャージ金額を選択後、支払いプロセスに進むことができます。現在は支払いUIのみ予約されています。",
+        "preset": "金額をクイック選択",
+        "custom": "カスタム金額",
+        "placeholder": "チャージ金額を入力してください",
+        "action": "支払いに進む",
+        "loading": "支払い処理中...",
+        "tip": "チャージには手数料がかかります",
+        "handlingFee": "手数料は {{fee}} です"
+      },
+      "records": {
+        "title": "残高変動記録",
+        "filters": {
+          "orderNo": "注文番号",
+          "remark": "備考",
+          "source": "出所",
+          "changeType": "変動タイプ",
+          "startTime": "開始時間",
+          "endTime": "終了時間",
+          "timeRange": "時間範囲",
+          "selectTimeRange": "時間範囲を選択してください",
+          "search": "照会",
+          "reset": "リセット"
+        },
+        "table": {
+          "createTime": "時間",
+          "source": "出所",
+          "remark": "備考",
+          "orderNo": "注文番号",
+          "changeAmount": "変動金額",
+          "beforeBalance": "変動前",
+          "afterBalance": "変動後"
+        },
+        "empty": "レコードはありません",
+        "pagination": {
+          "prev": "前のページ",
+          "next": "次のページ",
+          "jump": "ジャンプ",
+          "page": "ページ"
+        },
+        "changeTypeOptions": {
+          "all": "すべて",
+          "1": "チャージ",
+          "2": "消費",
+          "3": "返金",
+          "4": "出金",
+          "5": "仕訳調整",
+          "6": "凍結",
+          "7": "解凍",
+          "8": "プレゼント",
+          "9": "罰金徴収"
+        },
+        "typeAmountLabels": {
+          "type1": "チャージ統計",
+          "type2": "消費統計",
+          "type3": "返金統計",
+          "type4": "出金統計",
+          "type5": "仕訳調整統計",
+          "type6": "凍結統計",
+          "type7": "解凍統計",
+          "type8": "プレゼント統計"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "套餐注文",
+      "description": "套餐の購入履歴、注文状態、適用状況を確認します。",
+      "placeholderTitle": "套餐注文の初期テンプレート",
+      "placeholderDescription": "このページは初期化済みです。今後、注文一覧、フィルター、詳細機能を追加できます。",
+      "filters": {
+        "orderNo": "注文番号",
+        "status": "状態",
+        "search": "検索",
+        "reset": "リセット",
+        "all": "すべて"
+      },
+      "summary": {
+        "totalOrders": "注文総数",
+        "activeOrders": "正常注文",
+        "autoRenewOrders": "自動更新注文",
+        "totalAmount": "合計金額"
+      },
+      "table": {
+        "orderNo": "注文番号",
+        "combo": "套餐情報",
+        "duration": "購読期間",
+        "phoneNumCount": "番号数",
+        "amount": "注文金額",
+        "unitPrice": "単価",
+        "status": "注文状態",
+        "autoRenew": "自動更新",
+        "tempToken": "一時トークン",
+        "actions": "操作",
+        "timeInfo": "時間情報",
+        "subscribeTime": "購読時間",
+        "expireTime": "期限切れ時間"
+      },
+      "durationTypes": {
+        "day": "日",
+        "month": "月",
+        "year": "年"
+      },
+      "statusOptions": {
+        "0": "作成中",
+        "1": "正常",
+        "2": "期限切れ",
+        "3": "終了"
+      },
+      "autoRenew": {
+        "enabled": "有効",
+        "disabled": "無効"
+      },
+      "actions": {
+        "renew": "手動更新",
+        "viewNumbers": "番号を見る",
+        "receive": "受信",
+        "refreshTempToken": "トークン更新"
+      },
+      "renewDialog": {
+        "title": "更新内容",
+        "description": "更新数量、更新期間、自動更新設定を確認してから注文を送信します。",
+        "plan": "套餐名",
+        "numberCount": "更新番号数",
+        "duration": "更新期間",
+        "autoRenew": "自動更新",
+        "autoRenewHint": "有効にすると、有効期限到来時にこの設定で自動更新を試みます。",
+        "summary": "料金一覧",
+        "unitPrice": "単価",
+        "totalPrice": "合計金額",
+        "submitting": "更新中..."
+      },
+      "numberSheet": {
+        "title": "購読番号",
+        "description": "現在の套餐注文に関連付けられた番号一覧を確認します。"
+      },
+      "receiveDialog": {
+        "title": "コールバックURLを受信",
+        "description": "認証コードを取得したら、このURLへコールバックします。",
+        "callbackUrl": "コールバックURL",
+        "placeholder": "コールバックURLを入力してください",
+        "save": "URLを保存",
+        "saving": "保存中..."
+      },
+      "messages": {
+        "autoRenewUpdated": "自動更新状態を更新しました",
+        "autoRenewFailed": "自動更新状態の更新に失敗しました",
+        "renewSuccess": "套餐の更新に成功しました",
+        "renewFailed": "套餐の更新に失敗しました",
+        "saveCallbackSuccess": "コールバックURLを保存しました",
+        "saveCallbackFailed": "コールバックURLの保存に失敗しました",
+        "tempTokenRefreshSuccess": "一時トークンを更新しました",
+        "tempTokenRefreshFailed": "一時トークンの更新に失敗しました"
+      },
+      "empty": "套餐注文はまだありません",
+      "pagination": {
+        "prev": "前へ",
+        "next": "次へ",
+        "jump": "移動"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "套餐を購読",
+      "description": "利用可能な套餐を確認し、購読注文を作成します。",
+      "placeholderTitle": "套餐購読の初期テンプレート",
+      "placeholderDescription": "このページは初期化済みです。今後、套餐カード、購入フロー、更新機能を追加できます。",
+      "filters": {
+        "title": "専用套餐フィルター",
+        "description": "国と購読期間タイプで、このアカウントが購読できる套餐をすばやく絞り込みます。",
+        "country": "国",
+        "durationType": "購読タイプ",
+        "allCountries": "すべての国",
+        "allTypes": "すべてのタイプ",
+        "search": "一覧を更新",
+        "reset": "条件をリセット",
+        "placeholders": {
+          "searchCountry": "国名 / コード / 国番号 / ID で検索"
+        }
+      },
+      "types": {
+        "day": "日",
+        "week": "週",
+        "month": "月",
+        "year": "年"
+      },
+      "stats": {
+        "total": "套餐総数",
+        "active": "購読可能套餐"
+      },
+      "status": {
+        "enabled": "購読可能",
+        "disabled": "停止中"
+      },
+      "card": {
+        "country": "対応国",
+        "price": "套餐価格",
+        "duration": "購読期間",
+        "remark": "説明",
+        "createdTime": "作成時間",
+        "updatedTime": "更新時間",
+        "noRemark": "説明なし",
+        "subscribe": "套餐を購読"
+      },
+      "dialog": {
+        "title": "購読内容",
+        "description": "購読数量、期間、自動更新設定を確認してから注文を送信します。",
+        "plan": "套餐名",
+        "numberCount": "購読番号数",
+        "duration": "購読期間",
+        "autoRenew": "自動更新",
+        "autoRenewHint": "有効にすると、有効期限到来時に現在の設定で自動更新を試みます。",
+        "summary": "料金一覧",
+        "unitPrice": "単価",
+        "totalPrice": "合計金額",
+        "submitting": "購読中..."
+      },
+      "empty": "条件に一致する購読套餐はありません",
+      "messages": {
+        "loadFailed": "購読套餐の取得に失敗しました",
+        "createSuccess": "套餐の購読に成功しました",
+        "createFailed": "套餐の購読に失敗しました",
+        "invalidDuration": "正しい購読期間を入力してください",
+        "invalidNumberCount": "正しい購読番号数を入力してください"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "番号管理",
+      "description": "購読注文で割り当てられた番号を管理し、套餐と購読注文との関連を確認します。",
+      "placeholderTitle": "番号管理の初期テンプレート",
+      "placeholderDescription": "このページは初期化済みです。今後、割り当て済み番号一覧、割当状態、套餐関連、操作機能を追加できます。"
+    },
+    "subscriptionNumberList": {
+      "title": "購読番号一覧",
+      "description": "注文番号で套餐注文に紐づく番号を検索し、状態と有効期限を確認します。",
+      "filters": {
+        "title": "検索条件",
+        "orderNo": "注文番号",
+        "search": "検索",
+        "reset": "リセット"
+      },
+      "export": {
+        "button": "番号をエクスポート",
+        "loading": "エクスポート中...",
+        "successDescription": "エクスポートに成功しました。ダウンロードセンターをご確認ください。",
+        "failedDescription": "番号のエクスポートに失敗しました。しばらくしてから再試行してください。"
+      },
+      "summary": {
+        "totalNumbers": "番号総数"
+      },
+      "table": {
+        "orderNo": "注文番号",
+        "phone": "番号情報",
+        "imsi": "IMSI",
+        "combo": "套餐情報",
+        "status": "状態",
+        "timeInfo": "時間情報",
+        "createdAt": "作成時間",
+        "expireTime": "期限時間",
+        "remark": "備考"
+      },
+      "statusOptions": {
+        "0": "作成中",
+        "1": "正常",
+        "2": "期限切れ",
+        "3": "終了"
+      },
+      "empty": "購読番号記録はありません",
+      "pagination": {
+        "prev": "前へ",
+        "next": "次へ",
+        "jump": "移動"
+      }
+    },
+    "myOrdersPage": {
+      "title": "マイオーダー",
+      "description": "番号注文のステータス、認証コードの内容、国、プロジェクトおよび注文情報を確認します。",
+      "filters": {
+        "country": "国",
+        "project": "プロジェクト",
+        "status": "注文ステータス",
+        "phone": "番号",
+        "orderNo": "注文番号",
+        "timeRange": "時間範囲",
+        "startTime": "開始時間",
+        "endTime": "終了時間",
+        "search": "照会",
+        "reset": "リセット",
+        "all": "すべて",
+        "searchCountry": "国を検索",
+        "searchProject": "プロジェクトを検索",
+        "selectTimeRange": "時間範囲を選択してください"
+      },
+      "summary": {
+        "totalOrders": "総注文数",
+        "successAmount": "成功金額",
+        "failAmount": "失敗金額",
+        "totalAmount": "総消費金額"
+      },
+      "table": {
+        "orderNo": "注文番号",
+        "country": "国",
+        "project": "プロジェクト",
+        "phone": "番号",
+        "price": "価格",
+        "status": "ステータス",
+        "codeNum": "認証コード",
+        "smsContent": "SMS内容",
+        "sourceType": "ソース種別",
+        "createTime": "作成時間",
+        "updateTime": "更新時間",
+        "timeInfo": "時間"
+      },
+      "sourceTypeOptions": {
+        "1": "サイト内",
+        "2": "API",
+        "3": "購読注文"
+      },
+      "statusOptions": {
+        "-1": "注文無効",
+        "-2": "減額異常",
+        "1": "進行中",
+        "2": "成功",
+        "3": "終了",
+        "4": "失敗",
+        "99": "事前入庫"
+      },
+      "empty": "注文レコードはありません",
+      "pagination": {
+        "prev": "前のページ",
+        "next": "次のページ",
+        "jump": "ジャンプ"
+      },
+      "export": {
+        "button": "注文をエクスポート",
+        "loading": "エクスポート中...",
+        "successTitle": "エクスポートに成功しました",
+        "successDescription": "エクスポートに成功しました。注文ダウンロードセンターにてダウンロードしてください。",
+        "failedTitle": "エクスポートに失敗しました",
+        "failedDescription": "注文のエクスポートに失敗しました。後ほど再試行してください。"
+      }
+    },
+    "orderDownloadPage": {
+      "title": "注文ダウンロードセンター",
+      "description": "注文エクスポートタスクのステータス、クエリーパラメータ、処理結果を確認し、成功後にファイルをダウンロードします。",
+      "filters": {
+        "taskName": "タスク名",
+        "status": "ステータス",
+        "startTime": "開始時間",
+        "endTime": "終了時間",
+        "timeRange": "時間範囲",
+        "selectTimeRange": "時間範囲を選択してください",
+        "search": "照会",
+        "reset": "リセット"
+      },
+      "summary": {
+        "totalTasks": "総タスク数"
+      },
+      "table": {
+        "taskName": "タスク名",
+        "status": "ステータス",
+        "admin": "提出ユーザー",
+        "errorMsg": "エラー情報",
+        "createTime": "作成時間",
+        "updateTime": "更新時間",
+        "action": "操作",
+        "download": "ダウンロード"
+      },
+      "statusOptions": {
+        "0": "待機中",
+        "1": "処理中",
+        "2": "成功",
+        "3": "失敗"
+      },
+      "messages": {
+        "waitTitle": "現在はダウンロード不可",
+        "waitDescription": "注文処理が完了した後にダウンロードしてください。",
+        "fileMissingTitle": "ファイルが存在しません",
+        "fileMissingDescription": "現在のタスクにダウンロード可能なファイルがありません。"
+      },
+      "empty": "ダウンロードタスクはありません",
+      "pagination": {
+        "prev": "前のページ",
+        "next": "次のページ",
+        "jump": "ジャンプ"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "消費統計",
+      "description": "国、プロジェクトおよび時間範囲に基づいて番号の消費統計結果を確認し、異なるステータスの数量を集計します。",
+      "filters": {
+        "country": "国",
+        "project": "プロジェクト",
+        "timeRange": "時間範囲",
+        "startTime": "開始時間",
+        "endTime": "終了時間",
+        "selectTimeRange": "時間範囲を選択してください",
+        "search": "照会",
+        "reset": "リセット",
+        "all": "すべて",
+        "searchCountry": "国を検索",
+        "searchProject": "プロジェクトを検索"
+      },
+      "summary": {
+        "status1": "リクエスト中数量",
+        "status2": "成功数量",
+        "status3": "解放数量",
+        "status4": "ブラックリスト登録数量",
+        "totalCount": "番号総数"
+      },
+      "table": {
+        "getTime": "消費時間",
+        "country": "国情報",
+        "project": "プロジェクト情報",
+        "status1": "リクエスト中",
+        "status2": "成功",
+        "status3": "解放",
+        "status4": "ブラックリスト登録",
+        "totalCount": "番号総数"
+      },
+      "empty": "統計データはありません"
+    },
+    "releaseNumberPage": {
+      "title": "番号の解放",
+      "description": "番号解放ログを確認し、時間、番号、PKEYおよび操作結果でフィルタリングすることをサポートします。"
+    },
+    "blacklistNumberPage": {
+      "title": "番号のブラックリスト登録",
+      "description": "番号ブラックリスト登録ログを確認し、時間、番号、PKEYおよび操作結果でフィルタリングすることをサポートします。"
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "番号",
+        "pkey": "PKEY",
+        "operationResult": "操作結果",
+        "allResult": "すべての結果",
+        "timeRange": "時間範囲",
+        "selectTimeRange": "時間範囲を選択してください",
+        "search": "照会",
+        "reset": "リセット"
+      },
+      "table": {
+        "phone": "番号",
+        "pkey": "PKEY",
+        "operationResult": "操作結果",
+        "remark": "備考",
+        "createTime": "操作時間"
+      },
+      "operationResultOptions": {
+        "success": "成功",
+        "failed": "失敗"
+      },
+      "summary": {
+        "totalLogs": "総ログ数"
+      },
+      "empty": "ログレコードはありません",
+      "pagination": {
+        "prev": "前のページ",
+        "next": "次のページ",
+        "jump": "ジャンプ"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "番号の受発信",
+      "description": "プロジェクト、国とSMSタイプを選択後に番号を取得し、認証コードの結果を自動的にポーリングします。",
+      "form": {
+        "title": "番号を取得",
+        "description": "プロジェクトチャネル設定に基づいて国と価格をフィルタリングし、履歴番号の再利用をサポートします。",
+        "project": "プロジェクト",
+        "country": "国",
+        "type": "SMSタイプ",
+        "mobile": "指定番号",
+        "minPrice": "最低価格：",
+        "submit": "番号を即時取得",
+        "submitting": "取得中...",
+        "types": {
+          "all": "すべてのタイプ",
+          "sms": "通常SMS",
+          "voice": "音声からSMSへ",
+          "incall": "着信からSMSへ"
+        },
+        "placeholders": {
+          "project": "プロジェクトを選択してください",
+          "country": "国を選択してください",
+          "searchProject": "プロジェクト名 / コード / IDを検索",
+          "searchCountry": "国名 / コード / エリアコード / IDを検索",
+          "mobile": "前の番号を引き続き使用する場合はここに入力してください"
+        }
+      },
+      "currentPhone": {
+        "title": "現在の番号",
+        "description": "番号の取得に成功した後、認証コードを自動的にポーリングします。",
+        "empty": "番号はまだ取得されていません。左侧でフィルタリングを完了し、取得を発起してください。",
+        "phone": "番号",
+        "country": "国",
+        "countryTel": "国エリアコード",
+        "port": "ポート",
+        "getTime": "取得時間",
+        "pkey": "PKEY",
+        "dock": "チャネル識別子",
+        "polling": "認証コードをポーリング中",
+        "pollingTip": "システムは10秒ごとに認証コードの結果を自動的に取得します。",
+        "ready": "ポーリング待機中"
+      },
+      "records": {
+        "title": "コード受信記録",
+        "description": "認証コードの取得に成功した後、ここに表示され、番号の解放またはブラックリスト登録を続行できます。",
+        "empty": "コード受信記録はありません",
+        "columns": {
+          "phone": "番号",
+          "code": "認証コード",
+          "smsContent": "SMS内容",
+          "createTime": "取得時間",
+          "actions": "操作"
+        },
+        "actions": {
+          "black": "ブラックリスト登録",
+          "release": "解放"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "プロジェクトチャネル設定の取得に失敗しました",
+        "selectProject": "まずプロジェクトを選択してください",
+        "selectCountry": "まず国を選択してください",
+        "countryDataMissing": "現在の国情報が不足しています。再度選択してください",
+        "phoneSuccessTitle": "番号の取得に成功しました",
+        "phoneSuccessDescription": "番号の取得に成功しました。システムは認証コードの自動ポーリングを開始します。",
+        "phoneFailedDescription": "番号の取得に失敗しました",
+        "codeSuccessTitle": "認証コードの取得に成功しました",
+        "codeSuccessDescription": "認証コードはコード受信記録に正常に同期されました。",
+        "codeFailedDescription": "認証コードの取得に失敗しました",
+        "waitingCodeSilent": "認証コードを待機中、5秒後に再呼び出しします",
+        "blackSuccessTitle": "番号はブラックリストに登録されました",
+        "blackSuccessDescription": "現在の番号は既にブラックリストに登録されています。",
+        "blackFailedDescription": "番号のブラックリスト登録に失敗しました",
+        "releaseSuccessTitle": "番号は正常に解放されました",
+        "releaseSuccessDescription": "現在の番号は正常に解放されました。",
+        "releaseFailedDescription": "番号の解放に失敗しました",
+        "refreshProjectSuccessTitle": "プロジェクトは更新されました",
+        "refreshProjectSuccessDescription": "プロジェクトリストは更新されました。",
+        "refreshProjectFailedDescription": "プロジェクトリストの更新に失敗しました"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "ブログと情報",
+        "title": "コード受信業界の動向、実践経験とアクセスガイド",
+        "description": "認証コードの受信、プロジェクトのアクセス、リスクコントロール保護とチャネル運営に焦点を当て、開発者と業務チームが読むのに適したコンテンツを継続的に提供します。"
+      },
+      "featured": {
+        "title": "精选記事",
+        "items": [
+          {
+            "title": "コード受信成功率を向上させる方法",
+            "description": "国、プロジェクト、チャネルスケジューリングと認証コードポーリング戦略の複数の側面から、全体的な受信効果を向上させます。"
+          },
+          {
+            "title": "ダブルTokenメカニズムをより安全に設計する方法",
+            "description": "tokenとrefreshTokenの連携により、認証の無効による業務中断リスクを低減します。"
+          },
+          {
+            "title": "データの透明性がコード受信プラットフォームにとって重要な理由",
+            "description": "注文追跡、ステータスの追跡、異常のトラブルシューティングの観点から、透明なデータ能力の価値を説明します。"
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "ヘルプセンター",
+        "title": "よくある質問とクイックサポート",
+        "description": "コード受信業務のアクセス、認証、番号取得、認証コードポーリングと異常のトラブルシューティングにおける高頻度の質問を集計し、問題の迅速な特定と解決を支援します。"
+      },
+      "faq": {
+        "title": "よくある質問",
+        "items": [
+          {
+            "question": "なぜ番号を取得できないのですか？",
+            "answer": "まず残高、プロジェクトステータス、国プロジェクトの利用可能性、および現在のIPがホワイトリストに含まれているかを確認してください。"
+          },
+          {
+            "question": "なぜ認証コードが一直戻ってこないのですか？",
+            "answer": "番号ステータスが認証コード待機段階に入っていることを確認し、インターフェースの要求に従って定期的に認証コードをポーリングして取得してください。必要に応じてcallbackUrlを有効にしてください。"
+          },
+          {
+            "question": "Tokenが無効になった後はどうすればよいですか？",
+            "answer": "refreshTokenを使用して新しいtokenを更新して取得してください。refreshTokenも無効になった場合は、認証インターフェースを再度通じて取得する必要があります。"
+          },
+          {
+            "question": "なぜインターフェースがブロックされるのですか？",
+            "answer": "大半の場合、IPホワイトリストが設定されていない、認証情報が間違っている、またはセキュリティファイアウォールポリシーがトリガーされたことによるものです。"
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "会社概要",
+        "title": "グローバルなコード受信と認証コードアクセスサービスに特化",
+        "description": "我々はより安定的、より透明的、より安全なコード受信能力プラットフォームを構築することに取り組み、開発者、スタジオと企業チームに信頼性の高いSMS認証コード受信サービスを提供します。"
+      },
+      "seo": {
+        "title": "会社概要",
+        "description": "プラットフォームの理念、サービス能力と連絡先を知る。"
+      },
+      "values": {
+        "title": "私たちの理念",
+        "items": [
+          {
+            "title": "安定性優先",
+            "description": "マルチチャネルスケジューリングとリソース統合により、業務に持続的に利用可能な番号と認証コードサービスを提供します。"
+          },
+          {
+            "title": "透明性と信頼性",
+            "description": "価格の透明性、ステータスの透明性、データの透明性を堅持し、毎回の呼び出しに記録が残るようにします。"
+          },
+          {
+            "title": "安全性と制御可能性",
+            "description": "認証、更新メカニズム、ファイアウォールとホワイトリストポリシーにより、プラットフォームと顧客データのセキュリティを保障します。"
+          }
+        ]
+      },
+      "contacts": {
+        "title": "お問い合わせ",
+        "description": "チャネルサポート、ビジネスコラボレーション、インターフェースアクセス支援または技術支援が必要な場合は、以下の方法でチームに連絡できます。",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "Telegram",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "OpenAPI設定",
+      "description": "APIスイッチ、ホワイトリストIP、APPIDおよびシークレットキー情報を管理し、アクセスと技術支援ガイドを確認します。",
+      "cards": {
+        "status": "APIステータス",
+        "credentials": "インターフェース証明書",
+        "whiteIp": "ホワイトリストIP",
+        "guide": "アクセスガイド",
+        "support": "テクニカルサポート"
+      },
+      "status": {
+        "enabled": "有効化済み",
+        "disabled": "未有効化",
+        "openButton": "即時有効化",
+        "opening": "有効化中...",
+        "hint": "アカウントがまだAPIを有効化していない場合は、ここで主动的に開通できます。"
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "API Key",
+        "copy": "コピー",
+        "empty": "データはありません"
+      },
+      "whiteIp": {
+        "label": "ホワイトリストIP",
+        "placeholder": "ホワイトリストIPを入力してください。複数の場合は英語のコンマで区切ってください",
+        "helper": "サーバーの出口IPを記入することを推奨します。設定されていない場合はセキュリティポリシーによりブロックされる可能性があります。",
+        "save": "ホワイトリストを保存",
+        "saving": "保存中..."
+      },
+      "guide": {
+        "items": [
+          "アクセス前にAPPID、API KeyおよびホワイトリストIPを取得したことを確認してください。",
+          "グローバルインターフェースは統一的にJSONリクエストフォーマットを使用することを推奨します。",
+          "ログイン状態関連のインターフェースでは、tokenとrefreshTokenを適切に保存してください。"
+        ]
+      },
+      "support": {
+        "items": [
+          "アクセス上の問題が発生した場合は、リクエストメッセージとレスポンスメッセージを提供して問題の特定を容易にしてください。",
+          "認証コードの受信に異常がある場合は、プロジェクト、国とコールバックアドレスの設定を確認してください。",
+          "チャネルサポートまたはビジネスコラボレーションが必要な場合は、会社概要ページの連絡先でチームに連絡してください。"
+        ]
+      },
+      "messages": {
+        "openSuccess": "OpenAPIは正常に有効化されました",
+        "saveSuccess": "ホワイトリストIPは正常に保存されました"
+      }
+    }
+  },
+  "dashboard_cards": {
+    "hero": {
+      "title": "業務コンソールの概要",
+      "description": "アカウントステータス、OpenAPIの開通状況、資金の概要とシステムサポート情報を集中的に確認します。後続でリアルタイムの注文、チャネル、認証コードと収入のコックピットに直接拡張できます。"
+    },
+    "overview": {
+      "availableBalance": "利用可能残高",
+      "availableBalanceDesc": "現在、注文、番号取得と業務消費に直接使用できるアカウント残高。",
+      "todayAmount": "本日の消費金額",
+      "todayAmountDesc": "本日の注文に基づいて統計された累計消費金額。ユーザーが資金の消耗を迅速に把握するのに適しています。",
+      "freezeBalance": "凍結残高",
+      "freezeBalanceDesc": "注文処理中または決済待ち段階で一時的に凍結された資金。",
+      "totalBalance": "総残高",
+      "totalBalanceDesc": "アカウント総残高 = 利用可能残高 + 凍結残高。",
+      "successRate": "注文成功率",
+      "successRateDesc": "本日の注文に基づいて集計された全体的な成功率。現在の業務品質を判断するために使用されます。",
+      "waitingCodeCount": "コード待ち数量",
+      "waitingCodeCountDesc": "現在仍在等待验证码的号码数。ユーザーが処理効率を判断するのに便利です。",
+      "openApiStatus": "OpenAPIステータス",
+      "openApiEnabledDesc": "現在のアカウントは既にAPI機能を有効化しており、サーバーサイドとの統合を直接行うことができます。",
+      "openApiDisabledDesc": "現在のアカウントはまだAPI機能を有効化していません。OpenAPIページにて設定することを推奨します。"
+    },
+    "status": {
+      "enabled": "有効化済み",
+      "disabled": "未有効化",
+      "openApiEnabled": "OpenAPIは有効化済み",
+      "openApiDisabled": "OpenAPIは未有効化"
+    },
+    "account": {
+      "title": "アカウントと証明書",
+      "description": "現在ログインしているアカウントの基本的な身元、インターフェース証明書とアクセスステータスを表示します。",
+      "userName": "現在のユーザー",
+      "appId": "APPID",
+      "email": "メールアドレス",
+      "apiKey": "API Key"
+    },
+    "quickStats": {
+      "whiteIpCount": "ホワイトリスト数量",
+      "defaultCurrency": "通貨単位",
+      "supportTelegram": "Telegram",
+      "siteName": "サイト名",
+      "todayOrders": "本日の注文",
+      "inUseCount": "使用中の番号数"
+    },
+    "accountMetrics": {
+      "title": "アクセスステータス",
+      "openApi": "OpenAPI機能",
+      "security": "ホワイトリストセキュリティ",
+      "billing": "アカウント総額",
+      "support": "サポートメール",
+      "whitelistReady": "ホワイトリストは既に設定済み",
+      "whitelistMissing": "ホワイトリストは未設定"
+    },
+    "business": {
+      "title": "業務コックピット",
+      "description": "ここでは現在のプロジェクトの業務モデルに基づいて構造を構築します。バックエンドはフィールドに従って実際のデータを返すだけでプレースホルダーの内容を置き換えることができます。",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "注文の概要",
+          "description": "本日の注文数、成功数、失敗数、成功率、総消費金額のアクセスを推奨し、過去7日間のトレンドをサポートします。"
+        },
+        {
+          "key": "numbers",
+          "title": "番号業務",
+          "description": "現在の番号取得数、コード待ち数、解放済み数、ブラックリスト登録済み数、および国/プロジェクト次元の分布のアクセスを推奨します。"
+        },
+        {
+          "key": "channels",
+          "title": "チャネルステータス",
+          "description": "チャネルの利用率、プロジェクトがサポートする国数、異常チャネル数、平均コード取得時間などの指標のアクセスを推奨します。"
+        },
+        {
+          "key": "security",
+          "title": "セキュリティとアクセス",
+          "description": "OpenAPIのリクエスト量、ホワイトリストのヒット数、ブロック数、最近のAPI異常数などのデータのアクセスを推奨します。"
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "残高構成比",
+      "description": "利用可能残高と凍結残高の構成比を表示し、ユーザーが資金ステータスを迅速に理解するのを支援します。",
+      "available": "利用可能残高",
+      "freeze": "凍結残高"
+    },
+    "orderRatio": {
+      "title": "注文ステータス構成比",
+      "description": "本日の注文の成功、失敗と処理中の分布を構成比の形式で表示します。",
+      "success": "成功した注文",
+      "fail": "失敗した注文",
+      "processing": "処理中"
+    },
+    "projectRatio": {
+      "title": "プロジェクト構成比",
+      "description": "主要プロジェクトの注文または消費の構成比を表示し、ユーザーが業務の重点を判断するのに便利です。",
+      "successRate": "成功率："
+    },
+    "countryRatio": {
+      "title": "国構成比",
+      "description": "主要国の業務構成比と成功率の表现を表示します。",
+      "successRate": "成功率："
+    },
+    "trend": {
+      "title": "過去7日間のトレンド",
+      "description": "バックエンドは注文量、成功率、消費金額のトレンドを返すことを推奨し、業務の変化をグラフで表示するために使用されます。",
+      "totalOrders": "本日の注文総数",
+      "successRate": "本日の成功率",
+      "failCount": "本日の失敗数",
+      "latestWindow": "過去7日間の明細",
+      "ordersUnit": "件"
+    },
+    "todo": {
+      "title": "今後アクセスを推奨するデータモジュール",
+      "items": [
+        "本日/昨日の注文の比較",
+        "国次元の成功率ランキングトップ",
+        "プロジェクト次元の消費金額ランキング",
+        "過去7日間の番号取得とコード受信のトレンド"
+      ]
+    },
+    "support": {
+      "title": "サイトとサポート",
+      "description": "サイト名とアクセス連絡先を直接表示し、運営と技術の連携を容易にします。",
+      "siteName": "サイト名",
+      "email": "連絡先メール",
+      "telegram": "Telegram",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "推奨するバックエンドインターフェース構造",
+      "description": "コンソールの集計インターフェース（例：/admin/dashboard/summary）を新規追加することを推奨し、以下のフィールドに従って返します。",
+      "columns": {
+        "name": "フィールド名",
+        "type": "タイプ",
+        "desc": "説明"
+      },
+      "fields": [
+        {
+          "name": "balance.available",
+          "type": "number|string",
+          "desc": "現在の利用可能残高"
+        },
+        {
+          "name": "balance.freeze",
+          "type": "number|string",
+          "desc": "現在の凍結残高"
+        },
+        {
+          "name": "balance.total",
+          "type": "number|string",
+          "desc": "総残高。バックエンドで直接返すことができます"
+        },
+        {
+          "name": "orders.todayCount",
+          "type": "number",
+          "desc": "本日の注文総数"
+        },
+        {
+          "name": "orders.successCount",
+          "type": "number",
+          "desc": "成功した注文数"
+        },
+        {
+          "name": "orders.failCount",
+          "type": "number",
+          "desc": "失敗した注文数"
+        },
+        {
+          "name": "orders.successRate",
+          "type": "number|string",
+          "desc": "成功率。パーセント値またはフォーマット可能な数字を返すことを推奨します"
+        },
+        {
+          "name": "orders.totalAmount",
+          "type": "number|string",
+          "desc": "注文の総消費金額"
+        },
+        {
+          "name": "orders.processingCount",
+          "type": "number",
+          "desc": "処理中の注文数。注文ステータス構成比グラフに使用されます"
+        },
+        {
+          "name": "numbers.inUseCount",
+          "type": "number",
+          "desc": "現在使用中の番号数量"
+        },
+        {
+          "name": "numbers.waitingCodeCount",
+          "type": "number",
+          "desc": "認証コードを待機中の番号数"
+        },
+        {
+          "name": "numbers.releaseCount",
+          "type": "number",
+          "desc": "本日解放された番号数"
+        },
+        {
+          "name": "numbers.blacklistCount",
+          "type": "number",
+          "desc": "本日ブラックリスト登録された番号数"
+        },
+        {
+          "name": "channels.activeProjectCount",
+          "type": "number",
+          "desc": "現在利用可能なプロジェクト数"
+        },
+        {
+          "name": "channels.activeCountryCount",
+          "type": "number",
+          "desc": "現在利用可能な国数"
+        },
+        {
+          "name": "channels.abnormalChannelCount",
+          "type": "number",
+          "desc": "異常チャネル数"
+        },
+        {
+          "name": "api.requestCountToday",
+          "type": "number",
+          "desc": "本日のAPIリクエスト量"
+        },
+        {
+          "name": "api.blockCountToday",
+          "type": "number",
+          "desc": "本日のブロック回数"
+        },
+        {
+          "name": "trends.sevenDays",
+          "type": "array",
+          "desc": "過去7日間のトレンド配列。各項目にはdate、orderCount、successCount、amountを含むことができます"
+        },
+        {
+          "name": "projects.distribution",
+          "type": "array",
+          "desc": "プロジェクト構成比配列。各項目にはname、value、amount、successRate、colorを含むことを推奨します"
+        },
+        {
+          "name": "countries.distribution",
+          "type": "array",
+          "desc": "国構成比配列。各項目にはname、value、successRate、colorを含むことを推奨します"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "description": "アカウント設定を管理し、プロフィール、パスワードおよびシステムの外観スタイルを変更します。",
+    "appearance": {
+      "title": "外観",
+      "description": "システムの外観をカスタマイズし、ライト/ダークテーマを自動的に切り替えます。",
+      "theme": {
+        "label": "テーマ",
+        "description": "コンソールの表示テーマを選択",
+        "light": "ライトモード",
+        "dark": "ダークモード"
+      },
+      "language": {
+        "label": "言語",
+        "description": "システムの優先言語を選択",
+        "en": "英語",
+        "fr": "フランス語",
+        "es": "スペイン語",
+        "de": "ドイツ語",
+        "pt": "ポルトガル語",
+        "ru": "ロシア語",
+        "ja": "日本語",
+        "ko": "韓国語",
+        "zh": "简体字中国語"
+      }
+    },
+    "profile": {
+      "title": "プロフィール",
+      "description": "個人情報とプリファレンス設定を管理",
+      "personal_info": "基本情報",
+      "personal_info_description": "基本的なプロフィールを編集",
+      "first_name": "名",
+      "first_name_placeholder": "名前を入力してください",
+      "first_name_helper_text": "プロフィールに表示される名前",
+      "last_name": "姓",
+      "last_name_placeholder": "名字を入力してください",
+      "last_name_helper_text": "プロフィールに表示される名字",
+      "username": "ユーザー名",
+      "username_placeholder": "ユーザー名を入力してください",
+      "username_helper_text": "対外的に表示されるニックネーム。30日ごとに1回のみ変更可能",
+      "email": "メールアドレス",
+      "email_placeholder": "メールアドレスを入力してください",
+      "email_helper_text": "メールアドレスは認証元によって統一的に管理されており、ここでは変更できません",
+      "update_profile": "プロフィールを保存",
+      "profile_updated": "プロフィールの更新に成功しました",
+      "profile_update_failed": "プロフィールの更新に失敗しました。後ほど再試行してください",
+      "password_section_title": "パスワード管理",
+      "password_section_description": "定期的にパスワードを変更し、アカウントのセキュリティを保障します",
+      "password_prompt": "下記のボタンをクリックしてログインパスワードを変更してください",
+      "change_password": "パスワードを変更",
+      "current_password": "現在のパスワード",
+      "current_password_placeholder": "元のパスワードを入力してください",
+      "new_password": "新しいパスワード",
+      "new_password_placeholder": "新しいパスワードを入力してください",
+      "new_password_helper_text": "パスワードの長さは少なくとも8桁",
+      "confirm_password": "新しいパスワードの確認",
+      "confirm_password_placeholder": "新しいパスワードを再度入力してください",
+      "update_password": "パスワードを保存",
+      "password_updated": "パスワードの変更に成功しました",
+      "password_updated_description": "ログインパスワードは更新されました",
+      "password_update_failed": "パスワードの変更に失敗しました",
+      "current_password_required": "現在のパスワードを入力してください",
+      "new_password_required": "新しいパスワードは少なくとも8桁が必要です",
+      "confirm_password_required": "確認のために再度パスワードを入力してください",
+      "password_not_match": "2回入力した新しいパスワードが一致しません",
+      "reverification_required": "身分の再確認が必要です",
+      "reverification_required_description": "セキュリティを保障するため、アカウントをログアウトして再度ログインした後にパスワードを変更してください",
+      "current_password_incorrect": "元のパスワードの入力が間違っています。再度入力してください",
+      "password_compromised": "このパスワードにはセキュリティ漏洩のリスクが存在します。他のパスワードに置き換えてください"
+    }
+  },
+  "dashboard": {
+    "title": "コンソール"
+  },
+  "home": {
+    "hero": {
+      "badge": "グローバルコード受信サービスプラットフォーム",
+      "title": "価格が透明で、チャネルが安定し、成功率がより高いコード受信プラットフォーム",
+      "description": "認証コードの受信と番号サービスに特化し、価格が透明、データが透明、セキュリティ保護、チャネルが豊富で成功率の高いグローバルなコード受信能力を提供し、業務の認証プロセスをより効率的に完了するのを支援します。",
+      "cta": "すぐに開始",
+      "secondary": "APIドキュメントを確認"
+    },
+    "features": {
+      "title": "なぜ私たちを選ぶのか",
+      "items": [
+        {
+          "title": "価格の透明性",
+          "description": "プロジェクトの価格が明確に表示され、隠し料金はなく、番号の取得、解放、ブラックリスト登録などの操作が一目了然です。"
+        },
+        {
+          "title": "データの透明性",
+          "description": "注文ステータス、認証コードの取得、番号の使用プロセスが全行程追跡可能で、監査とトラブルシューティングに便利です。"
+        },
+        {
+          "title": "セキュリティ保護",
+          "description": "Token認証、更新メカニズムとセキュリティファイアウォールのブロックをサポートし、インターフェースアクセスと業務データのセキュリティを保障します。"
+        },
+        {
+          "title": "豊富なチャネル",
+          "description": "多国籍、多プロジェクト、多チャネルの供給により、異なる業務シナリオと認証ニーズに柔軟に適応します。"
+        },
+        {
+          "title": "高い成功率",
+          "description": "安定した番号リソースとマルチチャネルスケジューリング戦略により、認証コードの受信成功率と業務効率を効果的に向上させます。"
+        },
+        {
+          "title": "柔軟なコールバック",
+          "description": "アクティブポーリングとコールバックプッシュの2つのモードをサポートし、自動化された業務プロセスへのアクセスに便利です。"
+        }
+      ]
+    },
+    "stats": {
+      "title": "コア能力",
+      "items": [
+        {
+          "label": "価格体系",
+          "value": "透明に確認可能"
+        },
+        {
+          "label": "チャネルカバレッジ",
+          "value": "多国と多プロジェクト"
+        },
+        {
+          "label": "コード受信モード",
+          "value": "ポーリング + コールバック"
+        },
+        {
+          "label": "セキュリティ能力",
+          "value": "ファイアウォールのブロック"
+        }
+      ]
+    }
+  },
+  "apiDoc": {
+    "hero": {
+      "title": "APIドキュメント",
+      "description": "汎用的なAPIインターフェースドキュメントを提供し、開発者が本プラットフォームと迅速にアクセスし、効率的かつ安定的なサービスを享受するのを支援します。",
+      "cta": "APIドキュメントを確認"
+    },
+    "button": {
+      "start": "読書を開始"
+    },
+    "toc": {
+      "title": "目次",
+      "introduction": "はじめに",
+      "authentication": "アクセスの前提と認証",
+      "apiStandards": "汎用API仕様",
+      "responseFormat": "汎用レスポンスフォーマット",
+      "apiList": "APIインターフェースリスト"
+    },
+    "sections": {
+      "introduction": {
+        "title": "はじめに",
+        "lead": "このプロジェクトのインターフェースを使用する前に、以下の条件を満たしていることを確認してください：",
+        "items": [
+          "ネットワークリクエストの基礎知識を備えている 😪",
+          "開発者能力を有している 😨",
+          "ダブルToken更新メカニズムを熟知している 😥",
+          "デバッグ、ログの照会、問題のトラブルシューティング能力を備えている 😁"
+        ],
+        "summary": "本プロジェクトは一連の汎用的なAPIアクセス方案を提供することを目的とし、業務機能の統合を迅速に実現するのを支援します。",
+        "summaryTitle": "本プロジェクトは一連の汎用APIであるべき",
+        "summaryItems": [
+          "固定されたリクエストアドレスはなく、リクエストアドレスはアカウントアドレスに依存します。",
+          "通常、リクエストアドレスは使用中のIP/ドメイン名です。",
+          "ドキュメントの要求に厳密に従って開発してください。",
+          "テクニカルサポートが必要な場合は、問題、BUG再現プロセス、およびリクエストメッセージとレスポンスメッセージを記述してください。"
+        ],
+        "note": "ドキュメントは比較的カジュアルに書かれています。優しく叱ってください 💔"
+      },
+      "authentication": {
+        "title": "アクセスの前提と認証",
+        "lead": "アクセスする前に、コンソールバックエンドでAPPIDとapiKeyトークンを取得する必要があります：",
+        "items": [
+          "appid：現在使用中のマーチャント/ユーザーID。",
+          "apikey：システム特有の暗号化によって生成されたシークレットキー。インターフェースの署名または直接認証に使用されます。",
+          "IPホワイトリスト：サーバーのリクエスト出網IPに設定する必要があります。設定しない場合はファイアウォールによって直接ブロックされます。",
+          "複数のIPを設定する場合は英語のコンマで区切ってください。"
+        ]
+      },
+      "apiStandards": {
+        "title": "汎用API仕様",
+        "items": [
+          "リクエストアドレス：固定されたリクエストアドレスはなく、リクエストアドレスはアカウントの割り当てアドレスに依存します（通常は現在使用中のIP/ドメイン名）。",
+          "リクエスト方法：グローバルでPOSTリクエストを使用し、GET方法は受け付けません（ドキュメントで特に説明されている場合を除く）。",
+          "リクエストタイプ：リクエストヘッダーのContent-Typeは厳密にapplication/jsonに指定する必要があります。",
+          "命名規則：大部分のデータ返却フィールドはキャメルケース命名です。そうでない場合は、具体的なインターフェースドキュメントで特に注記されます。"
+        ],
+        "baseUrlLabel": "現在の環境のリクエストアドレス"
+      },
+      "responseFormat": {
+        "title": "汎用レスポンスフォーマット",
+        "lead": "すべてのインターフェースは標準的なJSONフォーマットのデータを返却します。codeステータスコードに基づいて業務処理が成功したかどうかを判断します。",
+        "successTitle": "成功したレスポンス",
+        "errorTitle": "エラーレスポンス",
+        "note": "注：codeが200/0でない場合、通常は業務またはシステムに異常が発生したことを意味します。msgフィールドを参照してトラブルシューティングしてください。"
+      },
+      "apiList": {
+        "title": "APIインターフェースリスト",
+        "lead": "以下は現在公開されているコアAPIです。呼び出し順に導入することを推奨します。",
+        "summaryTitle": "概要",
+        "authTitle": "認証",
+        "contentTypeTitle": "リクエストタイプ",
+        "paramsTitle": "リクエストパラメータ",
+        "responseTitle": "レスポンス例",
+        "table": {
+          "name": "パラメータ名",
+          "type": "型",
+          "required": "必須",
+          "description": "説明",
+          "example": "例"
+        },
+        "requiredYes": "はい",
+        "requiredNo": "いいえ",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "Token取得",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "API内で任意の操作を行う前に、このインターフェースで token と refreshToken を取得する必要があります。このインターフェースは POST/GET のパラメータ渡し、form-data/json の入力に対応しており、json の統一利用を推奨します。",
+            "auth": "いいえ",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "現在使用中のアカウント ID",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "プラットフォームが生成した apiKey",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Tokenの取得に成功しました\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "Token更新",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "このインターフェースは GET/POST リクエストに対応し、リクエストパラメータは refreshToken です。form-data/json に対応しており、更新成功後は新しい token と新しい refreshToken を取得できます。",
+            "auth": "いいえ",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "ログイン後に保存した更新トークン",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"操作に成功しました\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "アカウント情報取得",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "ユーザーのアカウント情報を取得します。必要に応じて、リクエストヘッダーに Authorization を渡してください。token 単体でも Bearer {Token値} 形式でも利用できます。",
+            "auth": "はい",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "ユーザーログイン後に取得した token。Bearer 接頭辞に対応",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"ユーザー情報の取得に成功しました\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "国・地域ライブラリ",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "システム内の住所情報ライブラリを取得します。国ライブラリはほとんど変化しないため、ローカル保存を推奨します。",
+            "auth": "任意",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "任意の token リクエストヘッダー",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"国リストの取得に成功しました\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"ウズベキスタン\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "利用中プロジェクト取得",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "オンラインで利用可能なプロジェクトを取得します。",
+            "auth": "任意",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "任意の token リクエストヘッダー",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"プロジェクトリストの取得に成功しました\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "携帯番号取得",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "携帯番号を取得します。form-data/json に対応。番号取得後、ステータスは認証コード待機に変わるため、その後は認証コード取得インターフェースを呼び出す必要があります。新たに返される orderNo は、認証コード取得時に渡す必要があります。",
+            "auth": "任意",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "国 ID。プロジェクト内の country フィールドに対応",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "プロジェクト ID",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "前回の番号を継続利用したい場合に渡します",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "番号タイプ。sms / voice / incall を選択可能。all または空も可",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "SMSコールバックアドレス",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"番号の取得に成功し、残高は凍結されました\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "認証コード取得",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "form-data/json に対応。このインターフェースは定期的にポーリングして認証コードを取得する必要があります。code=200 が返された後は、以降同じ認証コードは重複して返されません。",
+            "auth": "任意",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "番号取得インターフェースが返す一意の注文番号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "番号取得インターフェースが返す携帯番号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "番号取得インターフェースが返す pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"認証コードの取得に成功し、課金が完了しました\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"SMS内容\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "番号解放",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "form-data/json に対応。インターフェース利用者は能動的に解放インターフェースを呼び出すことで、追加課金を回避できます。",
+            "auth": "任意",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "解放する注文番号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "解放する携帯番号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "解放する pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"解放に成功しました\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "番号ブラックリスト登録",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "form-data/json に対応。インターフェース利用者はこの番号をブラックリストに追加でき、以後この番号は再取得されません。",
+            "auth": "任意",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "ブラックリスト登録する注文番号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "ブラックリスト登録する携帯番号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "ブラックリスト登録する pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"ブラックリスト登録に成功しました\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "SMSコールバック通知",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "番号取得時に callbackUrl を渡すと、後続でシステムが通信事業者のSMSを受信した際に、このアドレスへ主动的に通知します。",
+            "auth": "利用者側が URL を提供",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"SMS内容\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "製品",
+        "items": {
+          "smsPlatform": "コード受信プラットフォーム",
+          "apiDocs": "APIドキュメント",
+          "dashboard": "コンソール",
+          "pricing": "料金プラン"
+        }
+      },
+      "support": {
+        "title": "サポート",
+        "items": {
+          "helpCenter": "ヘルプセンター",
+          "integrationGuide": "導入ガイド",
+          "faq": "よくある質問"
+        }
+      },
+      "company": {
+        "title": "会社",
+        "items": {
+          "about": "会社概要",
+          "blog": "ブログ情報",
+          "contact": "お問い合わせ",
+          "terms": "利用規約",
+          "privacy": "プライバシーポリシー"
+        }
+      },
+      "resources": {
+        "title": "リソース",
+        "items": {
+          "countryLibrary": "国・地域ライブラリ",
+          "projectList": "プロジェクト一覧",
+          "callbackDocs": "コールバックドキュメント",
+          "statusPage": "システムステータス",
+          "security": "セキュリティ説明"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "申し訳ありません。アクセスしたページは存在しないか、既に削除されています。",
+    "backHome": "ホームに戻る"
+  },
+  "auth": {
+    "sign_in_success": "お帰りなさい！",
+    "sign_in_success_description": "アカウントへのログインに成功しました",
+    "sign_in_failed": "ログインに失敗しました",
+    "sign_up_success": "アカウント登録に成功しました！",
+    "sign_up_success_description": "本システムへようこそ",
+    "sign_up_failed": "登録に失敗しました",
+    "sign_out_success": "ログアウトしました",
+    "sign_out_success_description": "現在のアカウントから安全にログアウトしました",
+    "sign_out_failed": "ログアウトに失敗しました",
+    "verification_code_sent": "認証コードを送信しました",
+    "verification_code_sent_description": "メールボックスで認証コードを確認してください",
+    "verification_code_resent": "認証コードを再送信しました",
+    "verification_code_resent_description": "新しい認証コードをメールアドレス宛に送信しました",
+    "verification_failed": "認証に失敗しました",
+    "verification_success": "メール認証に成功しました",
+    "verification_success_description": "メールアドレスの紐付け認証が完了しました",
+    "captcha": {
+      "label": "画像認証コード",
+      "placeholder": "認証コードを入力してください",
+      "image_alt": "認証コード画像",
+      "loading": "読み込み中...",
+      "required": "認証コードを入力してください"
+    },
+    "logout": {
+      "button": "ログアウト",
+      "title": "ログアウト",
+      "description": "現在のアカウントからログアウトしてもよろしいですか？",
+      "loading": "ログアウト中...",
+      "confirm": "ログアウトを確認"
+    },
+    "sign_in": {
+      "title": "ログインへようこそ",
+      "description": "操作を続行するにはアカウントにログインしてください",
+      "verify_title": "本人確認",
+      "verify_description": "メールで受信した認証コードを入力してください",
+      "verify_new_device": "現在は新しいデバイスからのログインです。本人確認を完了してください",
+      "account_label": "メールアドレス / ユーザー名",
+      "account_placeholder": "メールアドレスまたはユーザー名を入力してください",
+      "email_label": "メールアドレス",
+      "password_label": "ログインパスワード",
+      "password_placeholder": "パスワードを入力してください",
+      "remember_password": "パスワードを記憶する",
+      "verification_code_label": "認証コード",
+      "verification_code_placeholder": "認証コードを入力してください",
+      "sign_in_button": "ログイン",
+      "signing_in": "ログイン中...",
+      "verify_button": "認証",
+      "verifying": "認証中...",
+      "resend_code": "認証コードが届かない場合はクリックして再送信",
+      "no_account": "まだアカウントをお持ちではありませんか？",
+      "sign_up_link": "今すぐ登録",
+      "forgot_password": "パスワードをお忘れですか？",
+      "reset_password_link": "パスワードをリセット",
+      "second_factor_required": "二段階認証が必要ですが、現在メール認証コードサービスは提供されていません",
+      "unexpected_status": "ログイン状態が異常です"
+    },
+    "sign_up": {
+      "title": "アカウント登録",
+      "description": "素早くアカウント登録して、完全なシステム機能を体験しましょう",
+      "verify_title": "メール認証",
+      "verify_description": "メール認証コードを入力して登録を完了してください",
+      "first_name_label": "名",
+      "first_name_placeholder": "名を入力してください",
+      "last_name_label": "姓",
+      "last_name_placeholder": "姓を入力してください",
+      "username_label": "ユーザー名",
+      "username_placeholder": "ユーザー名を入力してください",
+      "email_label": "メールアドレス",
+      "password_label": "パスワードを設定",
+      "password_placeholder": "パスワードを入力してください",
+      "verification_code_label": "認証コード",
+      "verification_code_placeholder": "認証コードを入力してください",
+      "sign_up_button": "登録",
+      "signing_up": "登録中...",
+      "verify_button": "メールを認証",
+      "verifying": "認証中...",
+      "resend_code": "認証コードが届かない場合はクリックして再送信",
+      "have_account": "既にアカウントをお持ちですか？",
+      "sign_in_link": "ログインへ進む",
+      "forgot_password": "パスワードをお忘れですか？",
+      "reset_password_link": "パスワードをリセット"
+    },
+    "reset_password": {
+      "title": "パスワードを忘れた場合",
+      "description": "メールアドレスを入力して認証コードを取得し、パスワードをリセットします",
+      "reset_title": "パスワードをリセット",
+      "reset_description": "メール認証コードを入力し、新しいパスワードを設定してください",
+      "email_label": "メールアドレス",
+      "code_label": "認証コード",
+      "code_placeholder": "メールで受信した認証コードを入力してください",
+      "new_password_label": "新しいパスワード",
+      "new_password_placeholder": "新しいパスワードを設定してください",
+      "send_code_button": "認証コードを送信",
+      "sending": "送信中...",
+      "reset_button": "リセットを確認",
+      "resetting": "リセット中...",
+      "resend_code": "認証コードが届かない場合はクリックして再送信",
+      "remember_password": "パスワードを思い出しましたか？",
+      "sign_in_link": "ログインに戻る"
+    }
+  },
+  "password_reset": {
+    "code_sent": "リセット認証コードを送信しました",
+    "code_sent_description": "パスワードリセット認証コードをメールアドレスに送信しました",
+    "code_resent": "リセット認証コードを再送信しました",
+    "code_resent_description": "新しいパスワードリセット認証コードを送信しました",
+    "reset_success": "パスワードのリセットに成功しました",
+    "reset_success_description": "パスワードはリセットされました。ログインページに移動しています...",
+    "reset_failed": "パスワードのリセットに失敗しました"
+  },
+  "profile": {
+    "title": "個人センター",
+    "description": "個人プロフィールを確認・管理します",
+    "first_name": "名",
+    "last_name": "姓",
+    "username": "ユーザー名",
+    "member_since": "登録日時",
+    "edit_profile": "プロフィールを編集"
+  },
+  "balance": {
+    "title": "資金アカウント"
+  },
+  "billing": {
+    "title": "請求とサブスクリプション",
+    "description": "プランのサブスクリプションと支払い請求を管理します",
+    "current_plan": "現在のプラン",
+    "current_plan_description": "現在利用中のサービスプラン",
+    "available_plans": "利用可能なプラン",
+    "month": "月",
+    "features": "プラン特典",
+    "recommended": "おすすめ",
+    "upgrade": "今すぐアップグレード",
+    "payment_method": "支払い方法",
+    "payment_method_description": "デフォルトの支払いアカウントを管理します",
+    "no_payment_method": "支払い方法はまだ追加されていません",
+    "add_payment_method": "支払い方法を追加",
+    "add_payment_method_description": "支払いアカウントを連携して有料プランにアップグレードします",
+    "billing_history": "請求履歴",
+    "billing_history_description": "過去の注文と消費請求書を確認します",
+    "no_invoices": "請求書はありません",
+    "no_invoices_description": "有料注文が発生すると、ここに記録が表示されます",
+    "plans": {
+      "free": {
+        "name": "無料版",
+        "description": "初心者の入門利用に適しています",
+        "feature_1": "基本機能1",
+        "feature_2": "基本機能2",
+        "feature_3": "基本機能3",
+        "feature_4": "基本機能4"
+      },
+      "pro": {
+        "name": "プロ版",
+        "description": "個人や小規模チームに適しています",
+        "feature_1": "無料版の全機能を含む",
+        "feature_2": "上級機能1",
+        "feature_3": "上級機能2",
+        "feature_4": "上級機能3",
+        "feature_5": "上級機能4",
+        "feature_6": "上級機能5"
+      },
+      "enterprise": {
+        "name": "エンタープライズ版",
+        "description": "大規模組織および企業向け",
+        "feature_1": "プロ版の全機能を含む",
+        "feature_2": "企業専用機能1",
+        "feature_3": "企業専用機能2",
+        "feature_4": "企業専用機能3",
+        "feature_5": "企業専用機能4",
+        "feature_6": "企業専用機能5"
+      }
+    }
+  }
+}

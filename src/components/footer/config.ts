@@ -1,54 +1,50 @@
 export type FooterNavItem = {
-  title: string
+  titleKey: string
   href: string
 }
 
 export type FooterSection = {
-  title: string
+  titleKey: string
   items: FooterNavItem[]
 }
 
 export const footerConfig = {
-  description: {
-    primary: "Vue | Shadcn UI | Clerk Saas Starter",
-    secondary: "Quickly build your next SaaS application with Vue.js, Shadcn UI, and Clerk",
-  },
   sections: [
     {
-      title: "Title 1",
+      titleKey: 'footer.sections.products.title',
       items: [
-        { title: "Subtitle 1", href: "/title1" },
-        { title: "Subtitle 2", href: "/title2" },
-        { title: "Subtitle 3", href: "/title3" },
-        { title: "Subtitle 4", href: "/title4" },
+        { titleKey: 'footer.sections.products.items.smsPlatform', href: '/' },
+        { titleKey: 'footer.sections.products.items.apiDocs', href: '/api' },
+        { titleKey: 'footer.sections.products.items.dashboard', href: '/app/dashboard' },
+        { titleKey: 'footer.sections.products.items.pricing', href: '' },
       ],
     },
     {
-      title: "Title 2",
+      titleKey: 'footer.sections.support.title',
       items: [
-        { title: "Subtitle 1", href: "/subtitle1" },
-        { title: "Subtitle 2", href: "/subtitle2" },
-        { title: "Subtitle 3", href: "/subtitle3" },
+        { titleKey: 'footer.sections.support.items.helpCenter', href: '/help' },
+        { titleKey: 'footer.sections.support.items.integrationGuide', href: '/api' },
+        { titleKey: 'footer.sections.support.items.faq', href: '/help' },
       ],
     },
     {
-      title: "Title 3",
+      titleKey: 'footer.sections.company.title',
       items: [
-        { title: "Subtitle 1", href: "/title1" },
-        { title: "Subtitle 2", href: "/title2" },
-        { title: "Subtitle 3", href: "/title3" },
-        { title: "Subtitle 4", href: "/title4" },
-        { title: "Subtitle 5", href: "/title5" },
+        { titleKey: 'footer.sections.company.items.about', href: '/about' },
+        { titleKey: 'footer.sections.company.items.blog', href: '/blog' },
+        { titleKey: 'footer.sections.company.items.contact', href: '/about' },
+        { titleKey: 'footer.sections.company.items.terms', href: '' },
+        { titleKey: 'footer.sections.company.items.privacy', href: '' },
       ],
     },
     {
-      title: "Title 4",
+      titleKey: 'footer.sections.resources.title',
       items: [
-        { title: "Subtitle 1", href: "/title1" },
-        { title: "Subtitle 2", href: "/title2" },
-        { title: "Subtitle 3", href: "/title3" },
-        { title: "Subtitle 4", href: "/title4" },
-        { title: "Subtitle 5", href: "/title5" },
+        { titleKey: 'footer.sections.resources.items.countryLibrary', href: '/api' },
+        { titleKey: 'footer.sections.resources.items.projectList', href: '/api' },
+        { titleKey: 'footer.sections.resources.items.callbackDocs', href: '/api' },
+        { titleKey: 'footer.sections.resources.items.statusPage', href: '' },
+        { titleKey: 'footer.sections.resources.items.security', href: '/about' },
       ],
     },
   ],

@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { watchEffect } from 'vue'
 
 const { t } = useI18n()
-
-// Update browser tab title based on current language
-watchEffect(() => {
-  document.title = t('pages.page_one')
-})
 </script>
 
 <template>

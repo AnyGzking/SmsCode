@@ -1,19 +1,43 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 import Logo from '@/components/Logo.vue'
 import Button from '@/components/ui/button/Button.vue'
-import { Github } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
+import { usePublicStore } from '@/store/modules/public'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { useUserStore } from '@/store/modules/user'
+import { storeToRefs } from 'pinia'
+
+const { t } = useI18n()
+const publicStore = usePublicStore()
+const userStore = useUserStore()
+const { isLogin, userInfo } = storeToRefs(userStore)
 
 const isOpen = ref(false)
 
 const navigation = [
-  { title: "NavLink1", path: "/navlink1" },
-  { title: "NavLink2", path: "/navlink2" },
-  { title: "NavLink3", path: "/navlink3" },
-  { title: "NavLink4", path: "/navlink4" },
+  { title: t('layouts.header.home'), path: '/' },
+  { title: t('layouts.header.api'), path: '/api' },
+  { title: t('layouts.header.blog'), path: '/blog' },
+  { title: t('layouts.header.help'), path: '/help' },
+  { title: t('layouts.header.about'), path: '/about' },
 ]
+
+console.log(isLogin.value)
+
+const authAction = computed(() => {
+  return isLogin.value
+    ? { title: t('navigation.dashboard'), path: '/app/dashboard' }
+    : { title: t('layouts.header.signIn'), path: '/sign-in' }
+})
+
+const avatarSrc = computed(() => userInfo.value?.avatar || publicStore.getConfigItem('site', 'userLogo'))
+const avatarFallback = computed(() => {
+  const text = userInfo.value?.userName || publicStore.getConfigItem('site', 'siteName') || 'U'
+  return text.charAt(0)
+})
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value
@@ -21,20 +45,19 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <!-- Mobile Header -->
   <div class="md:hidden bg-white dark:bg-black">
     <div class="flex items-center justify-between py-5 px-4">
       <Logo :with-text="true" />
       <div class="flex items-center gap-2">
-        <a
-          href="https://github.com/fedilayoub/vue-clerk-saas-starter"
-          target="_blank"
-          title="GitHub"
-          rel="noopener noreferrer"
-          class="cursor-pointer flex items-center justify-center gap-x-1 py-3 px-4 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full md:inline-flex hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300"
+        <div
+          v-if="isLogin"
+          class="cursor-pointer flex items-center justify-center py-2 px-2 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full md:inline-flex hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300"
         >
-          <Github class="h-5 w-5 text-black/70 dark:text-white" />
-        </a>
+          <Avatar class="h-8 w-8">
+            <AvatarImage :src="avatarSrc" :alt="avatarSrc || 'User Avatar'" />
+            <AvatarFallback>{{ avatarFallback }}</AvatarFallback>
+          </Avatar>
+        </div>
         <LanguageSwitcher />
         <ThemeSwitcher />
         <Button class="menu-btn" variant="outline" @click="toggleMenu">
@@ -69,7 +92,6 @@ const toggleMenu = () => {
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div v-if="isOpen" class="mobile-menu fixed inset-0 z-50 bg-white dark:bg-zinc-900">
       <div class="flex flex-col h-full">
         <div class="flex items-center justify-between p-4 border-b dark:border-zinc-800">
@@ -106,10 +128,10 @@ const toggleMenu = () => {
         </div>
         <div class="p-4 border-t dark:border-zinc-800">
           <router-link
-            to="/sign-in"
+            :to="authAction.path"
             class="flex items-center justify-center gap-x-1 py-3 px-4 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full w-full"
           >
-            <span class="text-black dark:text-white">Sign in</span>
+            <span class="text-black dark:text-white">{{ authAction.title }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -127,7 +149,6 @@ const toggleMenu = () => {
     </div>
   </div>
 
-  <!-- Desktop Navigation -->
   <nav class="hidden md:block md:text-sm top-0 inset-x-0 shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 sticky z-30 bg-trasparent">
     <div class="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-24 md:pt-5 bg-transparent">
       <Logo :with-text="true" />
@@ -147,10 +168,10 @@ const toggleMenu = () => {
         </ul>
         <div class="flex items-center justify-end md:flex md:mt-0 gap-2">
           <router-link
-            to="/sign-in"
+            :to="authAction.path"
             class="flex items-center justify-center gap-x-1 py-3 px-4 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full md:inline-flex"
           >
-            <span class="text-black dark:text-white">Sign in</span>
+            <span class="text-black dark:text-white">{{ authAction.title }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -163,15 +184,15 @@ const toggleMenu = () => {
               />
             </svg>
           </router-link>
-          <a
-            href="https://github.com/fedilayoub/vue-clerk-saas-starter"
-            target="_blank"
-            title="GitHub"
-            rel="noopener noreferrer"
-            class="cursor-pointer flex items-center justify-center gap-x-1 py-3 px-4 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full md:inline-flex hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300"
+          <div
+            v-if="isLogin"
+            class="cursor-pointer flex items-center justify-center py-2 px-2 text-white font-medium transform-gpu border border-zinc-300 bg-zinc-50 dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#8686f01f_inset] backdrop-blur rounded-full md:inline-flex hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300"
           >
-            <Github class="h-5 w-5 text-black/70 dark:text-white" />
-          </a>
+            <Avatar class="h-8 w-8">
+              <AvatarImage :src="avatarSrc" :alt="avatarSrc || 'User Avatar'" />
+              <AvatarFallback>{{ avatarFallback }}</AvatarFallback>
+            </Avatar>
+          </div>
           <LanguageSwitcher />
           <ThemeSwitcher />
         </div>

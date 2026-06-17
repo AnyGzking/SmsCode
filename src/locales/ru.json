@@ -1,0 +1,1723 @@
+{
+  "common": {
+    "success": "Успешно",
+    "error": "Ошибка",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "submit": "Отправить",
+    "update": "Обновить",
+    "loading": "Загрузка...",
+    "all": "Все"
+  },
+  "layouts": {
+    "header": {
+      "home": "Главная",
+      "api": "API",
+      "blog": "Блог",
+      "help": "Помощь",
+      "about": "О нас",
+      "signIn": "Войти"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "Ошибка входа",
+      "authErr": "Ошибка авторизации",
+      "authErrToken": "Не удалось обновить токен, войдите снова",
+      "authTimeOut": "Сессия истекла, войдите снова"
+    },
+    "failed": "Ошибка запроса",
+    "network": "Сетевая ошибка"
+  },
+  "navigation": {
+    "dashboard": "Панель управления",
+    "profile": "Профиль",
+    "appearance": "Внешний вид",
+    "settings": "Настройки",
+    "balance": "Баланс",
+    "openapi": "OpenAPI",
+    "numberRental": "Аренда номеров",
+    "numberrental": "Аренда номеров",
+    "receiveNumber": "Получить номер",
+    "releaseNumber": "Освободить номер",
+    "blacklistNumber": "Черный список",
+    "packageSubscription": "Подписка на пакеты",
+    "packagesubscription": "Подписка на пакеты",
+    "packageOrders": "Заказы пакетов",
+    "subscribePlan": "Оформить пакет",
+    "subscriptionNumberManagement": "Управление номерами",
+    "orderManagement": "Управление заказами",
+    "ordermanagement": "Управление заказами",
+    "myOrders": "Мои заказы",
+    "orderDownload": "Скачать заказы",
+    "expenseStatistics": "Статистика расходов",
+    "fundChanges": "История баланса",
+    "apiSupport": "Поддержка API",
+    "apiDoc": "Документация API"
+  },
+  "pages": {
+    "balancePage": {
+      "title": "Баланс",
+      "description": "Просмотр баланса, заблокированных средств и истории операций.",
+      "summary": {
+        "balance": "Доступный баланс",
+        "freezeBalance": "Заблокированный баланс",
+        "totalBalance": "Общий баланс",
+        "totalRecords": "Всего записей",
+        "freezeAmount": "Заблокировано",
+        "unfreezeAmount": "Разблокировано",
+        "consumptionAmount": "Потрачено"
+      },
+      "recharge": {
+        "title": "Пополнение баланса",
+        "description": "Выберите сумму и перейдите к оплате.",
+        "preset": "Быстрый выбор",
+        "custom": "Своя сумма",
+        "placeholder": "Введите сумму",
+        "action": "Оплатить",
+        "loading": "Оплата...",
+        "tip": "За пополнение взимается комиссия.",
+        "handlingFee": "Комиссия составляет {{fee}}"
+      },
+      "records": {
+        "title": "История изменений баланса",
+        "filters": {
+          "orderNo": "Номер заказа",
+          "remark": "Примечание",
+          "source": "Источник",
+          "changeType": "Тип операции",
+          "startTime": "Начало",
+          "endTime": "Окончание",
+          "timeRange": "Период",
+          "selectTimeRange": "Выберите период",
+          "search": "Поиск",
+          "reset": "Сброс"
+        },
+        "table": {
+          "createTime": "Дата",
+          "source": "Источник",
+          "remark": "Примечание",
+          "orderNo": "Заказ",
+          "changeAmount": "Сумма",
+          "beforeBalance": "До",
+          "afterBalance": "После"
+        },
+        "empty": "Записей нет",
+        "pagination": {
+          "prev": "Назад",
+          "next": "Вперед",
+          "jump": "Перейти",
+          "page": "стр."
+        },
+        "changeTypeOptions": {
+          "all": "Все",
+          "1": "Пополнение",
+          "2": "Покупка",
+          "3": "Возврат",
+          "4": "Вывод",
+          "5": "Корректировка",
+          "6": "Блокировка",
+          "7": "Разблокировка",
+          "8": "Подарок",
+          "9": "Штраф"
+        },
+        "typeAmountLabels": {
+          "type1": "Пополнения",
+          "type2": "Расходы",
+          "type3": "Возвраты",
+          "type4": "Выводы",
+          "type5": "Корректировки",
+          "type6": "Блокировки",
+          "type7": "Разблокировки",
+          "type8": "Подарки"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "Заказы пакетов",
+      "description": "Просматривайте покупки пакетов, статус заказов и информацию об активации.",
+      "placeholderTitle": "Начальный шаблон заказов пакетов",
+      "placeholderDescription": "Страница уже инициализирована, позже сюда можно добавить список заказов, фильтры и просмотр деталей.",
+      "filters": {
+        "orderNo": "Номер заказа",
+        "status": "Статус",
+        "search": "Поиск",
+        "reset": "Сброс",
+        "all": "Все"
+      },
+      "summary": {
+        "totalOrders": "Всего заказов",
+        "activeOrders": "Активные заказы",
+        "autoRenewOrders": "Автопродление",
+        "totalAmount": "Общая сумма"
+      },
+      "table": {
+        "orderNo": "Номер заказа",
+        "combo": "Информация о пакете",
+        "duration": "Срок",
+        "phoneNumCount": "Кол-во номеров",
+        "amount": "Сумма заказа",
+        "unitPrice": "Цена за единицу",
+        "status": "Статус заказа",
+        "autoRenew": "Автопродление",
+        "tempToken": "Временный токен",
+        "actions": "Действия",
+        "timeInfo": "Время",
+        "subscribeTime": "Время подписки",
+        "expireTime": "Время окончания"
+      },
+      "durationTypes": {
+        "day": "День",
+        "month": "Месяц",
+        "year": "Год"
+      },
+      "statusOptions": {
+        "0": "Создается",
+        "1": "Активен",
+        "2": "Истек",
+        "3": "Завершен"
+      },
+      "autoRenew": {
+        "enabled": "Включено",
+        "disabled": "Выключено"
+      },
+      "actions": {
+        "renew": "Продлить вручную",
+        "viewNumbers": "Просмотр номеров",
+        "receive": "Адрес приема",
+        "refreshTempToken": "Обновить токен"
+      },
+      "renewDialog": {
+        "title": "Сводка продления",
+        "description": "Подтвердите количество, срок и автопродление перед отправкой заказа.",
+        "plan": "Название пакета",
+        "numberCount": "Количество номеров",
+        "duration": "Срок продления",
+        "autoRenew": "Автопродление",
+        "autoRenewHint": "Если включено, при окончании срока будет выполнена попытка автопродления с этими настройками.",
+        "summary": "Сводка стоимости",
+        "unitPrice": "Цена за единицу",
+        "totalPrice": "Итоговая сумма",
+        "submitting": "Продление..."
+      },
+      "numberSheet": {
+        "title": "Подписанные номера",
+        "description": "Просматривайте список номеров, связанных с текущим заказом пакета."
+      },
+      "receiveDialog": {
+        "title": "Адрес callback",
+        "description": "Когда код подтверждения будет получен, он будет отправлен на этот адрес.",
+        "callbackUrl": "Адрес callback",
+        "placeholder": "Введите адрес callback",
+        "save": "Сохранить адрес",
+        "saving": "Сохранение..."
+      },
+      "messages": {
+        "autoRenewUpdated": "Статус автопродления обновлен",
+        "autoRenewFailed": "Не удалось обновить статус автопродления",
+        "renewSuccess": "Продление пакета выполнено успешно",
+        "renewFailed": "Не удалось продлить пакет",
+        "saveCallbackSuccess": "Адрес callback успешно сохранен",
+        "saveCallbackFailed": "Не удалось сохранить адрес callback",
+        "tempTokenRefreshSuccess": "Временный токен обновлен",
+        "tempTokenRefreshFailed": "Не удалось обновить временный токен"
+      },
+      "empty": "Нет заказов пакетов",
+      "pagination": {
+        "prev": "Назад",
+        "next": "Вперед",
+        "jump": "Перейти"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "Оформить пакет",
+      "description": "Просматривайте доступные пакеты и создавайте заказы на подписку.",
+      "placeholderTitle": "Начальный шаблон подписки на пакет",
+      "placeholderDescription": "Страница уже инициализирована, позже сюда можно добавить карточки пакетов, процесс покупки и продление.",
+      "filters": {
+        "title": "Фильтры персональных пакетов",
+        "description": "Быстро отфильтруйте доступные вашему аккаунту пакеты по стране и типу периода подписки.",
+        "country": "Страна",
+        "durationType": "Тип подписки",
+        "allCountries": "Все страны",
+        "allTypes": "Все типы",
+        "search": "Обновить список",
+        "reset": "Сбросить фильтры",
+        "placeholders": {
+          "searchCountry": "Поиск по стране / коду / префиксу / ID"
+        }
+      },
+      "types": {
+        "day": "День",
+        "week": "Неделя",
+        "month": "Месяц",
+        "year": "Год"
+      },
+      "stats": {
+        "total": "Всего пакетов",
+        "active": "Доступные пакеты"
+      },
+      "status": {
+        "enabled": "Доступен",
+        "disabled": "Отключен"
+      },
+      "card": {
+        "country": "Страна действия",
+        "price": "Цена пакета",
+        "duration": "Период подписки",
+        "remark": "Описание",
+        "createdTime": "Создан",
+        "updatedTime": "Обновлен",
+        "noRemark": "Без описания",
+        "subscribe": "Подписаться"
+      },
+      "dialog": {
+        "title": "Сводка подписки",
+        "description": "Подтвердите количество, срок и настройки автопродления перед отправкой заказа.",
+        "plan": "Название пакета",
+        "numberCount": "Количество номеров",
+        "duration": "Срок подписки",
+        "autoRenew": "Автопродление",
+        "autoRenewHint": "Если включено, при окончании срока будет выполнена попытка автоматического продления с текущими параметрами.",
+        "summary": "Сводка стоимости",
+        "unitPrice": "Цена за единицу",
+        "totalPrice": "Итоговая сумма",
+        "submitting": "Оформление..."
+      },
+      "empty": "Нет пакетов подписки по текущим фильтрам",
+      "messages": {
+        "loadFailed": "Не удалось загрузить пакеты подписки",
+        "createSuccess": "Подписка успешно оформлена",
+        "createFailed": "Не удалось оформить подписку",
+        "invalidDuration": "Введите корректный срок подписки",
+        "invalidNumberCount": "Введите корректное количество номеров"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "Управление номерами",
+      "description": "Управляйте номерами, распределенными по заказам подписки, и просматривайте их связь с пакетами и заказами.",
+      "placeholderTitle": "Начальный шаблон управления номерами",
+      "placeholderDescription": "Страница уже инициализирована, позже сюда можно добавить список распределенных номеров, статус распределения, привязку к пакетам и операции."
+    },
+    "subscriptionNumberList": {
+      "title": "Список подписанных номеров",
+      "description": "Ищите номера, связанные с заказами пакетов, по номеру заказа и просматривайте статус и срок действия.",
+      "filters": {
+        "title": "Фильтры",
+        "orderNo": "Номер заказа",
+        "search": "Поиск",
+        "reset": "Сброс"
+      },
+      "actions": {
+        "renew": "Продлить",
+        "viewNumbers": "Посмотреть номера",
+        "receive": "Получить",
+        "refreshTempToken": "Обновить временный токен"
+      },
+      "export": {
+        "button": "Экспортировать номера",
+        "loading": "Экспорт...",
+        "successDescription": "Экспорт выполнен успешно, проверьте центр загрузок.",
+        "failedDescription": "Не удалось экспортировать номера, попробуйте позже."
+      },
+      "summary": {
+        "totalNumbers": "Всего номеров"
+      },
+      "table": {
+        "orderNo": "Номер заказа",
+        "phone": "Информация о номере",
+        "imsi": "IMSI",
+        "combo": "Информация о пакете",
+        "status": "Статус",
+        "timeInfo": "Время",
+        "createdAt": "Создан",
+        "expireTime": "Истекает",
+        "remark": "Примечание"
+      },
+      "statusOptions": {
+        "0": "Создается",
+        "1": "Активен",
+        "2": "Истек",
+        "3": "Завершен"
+      },
+      "numberSheet": {
+        "title": "Подписанные номера",
+        "description": "Просмотр номеров, назначенных текущему заказу пакета."
+      },
+      "receiveDialog": {
+        "title": "URL для callback",
+        "description": "При получении кода подтверждения он будет отправлен на этот адрес.",
+        "callbackUrl": "Callback URL"
+      },
+      "empty": "Нет записей по подписанным номерам",
+      "pagination": {
+        "prev": "Назад",
+        "next": "Вперед",
+        "jump": "Перейти"
+      }
+    },
+    "myOrdersPage": {
+      "title": "Мои заказы",
+      "description": "Просмотр статусов заказов, кодов и SMS.",
+      "filters": {
+        "country": "Страна",
+        "project": "Проект",
+        "status": "Статус",
+        "phone": "Номер",
+        "orderNo": "Заказ",
+        "timeRange": "Период",
+        "startTime": "Начало",
+        "endTime": "Окончание",
+        "search": "Поиск",
+        "reset": "Сброс",
+        "all": "Все",
+        "searchCountry": "Поиск страны",
+        "searchProject": "Поиск проекта",
+        "selectTimeRange": "Выберите период"
+      },
+      "summary": {
+        "totalOrders": "Всего заказов",
+        "successAmount": "Успешно",
+        "failAmount": "Ошибок",
+        "totalAmount": "Всего потрачено"
+      },
+      "table": {
+        "orderNo": "Заказ",
+        "country": "Страна",
+        "project": "Проект",
+        "phone": "Номер",
+        "price": "Цена",
+        "status": "Статус",
+        "codeNum": "Код",
+        "smsContent": "SMS",
+        "sourceType": "Источник",
+        "createTime": "Создан",
+        "updateTime": "Обновлен",
+        "timeInfo": "Время"
+      },
+      "sourceTypeOptions": {
+        "1": "Внутри сайта",
+        "2": "API",
+        "3": "Подписка"
+      },
+      "statusOptions": {
+        "-1": "Заказ отменен",
+        "-2": "Ошибка списания",
+        "1": "В процессе",
+        "2": "Успешно",
+        "3": "Завершено",
+        "4": "Ошибка",
+        "99": "Предварительное размещение"
+      },
+      "empty": "Заказов нет",
+      "pagination": {
+        "prev": "Назад",
+        "next": "Вперед",
+        "jump": "Перейти"
+      },
+      "export": {
+        "button": "Экспорт",
+        "loading": "Экспорт...",
+        "successTitle": "Экспорт выполнен",
+        "successDescription": "Файл готов в разделе загрузок",
+        "failedTitle": "Ошибка экспорта",
+        "failedDescription": "Повторите позже"
+      }
+    },
+    "orderDownloadPage": {
+      "title": "Загрузки заказов",
+      "description": "Просмотр статуса экспорта и скачивание файлов.",
+      "filters": {
+        "taskName": "Задача",
+        "status": "Статус",
+        "startTime": "Начало",
+        "endTime": "Окончание",
+        "timeRange": "Период",
+        "selectTimeRange": "Выберите период",
+        "search": "Поиск",
+        "reset": "Сброс"
+      },
+      "summary": {
+        "totalTasks": "Всего задач"
+      },
+      "table": {
+        "taskName": "Задача",
+        "status": "Статус",
+        "admin": "Пользователь",
+        "errorMsg": "Ошибка",
+        "createTime": "Создана",
+        "updateTime": "Обновлена",
+        "action": "Действие",
+        "download": "Скачать"
+      },
+      "statusOptions": {
+        "0": "Ожидание",
+        "1": "В работе",
+        "2": "Готово",
+        "3": "Ошибка"
+      },
+      "messages": {
+        "waitTitle": "Недоступно",
+        "waitDescription": "Дождитесь завершения обработки",
+        "fileMissingTitle": "Файл не найден",
+        "fileMissingDescription": "Файл для скачивания отсутствует"
+      },
+      "empty": "Задач нет",
+      "pagination": {
+        "prev": "Назад",
+        "next": "Вперед",
+        "jump": "Перейти"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "Статистика расходов",
+      "description": "Статистика по странам, проектам и периодам.",
+      "filters": {
+        "country": "Страна",
+        "project": "Проект",
+        "timeRange": "Период",
+        "startTime": "Начало",
+        "endTime": "Окончание",
+        "selectTimeRange": "Выберите период",
+        "search": "Поиск",
+        "reset": "Сброс",
+        "all": "Все",
+        "searchCountry": "Поиск страны",
+        "searchProject": "Поиск проекта"
+      },
+      "summary": {
+        "status1": "В запросе",
+        "status2": "Успешно",
+        "status3": "Освобождены",
+        "status4": "В черном списке",
+        "totalCount": "Всего номеров"
+      },
+      "table": {
+        "getTime": "Дата",
+        "country": "Страна",
+        "project": "Проект",
+        "status1": "В запросе",
+        "status2": "Успешно",
+        "status3": "Освобождены",
+        "status4": "В черном списке",
+        "totalCount": "Всего номеров"
+      },
+      "empty": "Нет данных"
+    },
+    "releaseNumberPage": {
+      "title": "Освобожденные номера",
+      "description": "История освобождения номеров."
+    },
+    "blacklistNumberPage": {
+      "title": "Черный список номеров",
+      "description": "История добавления в черный список."
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "Номер",
+        "pkey": "PKEY",
+        "operationResult": "Результат",
+        "allResult": "Все",
+        "timeRange": "Период",
+        "selectTimeRange": "Выберите период",
+        "search": "Поиск",
+        "reset": "Сброс"
+      },
+      "table": {
+        "phone": "Номер",
+        "pkey": "PKEY",
+        "operationResult": "Результат",
+        "remark": "Примечание",
+        "createTime": "Дата"
+      },
+      "operationResultOptions": {
+        "success": "Успешно",
+        "failed": "Ошибка"
+      },
+      "summary": {
+        "totalLogs": "Всего записей"
+      },
+      "empty": "Записей нет",
+      "pagination": {
+        "prev": "Назад",
+        "next": "Вперед",
+        "jump": "Перейти"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "Получить номер",
+      "description": "Выберите проект и страну для получения номера.",
+      "form": {
+        "title": "Получить номер",
+        "description": "Фильтр по проектам и странам.",
+        "project": "Проект",
+        "country": "Страна",
+        "type": "Тип SMS",
+        "mobile": "Номер",
+        "minPrice": "Мин. цена:",
+        "submit": "Получить",
+        "submitting": "Получение...",
+        "types": {
+          "all": "Все",
+          "sms": "SMS",
+          "voice": "Голос",
+          "incall": "Входящий"
+        },
+        "placeholders": {
+          "project": "Выберите проект",
+          "country": "Выберите страну",
+          "searchProject": "Поиск проекта",
+          "searchCountry": "Поиск страны",
+          "mobile": "Использовать старый номер"
+        }
+      },
+      "currentPhone": {
+        "title": "Текущий номер",
+        "description": "Автоматическое получение кода.",
+        "empty": "Номер не получен",
+        "phone": "Номер",
+        "country": "Страна",
+        "countryTel": "Код страны",
+        "port": "Порт",
+        "getTime": "Дата",
+        "pkey": "PKEY",
+        "dock": "Канал",
+        "polling": "Ожидание кода...",
+        "pollingTip": "Автообновление каждые 10 сек",
+        "ready": "Готово"
+      },
+      "records": {
+        "title": "История кодов",
+        "description": "Полученные SMS-коды.",
+        "empty": "Кодов нет",
+        "columns": {
+          "phone": "Номер",
+          "code": "Код",
+          "smsContent": "SMS",
+          "createTime": "Дата",
+          "actions": "Действие"
+        },
+        "actions": {
+          "black": "В ЧС",
+          "release": "Освободить"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "Ошибка загрузки проектов",
+        "selectProject": "Выберите проект",
+        "selectCountry": "Выберите страну",
+        "countryDataMissing": "Данные страны отсутствуют",
+        "phoneSuccessTitle": "Номер получен",
+        "phoneSuccessDescription": "Начато ожидание кода",
+        "phoneFailedDescription": "Ошибка получения номера",
+        "codeSuccessTitle": "Код получен",
+        "codeSuccessDescription": "Код сохранен",
+        "codeFailedDescription": "Ошибка получения кода",
+        "waitingCodeSilent": "Ожидание кода...",
+        "blackSuccessTitle": "Добавлено в ЧС",
+        "blackSuccessDescription": "Номер в черном списке",
+        "blackFailedDescription": "Ошибка добавления",
+        "releaseSuccessTitle": "Номер освобожден",
+        "releaseSuccessDescription": "Успешно",
+        "releaseFailedDescription": "Ошибка освобождения",
+        "refreshProjectSuccessTitle": "Проекты обновлены",
+        "refreshProjectSuccessDescription": "Список обновлен",
+        "refreshProjectFailedDescription": "Ошибка обновления"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "Блог",
+        "title": "Новости и руководства",
+        "description": "Статьи по работе с номерами и API."
+      },
+      "featured": {
+        "title": "Популярное",
+        "items": [
+          {
+            "title": "Как повысить скорость получения кодов",
+            "description": "Советы по выбору стран и каналов."
+          },
+          {
+            "title": "Безопасная работа с токенами",
+            "description": "Настройка авторизации и защиты."
+          },
+          {
+            "title": "Почему важна прозрачность данных",
+            "description": "Контроль за заказами и расходами."
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "Помощь",
+        "title": "Часто задаваемые вопросы",
+        "description": "Ответы на популярные вопросы по работе сервиса."
+      },
+      "faq": {
+        "title": "Вопросы и ответы",
+        "items": [
+          {
+            "question": "Почему не получается взять номер?",
+            "answer": "Проверьте баланс, статус проекта и белый список IP."
+          },
+          {
+            "question": "Почему долго не приходит код?",
+            "answer": "Дождитесь статуса ожидания кода, включите автополлинг."
+          },
+          {
+            "question": "Токен не работает, что делать?",
+            "answer": "Обновите токен или войдите заново."
+          },
+          {
+            "question": "Почему блокируется запрос?",
+            "answer": "Проверьте IP-белый список и авторизацию."
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "О нас",
+        "title": "Глобальный сервис приема SMS",
+        "description": "Стабильные номера и прозрачные цены для бизнеса."
+      },
+      "seo": {
+        "title": "О нас",
+        "description": "Условия сервиса и контакты."
+      },
+      "values": {
+        "title": "Наши принципы",
+        "items": [
+          {
+            "title": "Стабильность",
+            "description": "Мультиканальность и постоянный доступ."
+          },
+          {
+            "title": "Прозрачность",
+            "description": "Честные цены и полная статистика."
+          },
+          {
+            "title": "Безопасность",
+            "description": "Защита данных и авторизация."
+          }
+        ]
+      },
+      "contacts": {
+        "title": "Контакты",
+        "description": "Свяжитесь с нами для поддержки и сотрудничества.",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "Telegram",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "Настройки API",
+      "description": "Управление доступом, IP и ключами.",
+      "cards": {
+        "status": "Статус API",
+        "credentials": "Ключи",
+        "whiteIp": "Белый список IP",
+        "guide": "Руководство",
+        "support": "Поддержка"
+      },
+      "status": {
+        "enabled": "Включено",
+        "disabled": "Выключено",
+        "openButton": "Включить",
+        "opening": "Включение...",
+        "hint": "Включите API для работы с сервисом."
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "API Key",
+        "copy": "Копировать",
+        "empty": "Нет данных"
+      },
+      "whiteIp": {
+        "label": "Белый список IP",
+        "placeholder": "Введите IP через запятую",
+        "helper": "Укажите IP сервера для доступа",
+        "save": "Сохранить",
+        "saving": "Сохранение..."
+      },
+      "guide": {
+        "items": [
+          "Получите APPID и API Key перед работой",
+          "Используйте JSON формат запросов",
+          "Храните токены безопасно"
+        ]
+      },
+      "support": {
+        "items": [
+          "При ошибках отправьте логи запросов",
+          "Проверьте настройки проекта и обратного вызова",
+          "По сотрудничеству пишите в контакты"
+        ]
+      },
+      "messages": {
+        "openSuccess": "API включен",
+        "saveSuccess": "IP сохранены"
+      }
+    }
+  },
+  "dashboard_cards": {
+    "hero": {
+      "title": "Обзор панели",
+      "description": "Статус аккаунта, баланс и статистика."
+    },
+    "overview": {
+      "availableBalance": "Доступный баланс",
+      "availableBalanceDesc": "Средства для покупки номеров",
+      "todayAmount": "Потрачено сегодня",
+      "todayAmountDesc": "Итоговые расходы за день",
+      "freezeBalance": "Заблокировано",
+      "freezeBalanceDesc": "Средства в активных заказах",
+      "totalBalance": "Общий баланс",
+      "totalBalanceDesc": "Доступно + заблокировано",
+      "successRate": "Успешность заказов",
+      "successRateDesc": "Процент успешных операций",
+      "waitingCodeCount": "Ожидают код",
+      "waitingCodeCountDesc": "Номера в ожидании SMS",
+      "openApiStatus": "Статус API",
+      "openApiEnabledDesc": "API включен и готов к работе",
+      "openApiDisabledDesc": "Включите API в настройках"
+    },
+    "status": {
+      "enabled": "Включено",
+      "disabled": "Выключено",
+      "openApiEnabled": "API работает",
+      "openApiDisabled": "API отключен"
+    },
+    "account": {
+      "title": "Аккаунт",
+      "description": "Данные пользователя и ключи",
+      "userName": "Пользователь",
+      "appId": "APPID",
+      "email": "Email",
+      "apiKey": "API Key"
+    },
+    "quickStats": {
+      "whiteIpCount": "IP в белом списке",
+      "defaultCurrency": "Валюта",
+      "supportTelegram": "Telegram",
+      "siteName": "Сайт",
+      "todayOrders": "Заказы сегодня",
+      "inUseCount": "Активных номеров"
+    },
+    "accountMetrics": {
+      "title": "Статус доступа",
+      "openApi": "OpenAPI",
+      "security": "Безопасность",
+      "billing": "Баланс",
+      "support": "Поддержка",
+      "whitelistReady": "Белый список настроен",
+      "whitelistMissing": "Белый список не настроен"
+    },
+    "business": {
+      "title": "Бизнес-статистика",
+      "description": "Данные по заказам и номерам",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "Заказы",
+          "description": "Статистика за день и неделю"
+        },
+        {
+          "key": "numbers",
+          "title": "Номера",
+          "description": "Активные, освобожденные, в ЧС"
+        },
+        {
+          "key": "channels",
+          "title": "Каналы",
+          "description": "Статус каналов и стран"
+        },
+        {
+          "key": "security",
+          "title": "Безопасность",
+          "description": "Запросы API и блокировки"
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "Структура баланса",
+      "description": "Доступные и заблокированные средства",
+      "available": "Доступно",
+      "freeze": "Заблокировано"
+    },
+    "orderRatio": {
+      "title": "Статус заказов",
+      "description": "Успешные, ошибки, в процессе",
+      "success": "Успешно",
+      "fail": "Ошибка",
+      "processing": "В процессе"
+    },
+    "projectRatio": {
+      "title": "Статистика по проектам",
+      "description": "Распределение расходов",
+      "successRate": "Успешность: "
+    },
+    "countryRatio": {
+      "title": "Статистика по странам",
+      "description": "Распределение по странам",
+      "successRate": "Успешность: "
+    },
+    "trend": {
+      "title": "Динамика за 7 дней",
+      "description": "Заказы, успешность, расходы",
+      "totalOrders": "Заказов",
+      "successRate": "Успешность",
+      "failCount": "Ошибок",
+      "latestWindow": "За 7 дней",
+      "ordersUnit": "шт."
+    },
+    "todo": {
+      "title": "Рекомендации",
+      "items": [
+        "Сравнение заказов сегодня/вчера",
+        "Топ стран по успешности",
+        "Топ проектов по расходам",
+        "Динамика номеров за неделю"
+      ]
+    },
+    "support": {
+      "title": "Поддержка",
+      "description": "Контакты и помощь",
+      "siteName": "Сайт",
+      "email": "Email",
+      "telegram": "Telegram",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "API для панели",
+      "description": "Рекомендуемые поля для бэкенда",
+      "columns": {
+        "name": "Поле",
+        "type": "Тип",
+        "desc": "Описание"
+      },
+      "fields": [
+        {
+          "name": "balance.available",
+          "type": "number|string",
+          "desc": "Доступный баланс"
+        },
+        {
+          "name": "balance.freeze",
+          "type": "number|string",
+          "desc": "Заблокированный баланс"
+        },
+        {
+          "name": "balance.total",
+          "type": "number|string",
+          "desc": "Общий баланс"
+        },
+        {
+          "name": "orders.todayCount",
+          "type": "number",
+          "desc": "Заказов сегодня"
+        },
+        {
+          "name": "orders.successCount",
+          "type": "number",
+          "desc": "Успешных заказов"
+        },
+        {
+          "name": "orders.failCount",
+          "type": "number",
+          "desc": "Ошибок"
+        },
+        {
+          "name": "orders.successRate",
+          "type": "number|string",
+          "desc": "Успешность (%)"
+        },
+        {
+          "name": "orders.totalAmount",
+          "type": "number|string",
+          "desc": "Всего потрачено"
+        },
+        {
+          "name": "orders.processingCount",
+          "type": "number",
+          "desc": "В процессе"
+        },
+        {
+          "name": "numbers.inUseCount",
+          "type": "number",
+          "desc": "Активных номеров"
+        },
+        {
+          "name": "numbers.waitingCodeCount",
+          "type": "number",
+          "desc": "Ожидают код"
+        },
+        {
+          "name": "numbers.releaseCount",
+          "type": "number",
+          "desc": "Освобождены"
+        },
+        {
+          "name": "numbers.blacklistCount",
+          "type": "number",
+          "desc": "В ЧС"
+        },
+        {
+          "name": "channels.activeProjectCount",
+          "type": "number",
+          "desc": "Активных проектов"
+        },
+        {
+          "name": "channels.activeCountryCount",
+          "type": "number",
+          "desc": "Стран"
+        },
+        {
+          "name": "channels.abnormalChannelCount",
+          "type": "number",
+          "desc": "Ошибок каналов"
+        },
+        {
+          "name": "api.requestCountToday",
+          "type": "number",
+          "desc": "Запросов API сегодня"
+        },
+        {
+          "name": "api.blockCountToday",
+          "type": "number",
+          "desc": "Блокировок"
+        },
+        {
+          "name": "trends.sevenDays",
+          "type": "array",
+          "desc": "Динамика за 7 дней"
+        },
+        {
+          "name": "projects.distribution",
+          "type": "array",
+          "desc": "Статистика по проектам"
+        },
+        {
+          "name": "countries.distribution",
+          "type": "array",
+          "desc": "Статистика по странам"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "title": "Настройки",
+    "description": "Профиль, пароль и внешний вид",
+    "appearance": {
+      "title": "Внешний вид",
+      "description": "Тема и язык интерфейса",
+      "theme": {
+        "label": "Тема",
+        "description": "Светлая / темная",
+        "light": "Светлая",
+        "dark": "Темная"
+      },
+      "language": {
+        "label": "Язык",
+        "description": "Выберите язык",
+        "en": "Английский",
+        "fr": "Французский",
+        "es": "Испанский",
+        "de": "Немецкий",
+        "pt": "Португальский",
+        "ru": "Русский",
+        "ja": "Японский",
+        "ko": "Корейский",
+        "zh": "Китайский"
+      }
+    },
+    "profile": {
+      "title": "Профиль",
+      "description": "Личные данные",
+      "personal_info": "Основные данные",
+      "personal_info_description": "Редактирование профиля",
+      "first_name": "Имя",
+      "first_name_placeholder": "Введите имя",
+      "first_name_helper_text": "Отображается в профиле",
+      "last_name": "Фамилия",
+      "last_name_placeholder": "Введите фамилию",
+      "last_name_helper_text": "Отображается в профиле",
+      "username": "Логин",
+      "username_placeholder": "Введите логин",
+      "username_helper_text": "Меняется раз в 30 дней",
+      "email": "Email",
+      "email_placeholder": "Ваш email",
+      "email_helper_text": "Не редактируется",
+      "update_profile": "Сохранить",
+      "profile_updated": "Профиль обновлен",
+      "profile_update_failed": "Ошибка обновления",
+      "password_section_title": "Пароль",
+      "password_section_description": "Изменение пароля",
+      "password_prompt": "Нажмите для смены пароля",
+      "change_password": "Сменить пароль",
+      "current_password": "Текущий пароль",
+      "current_password_placeholder": "Введите текущий пароль",
+      "new_password": "Новый пароль",
+      "new_password_placeholder": "Введите новый пароль",
+      "new_password_helper_text": "Минимум 8 символов",
+      "confirm_password": "Повторите пароль",
+      "confirm_password_placeholder": "Повторите новый пароль",
+      "update_password": "Сохранить пароль",
+      "password_updated": "Пароль изменен",
+      "password_updated_description": "Используйте новый пароль",
+      "password_update_failed": "Ошибка смены пароля",
+      "current_password_required": "Введите текущий пароль",
+      "new_password_required": "Пароль от 8 символов",
+      "confirm_password_required": "Повторите пароль",
+      "password_not_match": "Пароли не совпадают",
+      "reverification_required": "Требуется повторный вход",
+      "reverification_required_description": "Войдите снова для смены пароля",
+      "current_password_incorrect": "Неверный текущий пароль",
+      "password_compromised": "Пароль небезопасен, смените его"
+    }
+  },
+  "dashboard": {
+    "title": "Панель управления"
+  },
+  "home": {
+    "hero": {
+      "badge": "Сервис SMS",
+      "title": "Прозрачные цены и стабильные номера",
+      "description": "Глобальный прием SMS-кодов с высокой успешностью.",
+      "cta": "Начать",
+      "secondary": "Документация API"
+    },
+    "features": {
+      "title": "Преимущества",
+      "items": [
+        {
+          "title": "Прозрачные цены",
+          "description": "Нет скрытых комиссий, все цены открыты"
+        },
+        {
+          "title": "Контроль данных",
+          "description": "Полная история заказов и операций"
+        },
+        {
+          "title": "Безопасность",
+          "description": "Защищенные токены и фильтры IP"
+        },
+        {
+          "title": "Много каналов",
+          "description": "Номера из разных стран и проектов"
+        },
+        {
+          "title": "Высокая успешность",
+          "description": "Стабильное получение SMS-кодов"
+        },
+        {
+          "title": "Автоматизация",
+          "description": "Поллинг и обратный вызов кодов"
+        }
+      ]
+    },
+    "stats": {
+      "title": "Возможности",
+      "items": [
+        {
+          "label": "Цены",
+          "value": "Прозрачные"
+        },
+        {
+          "label": "Покрытие",
+          "value": "Много стран"
+        },
+        {
+          "label": "Получение кодов",
+          "value": "Авто + Callback"
+        },
+        {
+          "label": "Защита",
+          "value": "Брандмауэр"
+        }
+      ]
+    }
+  },
+  "apiDoc": {
+    "hero": {
+      "title": "API документация",
+      "description": "Интеграция с нашим сервисом",
+      "cta": "Открыть документацию"
+    },
+    "button": {
+      "start": "Читать"
+    },
+    "toc": {
+      "title": "Содержание",
+      "introduction": "Введение",
+      "authentication": "Авторизация",
+      "apiStandards": "Стандарты API",
+      "responseFormat": "Формат ответов",
+      "apiList": "Список методов"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Введение",
+        "lead": "Для работы с API нужно:",
+        "items": [
+          "Знать основы сетевых запросов",
+          "Иметь опыт разработки",
+          "Понимать работу токенов",
+          "Уметь читать логи"
+        ],
+        "summary": "Готовые методы для быстрой интеграции",
+        "summaryTitle": "Особенности API",
+        "summaryItems": [
+          "Адрес запроса — ваш домен/IP",
+          "Все запросы POST + JSON",
+          "Соблюдайте форматы документов",
+          "При ошибках отправляйте логи"
+        ],
+        "note": "Документация в разработке, спрашивайте поддержку"
+      },
+      "authentication": {
+        "title": "Авторизация",
+        "lead": "Получите ключи в панели:",
+        "items": [
+          "appid — идентификатор пользователя",
+          "apikey — секретный ключ",
+          "Обязательно настройте белый список IP",
+          "Несколько IP — через запятую"
+        ]
+      },
+      "apiStandards": {
+        "title": "Стандарты",
+        "items": [
+          "Запросы: POST",
+          "Формат: application/json",
+          "Поля: camelCase",
+          "Адрес: ваш сервер"
+        ],
+        "baseUrlLabel": "Адрес API"
+      },
+      "responseFormat": {
+        "title": "Ответы API",
+        "lead": "Стандартный JSON с кодом результата",
+        "successTitle": "Успех",
+        "errorTitle": "Ошибка",
+        "note": "Код 200/0 — успех, остальные — ошибка"
+      },
+      "apiList": {
+        "title": "Список API",
+        "lead": "Ниже приведены основные открытые интерфейсы. Рекомендуется подключать их в порядке вызова.",
+        "summaryTitle": "Краткое описание",
+        "authTitle": "Авторизация",
+        "contentTypeTitle": "Тип запроса",
+        "paramsTitle": "Параметры запроса",
+        "responseTitle": "Пример ответа",
+        "table": {
+          "name": "Имя параметра",
+          "type": "Тип",
+          "required": "Обязательно",
+          "description": "Описание",
+          "example": "Пример"
+        },
+        "requiredYes": "Да",
+        "requiredNo": "Нет",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "Получить Token",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "Для любых действий в API необходимо сначала получить token и refreshToken через этот интерфейс. Поддерживаются параметры POST/GET, а также передача form-data/json; рекомендуется использовать json.",
+            "auth": "Нет",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "ID текущего пользователя / аккаунта",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "apiKey, сгенерированный платформой",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Token успешно получен\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "Обновить Token",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "Этот интерфейс поддерживает GET/POST-запросы. Параметр запроса — refreshToken, поддерживаются form-data/json. После успешного обновления вы получите новый token и новый refreshToken.",
+            "auth": "Нет",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "Токен обновления, сохраненный после входа",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Операция выполнена успешно\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "Получить информацию об аккаунте",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "Получает информацию об аккаунте пользователя. При необходимости передайте Authorization в заголовке запроса. Поддерживается как token, так и Bearer {значение Token}.",
+            "auth": "Да",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Токен, полученный после входа пользователя, поддерживается префикс Bearer",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Информация о пользователе успешно получена\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "База стран и регионов",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "Получает встроенную базу географической информации системы. База стран почти не меняется, поэтому рекомендуется хранить ее локально.",
+            "auth": "Опционально",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Необязательный заголовок token",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Список стран успешно получен\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"Узбекистан\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "Получить активные проекты",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "Получает доступные онлайн-проекты.",
+            "auth": "Опционально",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Необязательный заголовок token",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Список проектов успешно получен\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "Получить номер телефона",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "Получает номер телефона, поддерживает form-data/json. После получения номера его статус меняется на ожидание кода подтверждения, и далее необходимо вызвать интерфейс получения кода. Дополнительно возвращается orderNo, который нужно передавать при получении кода.",
+            "auth": "Опционально",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "ID страны, соответствует полю country в проекте",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "ID проекта",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "Можно передать, если хотите продолжить использовать предыдущий номер",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "Тип номера: sms / voice / incall, также можно передать all или пустое значение",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "Адрес callback для SMS",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Номер успешно получен, баланс заморожен\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "Получить код подтверждения",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "Поддерживает form-data/json. Этот интерфейс необходимо периодически опрашивать для получения кода подтверждения. После возврата code=200 код больше повторно не возвращается.",
+            "auth": "Опционально",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Уникальный номер заказа, возвращенный интерфейсом получения номера",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Номер телефона, возвращенный интерфейсом получения номера",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey, возвращенный интерфейсом получения номера",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Код подтверждения успешно получен, списание завершено\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"Содержимое SMS\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "Освободить номер",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "Поддерживает form-data/json. Сторона интеграции может самостоятельно вызвать интерфейс освобождения номера, чтобы избежать дополнительных расходов.",
+            "auth": "Опционально",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Номер заказа, который нужно освободить",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Номер телефона, который нужно освободить",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey, который нужно освободить",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Номер успешно освобожден\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "Добавить номер в черный список",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "Поддерживает form-data/json. Сторона интеграции может добавить номер в черный список, и в дальнейшем этот номер больше не будет выдаваться.",
+            "auth": "Опционально",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Номер заказа, который нужно добавить в черный список",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Номер телефона, который нужно добавить в черный список",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey, который нужно добавить в черный список",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Номер успешно добавлен в черный список\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "Callback доставки SMS",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "При получении номера передайте callbackUrl. После этого, когда система получит SMS от оператора, она автоматически отправит данные на этот адрес.",
+            "auth": "URL предоставляется стороной интеграции",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"Содержимое SMS\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "Продукты",
+        "items": {
+          "smsPlatform": "Платформа приема SMS",
+          "apiDocs": "Документация API",
+          "dashboard": "Панель управления",
+          "pricing": "Тарифные планы"
+        }
+      },
+      "support": {
+        "title": "Поддержка",
+        "items": {
+          "helpCenter": "Центр помощи",
+          "integrationGuide": "Руководство по интеграции",
+          "faq": "Частые вопросы"
+        }
+      },
+      "company": {
+        "title": "Компания",
+        "items": {
+          "about": "О нас",
+          "blog": "Блог и новости",
+          "contact": "Связаться с нами",
+          "terms": "Условия обслуживания",
+          "privacy": "Политика конфиденциальности"
+        }
+      },
+      "resources": {
+        "title": "Ресурсы",
+        "items": {
+          "countryLibrary": "База стран и регионов",
+          "projectList": "Список проектов",
+          "callbackDocs": "Документация callback",
+          "statusPage": "Статус системы",
+          "security": "Информация о безопасности"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Извините, страница, которую вы ищете, не существует или была удалена.",
+    "backHome": "Вернуться на главную"
+  },
+  "auth": {
+    "sign_in_success": "С возвращением!",
+    "sign_in_success_description": "Вход в аккаунт выполнен успешно",
+    "sign_in_failed": "Ошибка входа",
+    "sign_up_success": "Регистрация аккаунта прошла успешно!",
+    "sign_up_success_description": "Добро пожаловать в систему",
+    "sign_up_failed": "Ошибка регистрации",
+    "sign_out_success": "Вы вышли из системы",
+    "sign_out_success_description": "Вы безопасно вышли из текущего аккаунта",
+    "sign_out_failed": "Ошибка выхода",
+    "verification_code_sent": "Код подтверждения отправлен",
+    "verification_code_sent_description": "Проверьте почту, чтобы посмотреть код подтверждения",
+    "verification_code_resent": "Код подтверждения отправлен повторно",
+    "verification_code_resent_description": "Новый код подтверждения отправлен на вашу почту",
+    "verification_failed": "Ошибка подтверждения",
+    "verification_success": "Почта подтверждена",
+    "verification_success_description": "Ваш адрес электронной почты успешно привязан и подтвержден",
+    "captcha": {
+      "label": "Графическая капча",
+      "placeholder": "Введите код",
+      "image_alt": "Изображение капчи",
+      "loading": "Загрузка...",
+      "required": "Введите код"
+    },
+    "logout": {
+      "button": "Выйти",
+      "title": "Выход",
+      "description": "Вы уверены, что хотите выйти из текущего аккаунта?",
+      "loading": "Выход...",
+      "confirm": "Подтвердить выход"
+    },
+    "sign_in": {
+      "title": "Добро пожаловать",
+      "description": "Войдите в аккаунт, чтобы продолжить",
+      "verify_title": "Проверка личности",
+      "verify_description": "Введите код подтверждения, полученный по почте",
+      "verify_new_device": "Вход выполнен с нового устройства, требуется подтверждение личности",
+      "account_label": "Почта / Имя пользователя",
+      "account_placeholder": "Введите почту или имя пользователя",
+      "email_label": "Почта",
+      "password_label": "Пароль для входа",
+      "password_placeholder": "Введите пароль",
+      "remember_password": "Запомнить пароль",
+      "verification_code_label": "Код подтверждения",
+      "verification_code_placeholder": "Введите код подтверждения",
+      "sign_in_button": "Войти",
+      "signing_in": "Вход...",
+      "verify_button": "Подтвердить",
+      "verifying": "Подтверждение...",
+      "resend_code": "Не получили код? Нажмите, чтобы отправить повторно",
+      "no_account": "Еще нет аккаунта?",
+      "sign_up_link": "Зарегистрироваться сейчас",
+      "forgot_password": "Забыли пароль?",
+      "reset_password_link": "Сбросить пароль",
+      "second_factor_required": "Требуется двухэтапная проверка, но почтовый сервис кодов пока не предоставляется",
+      "unexpected_status": "Неожиданное состояние входа"
+    },
+    "sign_up": {
+      "title": "Регистрация аккаунта",
+      "description": "Быстро зарегистрируйте аккаунт и получите доступ ко всем функциям системы",
+      "verify_title": "Подтверждение почты",
+      "verify_description": "Введите код подтверждения из письма, чтобы завершить регистрацию",
+      "first_name_label": "Имя",
+      "first_name_placeholder": "Введите имя",
+      "last_name_label": "Фамилия",
+      "last_name_placeholder": "Введите фамилию",
+      "username_label": "Имя пользователя",
+      "username_placeholder": "Введите имя пользователя",
+      "email_label": "Почта",
+      "password_label": "Задайте пароль",
+      "password_placeholder": "Введите пароль",
+      "verification_code_label": "Код подтверждения",
+      "verification_code_placeholder": "Введите код подтверждения",
+      "sign_up_button": "Зарегистрироваться",
+      "signing_up": "Регистрация...",
+      "verify_button": "Подтвердить почту",
+      "verifying": "Подтверждение...",
+      "resend_code": "Не получили код? Нажмите, чтобы отправить повторно",
+      "have_account": "Уже есть аккаунт?",
+      "sign_in_link": "Перейти ко входу",
+      "forgot_password": "Забыли пароль?",
+      "reset_password_link": "Сбросить пароль"
+    },
+    "reset_password": {
+      "title": "Забыли пароль",
+      "description": "Введите почту, получите код подтверждения и сбросьте пароль",
+      "reset_title": "Сброс пароля",
+      "reset_description": "Введите код подтверждения из письма и задайте новый пароль",
+      "email_label": "Адрес электронной почты",
+      "code_label": "Код подтверждения",
+      "code_placeholder": "Введите код подтверждения из письма",
+      "new_password_label": "Новый пароль",
+      "new_password_placeholder": "Задайте новый пароль",
+      "send_code_button": "Отправить код подтверждения",
+      "sending": "Отправка...",
+      "reset_button": "Подтвердить сброс",
+      "resetting": "Сброс...",
+      "resend_code": "Не получили код? Нажмите, чтобы отправить повторно",
+      "remember_password": "Вспомнили пароль?",
+      "sign_in_link": "Вернуться ко входу"
+    }
+  },
+  "password_reset": {
+    "code_sent": "Код сброса отправлен",
+    "code_sent_description": "Код для сброса пароля отправлен на вашу почту",
+    "code_resent": "Код сброса отправлен повторно",
+    "code_resent_description": "Новый код для сброса пароля отправлен",
+    "reset_success": "Пароль успешно сброшен",
+    "reset_success_description": "Пароль сброшен, выполняется переход на страницу входа...",
+    "reset_failed": "Ошибка сброса пароля"
+  },
+  "profile": {
+    "title": "Личный кабинет",
+    "description": "Просматривайте и управляйте своими личными данными",
+    "first_name": "Имя",
+    "last_name": "Фамилия",
+    "username": "Имя пользователя",
+    "member_since": "Дата регистрации",
+    "edit_profile": "Редактировать профиль"
+  },
+  "balance": {
+    "title": "Финансовый аккаунт"
+  },
+  "billing": {
+    "title": "Подписка и биллинг",
+    "description": "Управление подписками на тарифы и платежными счетами",
+    "current_plan": "Текущий тариф",
+    "current_plan_description": "Тарифный план сервиса, который вы используете сейчас",
+    "available_plans": "Доступные тарифы",
+    "month": "месяц",
+    "features": "Преимущества тарифа",
+    "recommended": "Рекомендуется",
+    "upgrade": "Обновить сейчас",
+    "payment_method": "Способ оплаты",
+    "payment_method_description": "Управление основным платежным аккаунтом",
+    "no_payment_method": "Способ оплаты пока не добавлен",
+    "add_payment_method": "Добавить способ оплаты",
+    "add_payment_method_description": "Привяжите платежный аккаунт для перехода на платный тариф",
+    "billing_history": "История счетов",
+    "billing_history_description": "Просмотр прошлых заказов и счетов за потребление",
+    "no_invoices": "Счетов пока нет",
+    "no_invoices_description": "После создания платного заказа записи появятся здесь",
+    "plans": {
+      "free": {
+        "name": "Бесплатный тариф",
+        "description": "Подходит для новичков",
+        "feature_1": "Базовая функция 1",
+        "feature_2": "Базовая функция 2",
+        "feature_3": "Базовая функция 3",
+        "feature_4": "Базовая функция 4"
+      },
+      "pro": {
+        "name": "Профессиональный тариф",
+        "description": "Подходит для частных пользователей и небольших команд",
+        "feature_1": "Включает все функции бесплатного тарифа",
+        "feature_2": "Расширенная функция 1",
+        "feature_3": "Расширенная функция 2",
+        "feature_4": "Расширенная функция 3",
+        "feature_5": "Расширенная функция 4",
+        "feature_6": "Расширенная функция 5"
+      },
+      "enterprise": {
+        "name": "Корпоративный тариф",
+        "description": "Для крупных организаций и компаний",
+        "feature_1": "Включает все функции профессионального тарифа",
+        "feature_2": "Корпоративная функция 1",
+        "feature_3": "Корпоративная функция 2",
+        "feature_4": "Корпоративная функция 3",
+        "feature_5": "Корпоративная функция 4",
+        "feature_6": "Корпоративная функция 5"
+      }
+    }
+  }
+}

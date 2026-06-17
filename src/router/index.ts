@@ -1,6 +1,8 @@
-import { createRouter, createWebHistory } from "vue-router";
-import { useAuth } from "@clerk/vue";
-import { watch } from "vue";
+import { createRouter, createWebHashHistory } from "vue-router";
+import { useUserStore } from '@/store/modules/user'
+import { i18n } from '@/plugins/i18n'
+import { usePublicStore } from '@/store/modules/public'
+import { updateWebsiteMeta } from '@/lib/utils'
 
 export const routes = [
   {
@@ -9,38 +11,43 @@ export const routes = [
     component: () => import("@/views/Home.vue"),
     meta: {
       requiresAuth: false,
+      title: 'home.hero.title',
     },
   },
   {
-    path: "/navlink1",
-    name: "navlink1",
-    component: () => import("@/views/NavLink1.vue"),
+    path: "/api",
+    name: "Api",
+    component: () => import("@/views/ApiDoc.vue"),
     meta: {
       requiresAuth: false,
+      title: 'layouts.header.api',
     },
   },
   {
-    path: "/navlink2",
-    name: "navlink2",
-    component: () => import("@/views/NavLink2.vue"),
+    path: "/blog",
+    name: "blog",
+    component: () => import("@/views/Blog.vue"),
     meta: {
       requiresAuth: false,
+      title: 'pages.blog.hero.title',
     },
   },
   {
-    path: "/navlink3",
-    name: "navlink3",
-    component: () => import("@/views/NavLink3.vue"),
+    path: "/help",
+    name: "help",
+    component: () => import("@/views/Help.vue"),
     meta: {
       requiresAuth: false,
+      title: 'pages.help.hero.title',
     },
   },
   {
-    path: "/navlink4",
-    name: "navlink4",
-    component: () => import("@/views/NavLink4.vue"),
+    path: "/about",
+    name: "about",
+    component: () => import("@/views/About.vue"),
     meta: {
       requiresAuth: false,
+      title: 'pages.about.hero.title',
     },
   },
   {
@@ -49,6 +56,7 @@ export const routes = [
     component: () => import("@/views/SignUp.vue"),
     meta: {
       requiresAuth: false,
+      title: 'auth.sign_up.title',
     },
   },
   {
@@ -57,6 +65,7 @@ export const routes = [
     component: () => import("@/views/SignIn.vue"),
     meta: {
       requiresAuth: false,
+      title: 'auth.sign_in.title',
     },
   },
   {
@@ -70,6 +79,8 @@ export const routes = [
         component: () => import("@/views/Dashboard.vue"),
         meta: {
           requiresAuth: true,
+          title: 'navigation.dashboard',
+          keepAlive: true,
         },
       },
       {
@@ -78,6 +89,7 @@ export const routes = [
         component: () => import("@/views/PageOne.vue"),
         meta: {
           requiresAuth: true,
+          title: 'pages.page_one',
         },
       },
       {
@@ -86,6 +98,7 @@ export const routes = [
         component: () => import("@/views/settings/Profile.vue"),
         meta: {
           requiresAuth: true,
+          title: 'settings.profile.title',
         },
       },
       {
@@ -94,6 +107,117 @@ export const routes = [
         component: () => import("@/views/settings/Appearance.vue"),
         meta: {
           requiresAuth: true,
+          title: 'settings.appearance.title',
+        },
+      },
+      {
+        path: "settings/balance",
+        name: "settings-balance",
+        component: () => import("@/views/settings/Balance.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'pages.balancePage.title',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "settings/openapi",
+        name: "settings-openapi",
+        component: () => import("@/views/settings/OpenApi.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'pages.openApiPage.title',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "number-rental/receive-number",
+        name: "receive-number",
+        component: () => import("@/views/ReceiveNumber.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.receiveNumber',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "number-rental/release-number",
+        name: "release-number",
+        component: () => import("@/views/ReleaseNumber.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.releaseNumber',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "number-rental/blacklist-number",
+        name: "blacklist-number",
+        component: () => import("@/views/BlacklistNumber.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.blacklistNumber',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "package-subscription/package-orders",
+        name: "package-orders",
+        component: () => import("@/views/PackageOrders.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'pages.packageOrdersPage.title',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "package-subscription/subscribe-plan",
+        name: "subscribe-plan",
+        component: () => import("@/views/SubscribePlan.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'pages.subscribePlanPage.title',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "package-subscription/number-management",
+        name: "subscription-number-management",
+        component: () => import("@/views/SubscriptionNumberManagement.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'pages.subscriptionNumberManagementPage.title',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "order-management/my-orders",
+        name: "my-orders",
+        component: () => import("@/views/MyOrders.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.myOrders',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "order-management/order-download",
+        name: "order-download",
+        component: () => import("@/views/OrderDownload.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.orderDownload',
+          keepAlive: true,
+        },
+      },
+      {
+        path: "order-management/expense-statistics",
+        name: "expense-statistics",
+        component: () => import("@/views/ExpenseStatistics.vue"),
+        meta: {
+          requiresAuth: true,
+          title: 'navigation.expenseStatistics',
+          keepAlive: true,
         },
       },
       {
@@ -102,6 +226,7 @@ export const routes = [
         component: () => import("@/views/Billing.vue"),
         meta: {
           requiresAuth: true,
+          title: 'billing.title',
         },
       },
     ],
@@ -115,6 +240,7 @@ export const routes = [
     component: () => import("@/views/ResetPassword.vue"),
     meta: {
       requiresAuth: false,
+      title: 'auth.reset_password.title',
     },
   },
   {
@@ -122,8 +248,17 @@ export const routes = [
     redirect: "/app/dashboard",
   },
   {
+    path: "/404",
+    name: "not-found",
+    component: () => import("@/components/NotFound.vue"),
+    meta: {
+      requiresAuth: false,
+      title: 'notFound.title',
+    },
+  },
+  {
     path: "/:catchAll(.*)",
-    redirect: { name: "home" },
+    redirect: { name: "not-found" },
     meta: {
       requiresAuth: false,
     },
@@ -131,36 +266,31 @@ export const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
-// Navigation guard
-router.beforeEach(async (to, _, next) => {
-  const auth = useAuth();
+router.beforeEach((to) => {
+  const userStore = useUserStore()
 
-  // Wait for Clerk to load
-  if (!auth.isLoaded.value) {
-    await new Promise<void>((resolve) => {
-      const unwatch = watch(auth.isLoaded, (value) => {
-        if (value) {
-          unwatch();
-          resolve();
-        }
-      });
-    });
+  if (to.meta.requiresAuth && !userStore.isLogin) {
+    return { name: 'sign-in' }
   }
 
-  // After load, check auth state
-  if (to.meta.requiresAuth && !auth.isSignedIn.value) {
-    return next({ name: "sign-in" });
-  }
+  return true
+})
 
-  if (!to.meta.requiresAuth && auth.isSignedIn.value) {
-    return next({ name: "dashboard" });
-  }
+router.afterEach((to) => {
+  const titleKey = to.meta.title as string | undefined
+  if (!titleKey) return
 
-  return next();
-});
+  const publicStore = usePublicStore()
+  const siteName = publicStore.getConfigItem('site', 'siteName', '')
+  const title = i18n.global.t(titleKey)
+
+  updateWebsiteMeta({
+    title: siteName ? `${title} - ${siteName}` : title,
+  })
+})
 
 export default router;

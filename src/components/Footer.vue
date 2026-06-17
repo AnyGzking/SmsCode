@@ -2,11 +2,13 @@
 import Logo from '@/components/Logo.vue'
 import FooterSection from '@/components/footer/FooterSection.vue'
 import { footerConfig } from '@/components/footer/config'
+import { usePublicStore } from '@/store/modules/public'
 
-const { description, sections } = footerConfig
+const { sections } = footerConfig
 const mainSections = sections.slice(0, 3)
 const moreSections = sections.slice(3)
 const currentYear = new Date().getFullYear()
+const publicStore = usePublicStore()
 </script>
 
 <template>
@@ -19,10 +21,10 @@ const currentYear = new Date().getFullYear()
             <Logo :with-text="true" />
             <div class="flex flex-col gap-2 lg:gap-4">
               <p class="text-sm text-muted-foreground lg:max-w-[380px]">
-                {{ description.primary }}
+                {{ publicStore.getConfigItem('site', 'loginText') }}
               </p>
               <p class="text-sm text-muted-foreground lg:max-w-[380px]">
-                {{ description.secondary }}
+                {{ publicStore.getConfigItem('site', 'loginFuText') }}
               </p>
             </div>
           </div>
@@ -30,14 +32,14 @@ const currentYear = new Date().getFullYear()
           <!-- Main Sections -->
           <FooterSection
             v-for="section in mainSections"
-            :key="section.title"
+            :key="section.titleKey"
             :section="section"
           />
 
           <!-- More Sections - Hidden on small screens -->
           <FooterSection
             v-for="section in moreSections"
-            :key="section.title"
+            :key="section.titleKey"
             :section="section"
             class-name="flex-col gap-2 md:gap-4 flex sm:hidden md:flex"
           />
@@ -49,7 +51,7 @@ const currentYear = new Date().getFullYear()
             <p>
               © {{ currentYear }}
               <a href="#" class="hover:text-foreground transition-colors">
-                Starter
+               {{ publicStore.getConfigItem('site', 'enSiteName') }}
               </a>
               . All rights reserved
             </p>

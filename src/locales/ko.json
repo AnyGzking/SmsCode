@@ -1,0 +1,1708 @@
+{
+  "common": {
+    "success": "성공",
+    "error": "오류",
+    "save": "저장",
+    "cancel": "취소",
+    "submit": "제출",
+    "update": "업데이트",
+    "loading": "로딩 중...",
+    "all": "전체"
+  },
+  "layouts": {
+    "header": {
+      "home": "홈",
+      "api": "API",
+      "blog": "블로그",
+      "help": "도움말",
+      "about": "소개",
+      "signIn": "로그인"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "로그인 실패",
+      "authErr": "인증 실패",
+      "authErrToken": "토큰 갱신에 실패했습니다. 다시 로그인해 주세요.",
+      "authTimeOut": "로그인이 만료되었습니다. 다시 로그인해 주세요."
+    },
+    "failed": "요청 실패",
+    "network": "네트워크 오류"
+  },
+  "navigation": {
+    "dashboard": "대시보드",
+    "profile": "프로필",
+    "appearance": "외관",
+    "settings": "설정",
+    "balance": "잔액 센터",
+    "openapi": "OpenAPI",
+    "numberRental": "번호 임대",
+    "numberrental": "번호 임대",
+    "receiveNumber": "번호 받기",
+    "releaseNumber": "번호 해제",
+    "blacklistNumber": "번호 차단",
+    "packageSubscription": "패키지 구독",
+    "packagesubscription": "패키지 구독",
+    "packageOrders": "패키지 주문",
+    "subscribePlan": "패키지 구독 신청",
+    "subscriptionNumberManagement": "번호 관리",
+    "orderManagement": "주문 관리",
+    "ordermanagement": "주문 관리",
+    "myOrders": "내 주문",
+    "orderDownload": "주문 다운로드",
+    "expenseStatistics": "지출 통계",
+    "fundChanges": "자금 변동",
+    "apiSupport": "기술 지원",
+    "apiDoc": "API 문서"
+  },
+  "pages": {
+    "balancePage": {
+      "title": "잔액 센터",
+      "description": "계정 잔액, 동결 잔액, 총 잔액을 확인하고 자금 변동 내역을 조회합니다.",
+      "summary": {
+        "balance": "사용 가능 잔액",
+        "freezeBalance": "동결 잔액",
+        "totalBalance": "총 잔액",
+        "totalRecords": "총 기록 수",
+        "freezeAmount": "동결 금액",
+        "unfreezeAmount": "동결 해제 금액",
+        "consumptionAmount": "소비 금액"
+      },
+      "recharge": {
+        "title": "충전 센터",
+        "description": "결제 프로세스를 진행할 충전 금액을 선택하세요. 현재 결제 UI만 예약되어 있습니다.",
+        "preset": "금액 빠른 선택",
+        "custom": "사용자 지정 금액",
+        "placeholder": "충전 금액을 입력하세요",
+        "action": "결제하기",
+        "loading": "결제 중...",
+        "tip": "충전 시 수수료가 부과됩니다.",
+        "handlingFee": "수수료는 {{fee}} 입니다"
+      },
+      "records": {
+        "title": "잔액 변동 기록",
+        "filters": {
+          "orderNo": "주문 번호",
+          "remark": "비고",
+          "source": "출처",
+          "changeType": "변동 유형",
+          "startTime": "시작 시간",
+          "endTime": "종료 시간",
+          "timeRange": "시간 범위",
+          "selectTimeRange": "시간 범위를 선택하세요",
+          "search": "검색",
+          "reset": "초기화"
+        },
+        "table": {
+          "createTime": "시간",
+          "source": "출처",
+          "remark": "비고",
+          "orderNo": "주문 번호",
+          "changeAmount": "변동 금액",
+          "beforeBalance": "변동 전",
+          "afterBalance": "변동 후"
+        },
+        "empty": "기록이 없습니다",
+        "pagination": {
+          "prev": "이전",
+          "next": "다음",
+          "jump": "이동",
+          "page": "페이지"
+        },
+        "changeTypeOptions": {
+          "all": "전체",
+          "1": "충전",
+          "2": "소비",
+          "3": "환불",
+          "4": "출금",
+          "5": "조정",
+          "6": "동결",
+          "7": "동결 해제",
+          "8": "선물",
+          "9": "페널티"
+        },
+        "typeAmountLabels": {
+          "type1": "충전 통계",
+          "type2": "소비 통계",
+          "type3": "환불 통계",
+          "type4": "출금 통계",
+          "type5": "조정 통계",
+          "type6": "동결 통계",
+          "type7": "동결 해제 통계",
+          "type8": "선물 통계"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "패키지 주문",
+      "description": "패키지 구매 기록, 주문 상태 및 적용 현황을 확인합니다.",
+      "placeholderTitle": "패키지 주문 초기 템플릿",
+      "placeholderDescription": "현재 페이지 초기화가 완료되었으며, 이후 주문 목록, 필터, 상세 기능을 계속 확장할 수 있습니다.",
+      "filters": {
+        "orderNo": "주문번호",
+        "status": "상태",
+        "search": "조회",
+        "reset": "초기화",
+        "all": "전체"
+      },
+      "summary": {
+        "totalOrders": "전체 주문",
+        "activeOrders": "정상 주문",
+        "autoRenewOrders": "자동 갱신 주문",
+        "totalAmount": "총 금액"
+      },
+      "table": {
+        "orderNo": "주문번호",
+        "combo": "패키지 정보",
+        "duration": "구독 기간",
+        "phoneNumCount": "번호 수량",
+        "amount": "주문 금액",
+        "unitPrice": "단가",
+        "status": "주문 상태",
+        "autoRenew": "자동 갱신",
+        "tempToken": "임시 토큰",
+        "actions": "작업",
+        "timeInfo": "시간 정보",
+        "subscribeTime": "구독 시간",
+        "expireTime": "만료 시간"
+      },
+      "durationTypes": {
+        "day": "일",
+        "month": "월",
+        "year": "년"
+      },
+      "statusOptions": {
+        "0": "생성 중",
+        "1": "정상",
+        "2": "만료",
+        "3": "종료"
+      },
+      "autoRenew": {
+        "enabled": "사용",
+        "disabled": "미사용"
+      },
+      "actions": {
+        "renew": "수동 연장",
+        "viewNumbers": "번호 보기",
+        "receive": "수신",
+        "refreshTempToken": "토큰 새로고침"
+      },
+      "renewDialog": {
+        "title": "연장 내역",
+        "description": "연장 수량, 연장 기간, 자동 갱신 설정을 확인한 뒤 주문을 제출합니다.",
+        "plan": "패키지명",
+        "numberCount": "연장 번호 수량",
+        "duration": "연장 기간",
+        "autoRenew": "자동 갱신",
+        "autoRenewHint": "활성화하면 만료 시 이 설정으로 자동 연장을 시도합니다.",
+        "summary": "요금 내역",
+        "unitPrice": "단가",
+        "totalPrice": "총 금액",
+        "submitting": "연장 중..."
+      },
+      "numberSheet": {
+        "title": "구독 번호",
+        "description": "현재 패키지 주문과 연결된 번호 목록을 확인합니다."
+      },
+      "receiveDialog": {
+        "title": "콜백 URL 수신",
+        "description": "인증 코드를 받으면 이 URL로 콜백됩니다.",
+        "callbackUrl": "콜백 URL",
+        "placeholder": "콜백 URL을 입력하세요",
+        "save": "주소 저장",
+        "saving": "저장 중..."
+      },
+      "messages": {
+        "autoRenewUpdated": "자동 갱신 상태가 업데이트되었습니다",
+        "autoRenewFailed": "자동 갱신 상태 업데이트에 실패했습니다",
+        "renewSuccess": "패키지 연장에 성공했습니다",
+        "renewFailed": "패키지 연장에 실패했습니다",
+        "saveCallbackSuccess": "콜백 URL이 저장되었습니다",
+        "saveCallbackFailed": "콜백 URL 저장에 실패했습니다",
+        "tempTokenRefreshSuccess": "임시 토큰이 갱신되었습니다",
+        "tempTokenRefreshFailed": "임시 토큰 갱신에 실패했습니다"
+      },
+      "empty": "패키지 주문 기록이 없습니다",
+      "pagination": {
+        "prev": "이전",
+        "next": "다음",
+        "jump": "이동"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "패키지 구독 신청",
+      "description": "사용 가능한 패키지를 확인하고 구독 주문을 생성합니다.",
+      "placeholderTitle": "패키지 구독 초기 템플릿",
+      "placeholderDescription": "현재 페이지 초기화가 완료되었으며, 이후 패키지 카드, 구매 흐름, 갱신 기능을 추가할 수 있습니다.",
+      "filters": {
+        "title": "전용 패키지 필터",
+        "description": "국가와 구독 기간 유형으로 현재 계정에서 구독 가능한 패키지를 빠르게 조회합니다.",
+        "country": "국가",
+        "durationType": "구독 유형",
+        "allCountries": "전체 국가",
+        "allTypes": "전체 유형",
+        "search": "목록 새로고침",
+        "reset": "필터 초기화",
+        "placeholders": {
+          "searchCountry": "국가명 / 코드 / 국가번호 / ID 검색"
+        }
+      },
+      "types": {
+        "day": "일",
+        "week": "주",
+        "month": "월",
+        "year": "년"
+      },
+      "stats": {
+        "total": "전체 패키지",
+        "active": "구독 가능 패키지"
+      },
+      "status": {
+        "enabled": "구독 가능",
+        "disabled": "비활성"
+      },
+      "card": {
+        "country": "적용 국가",
+        "price": "패키지 가격",
+        "duration": "구독 기간",
+        "remark": "설명",
+        "createdTime": "생성 시간",
+        "updatedTime": "수정 시간",
+        "noRemark": "설명 없음",
+        "subscribe": "패키지 구독"
+      },
+      "dialog": {
+        "title": "구독 내역",
+        "description": "구독 수량, 기간, 자동 갱신 설정을 확인한 뒤 주문을 제출합니다.",
+        "plan": "패키지명",
+        "numberCount": "구독 번호 수량",
+        "duration": "구독 기간",
+        "autoRenew": "자동 갱신",
+        "autoRenewHint": "활성화하면 만료 시 현재 설정으로 자동 갱신을 시도합니다.",
+        "summary": "요금 내역",
+        "unitPrice": "단가",
+        "totalPrice": "총 금액",
+        "submitting": "구독 중..."
+      },
+      "empty": "현재 조건에 맞는 구독 패키지가 없습니다",
+      "messages": {
+        "loadFailed": "구독 패키지를 불러오지 못했습니다",
+        "createSuccess": "패키지 구독이 완료되었습니다",
+        "createFailed": "패키지 구독에 실패했습니다",
+        "invalidDuration": "올바른 구독 기간을 입력해 주세요",
+        "invalidNumberCount": "올바른 구독 번호 수량을 입력해 주세요"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "번호 관리",
+      "description": "구독 주문으로 배정된 번호를 관리하고 패키지 및 구독 주문과의 연관 관계를 확인합니다.",
+      "placeholderTitle": "번호 관리 초기 템플릿",
+      "placeholderDescription": "현재 페이지 초기화가 완료되었으며, 이후 배정 번호 목록, 배정 상태, 패키지 연결 및 작업 기능을 추가할 수 있습니다."
+    },
+    "subscriptionNumberList": {
+      "title": "구독 번호 목록",
+      "description": "주문번호로 패키지 주문에 연결된 번호를 조회하고 상태와 유효기간을 확인합니다.",
+      "filters": {
+        "title": "조회 조건",
+        "orderNo": "주문번호",
+        "search": "조회",
+        "reset": "초기화"
+      },
+      "export": {
+        "button": "번호 내보내기",
+        "loading": "내보내는 중...",
+        "successDescription": "내보내기에 성공했습니다. 다운로드 센터를 확인하세요.",
+        "failedDescription": "번호 내보내기에 실패했습니다. 나중에 다시 시도하세요."
+      },
+      "summary": {
+        "totalNumbers": "전체 번호 수"
+      },
+      "table": {
+        "orderNo": "주문번호",
+        "phone": "번호 정보",
+        "imsi": "IMSI",
+        "combo": "패키지 정보",
+        "status": "상태",
+        "timeInfo": "시간 정보",
+        "createdAt": "생성 시간",
+        "expireTime": "만료 시간",
+        "remark": "비고"
+      },
+      "statusOptions": {
+        "0": "생성 중",
+        "1": "정상",
+        "2": "만료",
+        "3": "종료"
+      },
+      "empty": "구독 번호 기록이 없습니다",
+      "pagination": {
+        "prev": "이전",
+        "next": "다음",
+        "jump": "이동"
+      }
+    },
+    "myOrdersPage": {
+      "title": "내 주문",
+      "description": "번호 주문 상태, 인증 코드 내용, 국가, 프로젝트 및 주문 정보를 확인합니다.",
+      "filters": {
+        "country": "국가",
+        "project": "프로젝트",
+        "status": "주문 상태",
+        "phone": "번호",
+        "orderNo": "주문 번호",
+        "timeRange": "시간 범위",
+        "startTime": "시작 시간",
+        "endTime": "종료 시간",
+        "search": "검색",
+        "reset": "초기화",
+        "all": "전체",
+        "searchCountry": "국가 검색",
+        "searchProject": "프로젝트 검색",
+        "selectTimeRange": "시간 범위를 선택하세요"
+      },
+      "summary": {
+        "totalOrders": "총 주문 수",
+        "successAmount": "성공 금액",
+        "failAmount": "실패 금액",
+        "totalAmount": "총 소비 금액"
+      },
+      "table": {
+        "orderNo": "주문 번호",
+        "country": "국가",
+        "project": "프로젝트",
+        "phone": "번호",
+        "price": "가격",
+        "status": "상태",
+        "codeNum": "인증 코드",
+        "smsContent": "SMS 내용",
+        "sourceType": "출처 유형",
+        "createTime": "생성 시간",
+        "updateTime": "업데이트 시간",
+        "timeInfo": "시간"
+      },
+      "sourceTypeOptions": {
+        "1": "사이트 내",
+        "2": "API",
+        "3": "구독 주문"
+      },
+      "statusOptions": {
+        "-1": "주문 무효",
+        "-2": "금액 공제 이상",
+        "1": "진행 중",
+        "2": "성공",
+        "3": "종료",
+        "4": "실패",
+        "99": "사전 입고"
+      },
+      "empty": "주문 기록이 없습니다",
+      "pagination": {
+        "prev": "이전",
+        "next": "다음",
+        "jump": "이동"
+      },
+      "export": {
+        "button": "주문 내보내기",
+        "loading": "내보내는 중...",
+        "successTitle": "내보내기 성공",
+        "successDescription": "내보내기에 성공했습니다. 주문 다운로드 센터에서 다운로드하세요.",
+        "failedTitle": "내보내기 실패",
+        "failedDescription": "주문 내보내기에 실패했습니다. 나중에 다시 시도해 주세요."
+      }
+    },
+    "orderDownloadPage": {
+      "title": "주문 다운로드 센터",
+      "description": "주문 내보내기 작업 상태, 쿼리 매개변수, 처리 결과를 확인하고 성공 후 파일을 다운로드합니다.",
+      "filters": {
+        "taskName": "작업 이름",
+        "status": "상태",
+        "startTime": "시작 시간",
+        "endTime": "종료 시간",
+        "timeRange": "시간 범위",
+        "selectTimeRange": "시간 범위를 선택하세요",
+        "search": "검색",
+        "reset": "초기화"
+      },
+      "summary": {
+        "totalTasks": "총 작업 수"
+      },
+      "table": {
+        "taskName": "작업 이름",
+        "status": "상태",
+        "admin": "제출자",
+        "errorMsg": "오류 메시지",
+        "createTime": "생성 시간",
+        "updateTime": "업데이트 시간",
+        "action": "작업",
+        "download": "다운로드"
+      },
+      "statusOptions": {
+        "0": "대기 중",
+        "1": "처리 중",
+        "2": "성공",
+        "3": "실패"
+      },
+      "messages": {
+        "waitTitle": "현재 다운로드 불가",
+        "waitDescription": "주문 처리가 완료될 때까지 기다린 후 다운로드하세요.",
+        "fileMissingTitle": "파일이 존재하지 않음",
+        "fileMissingDescription": "현재 작업에 다운로드할 파일이 없습니다."
+      },
+      "empty": "다운로드 작업이 없습니다",
+      "pagination": {
+        "prev": "이전",
+        "next": "다음",
+        "jump": "이동"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "지출 통계",
+      "description": "국가, 프로젝트, 시간 범위별 번호 소비 통계를 확인하고 다양한 상태의 수량을 요약합니다.",
+      "filters": {
+        "country": "국가",
+        "project": "프로젝트",
+        "timeRange": "시간 범위",
+        "startTime": "시작 시간",
+        "endTime": "종료 시간",
+        "selectTimeRange": "시간 범위를 선택하세요",
+        "search": "검색",
+        "reset": "초기화",
+        "all": "전체",
+        "searchCountry": "국가 검색",
+        "searchProject": "프로젝트 검색"
+      },
+      "summary": {
+        "status1": "요청 중 수량",
+        "status2": "성공 수량",
+        "status3": "해제됨 수량",
+        "status4": "차단됨 수량",
+        "totalCount": "총 번호 수"
+      },
+      "table": {
+        "getTime": "소비 시간",
+        "country": "국가 정보",
+        "project": "프로젝트 정보",
+        "status1": "요청 중",
+        "status2": "성공",
+        "status3": "해제됨",
+        "status4": "차단됨",
+        "totalCount": "총 번호 수"
+      },
+      "empty": "통계 데이터가 없습니다"
+    },
+    "releaseNumberPage": {
+      "title": "번호 해제",
+      "description": "시간, 번호, PKEY, 작업 결과별 필터링을 지원하는 번호 해제 로그를 확인합니다."
+    },
+    "blacklistNumberPage": {
+      "title": "번호 차단",
+      "description": "시간, 번호, PKEY, 작업 결과별 필터링을 지원하는 번호 차단 로그를 확인합니다."
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "번호",
+        "pkey": "PKEY",
+        "operationResult": "작업 결과",
+        "allResult": "모든 결과",
+        "timeRange": "시간 범위",
+        "selectTimeRange": "시간 범위를 선택하세요",
+        "search": "검색",
+        "reset": "초기화"
+      },
+      "table": {
+        "phone": "번호",
+        "pkey": "PKEY",
+        "operationResult": "작업 결과",
+        "remark": "비고",
+        "createTime": "작업 시간"
+      },
+      "operationResultOptions": {
+        "success": "성공",
+        "failed": "실패"
+      },
+      "summary": {
+        "totalLogs": "총 로그 수"
+      },
+      "empty": "로그 기록이 없습니다",
+      "pagination": {
+        "prev": "이전",
+        "next": "다음",
+        "jump": "이동"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "번호 받기",
+      "description": "프로젝트, 국가, SMS 유형을 선택하여 번호를 받고 인증 코드 결과를 자동으로 폴링합니다.",
+      "form": {
+        "title": "번호 가져오기",
+        "description": "프로젝트 채널 구성에 따라 국가 및 가격을 필터링합니다. 이전 번호 재사용을 지원합니다.",
+        "project": "프로젝트",
+        "country": "국가",
+        "type": "SMS 유형",
+        "mobile": "번호 지정",
+        "minPrice": "최소 가격:",
+        "submit": "지금 번호 받기",
+        "submitting": "가져오는 중...",
+        "types": {
+          "all": "모든 유형",
+          "sms": "표준 SMS",
+          "voice": "음성을 SMS로",
+          "incall": "수신 전화를 SMS로"
+        },
+        "placeholders": {
+          "project": "프로젝트를 선택하세요",
+          "country": "국가를 선택하세요",
+          "searchProject": "프로젝트 이름 / 코드 / ID 검색",
+          "searchCountry": "국가 이름 / 코드 / 지역 코드 / ID 검색",
+          "mobile": "이전 번호를 계속 사용하려면 여기에 입력하세요"
+        }
+      },
+      "currentPhone": {
+        "title": "현재 번호",
+        "description": "번호를 성공적으로 얻은 후 시스템이 인증 코드를 자동으로 폴링합니다.",
+        "empty": "아직 번호를 받지 못했습니다. 왼쪽에서 필터링을 완료하고 요청을 시작하세요.",
+        "phone": "번호",
+        "country": "국가",
+        "countryTel": "국가 지역 코드",
+        "port": "포트",
+        "getTime": "획득 시간",
+        "pkey": "PKEY",
+        "dock": "채널 식별자",
+        "polling": "인증 코드 폴링 중",
+        "pollingTip": "시스템이 10초마다 인증 코드 결과를 자동으로 가져옵니다.",
+        "ready": "폴링 대기 중"
+      },
+      "records": {
+        "title": "인증 코드 기록",
+        "description": "성공적으로 획득한 인증 코드가 여기에 표시됩니다. 번호를 계속 해제하거나 차단할 수 있습니다.",
+        "empty": "인증 코드 기록이 없습니다",
+        "columns": {
+          "phone": "번호",
+          "code": "인증 코드",
+          "smsContent": "SMS 내용",
+          "createTime": "획득 시간",
+          "actions": "작업"
+        },
+        "actions": {
+          "black": "차단",
+          "release": "해제"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "프로젝트 채널 구성을 가져오지 못했습니다",
+        "selectProject": "먼저 프로젝트를 선택하세요",
+        "selectCountry": "먼저 국가를 선택하세요",
+        "countryDataMissing": "현재 국가 정보가 누락되었습니다. 다시 선택하세요",
+        "phoneSuccessTitle": "번호 획득 성공",
+        "phoneSuccessDescription": "번호를 성공적으로 획득했으며 시스템이 인증 코드 자동 폴링을 시작했습니다.",
+        "phoneFailedDescription": "번호 획득 실패",
+        "codeSuccessTitle": "인증 코드 획득 성공",
+        "codeSuccessDescription": "인증 코드가 기록에 성공적으로 동기화되었습니다.",
+        "codeFailedDescription": "인증 코드 획득 실패",
+        "waitingCodeSilent": "인증 코드를 기다리는 중, 5초 후 재시도",
+        "blackSuccessTitle": "번호 차단됨",
+        "blackSuccessDescription": "현재 번호가 차단 목록에 추가되었습니다.",
+        "blackFailedDescription": "번호 차단 실패",
+        "releaseSuccessTitle": "번호 해제됨",
+        "releaseSuccessDescription": "현재 번호가 성공적으로 해제되었습니다.",
+        "releaseFailedDescription": "번호 해제 실패",
+        "refreshProjectSuccessTitle": "프로젝트 새로고침됨",
+        "refreshProjectSuccessDescription": "프로젝트 목록이 업데이트되었습니다.",
+        "refreshProjectFailedDescription": "프로젝트 목록 새로고침 실패"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "블로그 및 뉴스",
+        "title": "업계 동향, 실무 경험 및 연동 가이드",
+        "description": "인증 코드 수신, 프로젝트 연동, 리스크 제어 보호 및 채널 운영에 중점을 둡니다. 개발자 및 비즈니스 팀에 적합한 콘텐츠를 지속적으로 출력합니다."
+      },
+      "featured": {
+        "title": "주요 추천 문서",
+        "items": [
+          {
+            "title": "코드 수신 성공률을 높이는 방법",
+            "description": "국가, 프로젝트, 채널 스케줄링 및 인증 코드 폴링 전략의 차원에서 전반적인 수신 성능을 향상시킵니다."
+          },
+          {
+            "title": "더 안전한 이중 토큰 메커니즘을 설계하는 방법",
+            "description": "token과 refreshToken의 협력을 통해 인증 실패로 인한 비즈니스 중단 위험을 줄입니다."
+          },
+          {
+            "title": "수신 플랫폼에서 데이터 투명성이 중요한 이유",
+            "description": "주문 추적, 상태 역추적 및 이상 문제 해결의 관점에서 투명한 데이터 기능의 가치를 설명합니다."
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "도움말 센터",
+        "title": "자주 묻는 질문 및 빠른 지원",
+        "description": "비즈니스 연동, 인증, 번호 획득, 인증 코드 폴링 및 이상 문제 해결에서 자주 발생하는 문제를 요약하여 문제를 신속하게 파악하고 해결하도록 돕습니다."
+      },
+      "faq": {
+        "title": "자주 묻는 질문",
+        "items": [
+          {
+            "question": "왜 번호를 받을 수 없나요?",
+            "answer": "먼저 잔액, 프로젝트 상태, 해당 국가 프로젝트 사용 가능 여부, 현재 IP가 화이트리스트에 있는지 확인하세요."
+          },
+          {
+            "question": "왜 인증 코드가 반환되지 않나요?",
+            "answer": "번호 상태가 인증 코드 대기 단계에 진입했는지 확인하고 인터페이스 요구 사항에 따라 인증 코드를 정기적으로 폴링하세요. 필요한 경우 callbackUrl을 활성화하세요."
+          },
+          {
+            "question": "토큰이 만료되면 어떻게 해야 하나요?",
+            "answer": "refreshToken을 사용하여 새 토큰을 갱신하고 받으세요. refreshToken도 만료된 경우 인증 인터페이스를 통해 다시 인증해야 합니다."
+          },
+          {
+            "question": "왜 인터페이스가 차단되나요?",
+            "answer": "대부분의 경우 IP 화이트리스트가 구성되지 않았거나, 인증 정보 오류 또는 보안 방화벽 정책이 트리거되어 발생합니다."
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "회사 소개",
+        "title": "글로벌 번호 수신 및 인증 코드 연동 서비스에 집중",
+        "description": "우리는 더 안정적이고 투명하며 안전한 코드 수신 기능 플랫폼을 구축하여 개발자, 스튜디오 및 기업 팀에 신뢰할 수 있는 SMS 인증 코드 수신 서비스를 제공하기 위해 최선을 다하고 있습니다."
+      },
+      "seo": {
+        "title": "회사 소개",
+        "description": "당사의 플랫폼 철학, 서비스 기능 및 연락처 정보에 대해 알아보세요."
+      },
+      "values": {
+        "title": "우리의 철학",
+        "items": [
+          {
+            "title": "안정성 최우선",
+            "description": "다중 채널 스케줄링 및 리소스 통합을 통해 귀하의 비즈니스에 지속적으로 사용 가능한 번호 및 인증 코드 서비스를 제공합니다."
+          },
+          {
+            "title": "투명성과 신뢰성",
+            "description": "가격 투명성, 상태 투명성, 데이터 투명성을 준수하여 모든 API 호출을 추적할 수 있도록 보장합니다."
+          },
+          {
+            "title": "안전 및 제어 가능",
+            "description": "인증, 갱신 메커니즘, 방화벽 및 화이트리스트 정책을 통해 플랫폼과 고객 데이터의 보안을 보장합니다."
+          }
+        ]
+      },
+      "contacts": {
+        "title": "연락처",
+        "description": "채널 지원, 비즈니스 협력, API 연동 도움말 또는 기술 지원이 필요한 경우 다음 방법을 통해 팀에 문의할 수 있습니다.",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "텔레그램",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "OpenAPI 구성",
+      "description": "API 스위치, 화이트리스트 IP, APPID, 비밀 키 정보를 관리하고 연동 및 기술 지원 가이드를 확인합니다.",
+      "cards": {
+        "status": "API 상태",
+        "credentials": "API 자격 증명",
+        "whiteIp": "화이트리스트 IP",
+        "guide": "연동 가이드",
+        "support": "기술 지원"
+      },
+      "status": {
+        "enabled": "활성화됨",
+        "disabled": "비활성화됨",
+        "openButton": "지금 활성화",
+        "opening": "활성화 중...",
+        "hint": "계정에서 아직 API를 활성화하지 않은 경우 여기에서 직접 활성화할 수 있습니다."
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "API 키",
+        "copy": "복사",
+        "empty": "데이터 없음"
+      },
+      "whiteIp": {
+        "label": "화이트리스트 IP",
+        "placeholder": "화이트리스트 IP를 입력하세요 (여러 IP는 영문 쉼표로 구분)",
+        "helper": "서버의 송신 IP를 입력하는 것이 좋습니다. 구성되지 않은 IP는 보안 정책에 의해 차단될 수 있습니다.",
+        "save": "화이트리스트 저장",
+        "saving": "저장 중..."
+      },
+      "guide": {
+        "items": [
+          "연동 전에 APPID, API 키를 획득하고 화이트리스트 IP를 구성했는지 확인하세요.",
+          "글로벌 인터페이스에 JSON 요청 형식을 통일하여 사용하는 것이 좋습니다.",
+          "로그인 상태 관련 인터페이스를 위해 token 및 refreshToken을 안전하게 보관하세요."
+        ]
+      },
+      "support": {
+        "items": [
+          "연동 문제가 발생하면 원활한 문제 해결을 위해 요청 및 응답 메시지를 제공해 주세요.",
+          "인증 코드 수신이 비정상적인 경우 프로젝트, 국가, 콜백 주소 구성을 확인하세요.",
+          "채널 지원 또는 비즈니스 협력이 필요한 경우 '회사 소개' 페이지의 연락처 정보를 통해 팀에 문의하세요."
+        ]
+      },
+      "messages": {
+        "openSuccess": "OpenAPI가 성공적으로 활성화되었습니다",
+        "saveSuccess": "화이트리스트 IP가 성공적으로 저장되었습니다"
+      }
+    }
+  },
+  "dashboard_cards": {
+    "hero": {
+      "title": "비즈니스 대시보드 개요",
+      "description": "계정 상태, OpenAPI 활성화, 재무 개요, 시스템 지원 정보를 한눈에 확인합니다. 나중에 실시간 주문, 채널, 인증 코드 및 수익 상황판으로 확장할 수 있습니다."
+    },
+    "overview": {
+      "availableBalance": "사용 가능 잔액",
+      "availableBalanceDesc": "주문, 번호 획득 및 비즈니스 소비를 위해 현재 바로 사용할 수 있는 계정 잔액입니다.",
+      "todayAmount": "오늘 소비 금액",
+      "todayAmountDesc": "오늘의 주문을 기반으로 한 누적 소비 금액으로, 자금 사용 현황을 빠르게 파악할 수 있습니다.",
+      "freezeBalance": "동결 잔액",
+      "freezeBalanceDesc": "주문 처리 중이거나 정산 대기 단계에서 일시적으로 동결된 자금입니다.",
+      "totalBalance": "총 잔액",
+      "totalBalanceDesc": "총 계정 잔액 = 사용 가능 잔액 + 동결 잔액.",
+      "successRate": "주문 성공률",
+      "successRateDesc": "오늘의 주문을 기반으로 한 전체 성공률로, 현재 비즈니스 품질을 판단하는 데 사용됩니다.",
+      "waitingCodeCount": "코드 대기 수",
+      "waitingCodeCountDesc": "현재 아직 인증 코드를 기다리고 있는 휴대전화 수로, 처리 적시성을 판단하는 데 도움이 됩니다.",
+      "openApiStatus": "OpenAPI 상태",
+      "openApiEnabledDesc": "현재 계정은 API 기능이 활성화되어 있으며 직접 서버 연동을 수행할 수 있습니다.",
+      "openApiDisabledDesc": "현재 계정은 아직 API 기능이 활성화되지 않았습니다. OpenAPI 페이지에서 구성하는 것을 권장합니다."
+    },
+    "status": {
+      "enabled": "활성화됨",
+      "disabled": "비활성화됨",
+      "openApiEnabled": "OpenAPI 활성화됨",
+      "openApiDisabled": "OpenAPI 비활성화됨"
+    },
+    "account": {
+      "title": "계정 및 자격 증명",
+      "description": "현재 로그인된 계정의 기본 신원, 인터페이스 자격 증명 및 연동 상태를 표시합니다.",
+      "userName": "현재 사용자",
+      "appId": "APPID",
+      "email": "이메일",
+      "apiKey": "API 키"
+    },
+    "quickStats": {
+      "whiteIpCount": "화이트리스트 수",
+      "defaultCurrency": "통화 단위",
+      "supportTelegram": "텔레그램",
+      "siteName": "사이트 이름",
+      "todayOrders": "오늘의 주문",
+      "inUseCount": "사용 중인 번호"
+    },
+    "accountMetrics": {
+      "title": "연동 상태",
+      "openApi": "OpenAPI 기능",
+      "security": "화이트리스트 보안",
+      "billing": "총 잔액",
+      "support": "지원 이메일",
+      "whitelistReady": "화이트리스트 구성됨",
+      "whitelistMissing": "화이트리스트 구성되지 않음"
+    },
+    "business": {
+      "title": "비즈니스 상황판",
+      "description": "이곳의 구조는 현재 프로젝트의 비즈니스 모델을 기반으로 임시로 구축되었습니다. 백엔드는 자리 표시자 콘텐츠를 대체하기 위해 필드에 따라 실제 데이터만 반환하면 됩니다.",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "주문 개요",
+          "description": "오늘의 총 주문 수, 성공, 실패, 성공률, 총 소비 금액을 연동하고 7일 추세를 지원하는 것이 좋습니다."
+        },
+        {
+          "key": "numbers",
+          "title": "번호 비즈니스",
+          "description": "현재 번호 획득 수, 코드 대기 수, 해제 수, 차단 수 및 국가/프로젝트별 분포를 연동하는 것이 좋습니다."
+        },
+        {
+          "key": "channels",
+          "title": "채널 상태",
+          "description": "채널 가용률, 프로젝트에서 지원하는 국가 수, 비정상적인 채널 수, 평균 코드 검색 시간 및 기타 지표를 연동하는 것이 좋습니다."
+        },
+        {
+          "key": "security",
+          "title": "보안 및 연동",
+          "description": "OpenAPI 요청 볼륨, 화이트리스트 적중, 차단, 최근 API 예외 및 기타 데이터를 연동하는 것이 좋습니다."
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "잔액 비율",
+      "description": "사용 가능 잔액과 동결 잔액의 구조적 비율을 표시하여 자금 상태를 빠르게 파악할 수 있도록 돕습니다.",
+      "available": "사용 가능 잔액",
+      "freeze": "동결 잔액"
+    },
+    "orderRatio": {
+      "title": "주문 상태 비율",
+      "description": "오늘의 성공, 실패, 처리 중 주문의 분포를 비율로 표시합니다.",
+      "success": "성공 주문",
+      "fail": "실패 주문",
+      "processing": "처리 중"
+    },
+    "projectRatio": {
+      "title": "프로젝트 비율",
+      "description": "주요 프로젝트의 주문 또는 소비 비율을 표시하여 핵심 비즈니스를 쉽게 파악할 수 있도록 합니다.",
+      "successRate": "성공률:"
+    },
+    "countryRatio": {
+      "title": "국가 비율",
+      "description": "주요 국가의 비즈니스 비율과 성공률 성과를 표시합니다.",
+      "successRate": "성공률:"
+    },
+    "trend": {
+      "title": "7일 추세",
+      "description": "비즈니스 변화를 그래픽으로 표현하기 위해 백엔드에서 주문량, 성공률, 소비 금액의 추세를 반환하는 것이 좋습니다.",
+      "totalOrders": "오늘 총 주문",
+      "successRate": "오늘의 성공률",
+      "failCount": "오늘의 실패",
+      "latestWindow": "최근 7일 세부 정보",
+      "ordersUnit": "주문"
+    },
+    "todo": {
+      "title": "향후 연동이 권장되는 데이터 모듈",
+      "items": [
+        "오늘 / 어제 주문 비교",
+        "국가별 최고 성공률 순위",
+        "프로젝트별 소비 금액 순위",
+        "최근 7일간 번호 획득 및 수신 추세"
+      ]
+    },
+    "support": {
+      "title": "사이트 및 지원",
+      "description": "운영 및 기술 조정을 용이하게 하기 위해 사이트 이름과 연동 연락처 정보를 직접 표시합니다.",
+      "siteName": "사이트 이름",
+      "email": "연락처 이메일",
+      "telegram": "텔레그램",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "권장 백엔드 인터페이스 구조",
+      "description": "콘솔에 대한 요약 인터페이스(예: /admin/dashboard/summary)를 추가하여 다음 필드에 따라 데이터를 반환하는 것이 좋습니다.",
+      "columns": {
+        "name": "필드 이름",
+        "type": "유형",
+        "desc": "설명"
+      },
+      "fields": [
+        {
+          "name": "balance.available",
+          "type": "number|string",
+          "desc": "현재 사용 가능 잔액"
+        },
+        {
+          "name": "balance.freeze",
+          "type": "number|string",
+          "desc": "현재 동결 잔액"
+        },
+        {
+          "name": "balance.total",
+          "type": "number|string",
+          "desc": "총 잔액, 백엔드에서 직접 반환 가능"
+        },
+        {
+          "name": "orders.todayCount",
+          "type": "number",
+          "desc": "오늘의 총 주문"
+        },
+        {
+          "name": "orders.successCount",
+          "type": "number",
+          "desc": "성공 주문 수"
+        },
+        {
+          "name": "orders.failCount",
+          "type": "number",
+          "desc": "실패 주문 수"
+        },
+        {
+          "name": "orders.successRate",
+          "type": "number|string",
+          "desc": "성공률, 백분율 값 또는 형식화 가능한 숫자로 반환 권장"
+        },
+        {
+          "name": "orders.totalAmount",
+          "type": "number|string",
+          "desc": "주문의 총 소비 금액"
+        },
+        {
+          "name": "orders.processingCount",
+          "type": "number",
+          "desc": "주문 상태 비율 차트에 사용되는 처리 중 주문 수"
+        },
+        {
+          "name": "numbers.inUseCount",
+          "type": "number",
+          "desc": "현재 사용 중인 휴대전화 수"
+        },
+        {
+          "name": "numbers.waitingCodeCount",
+          "type": "number",
+          "desc": "인증 코드를 기다리는 휴대전화 수"
+        },
+        {
+          "name": "numbers.releaseCount",
+          "type": "number",
+          "desc": "오늘 해제된 휴대전화 수"
+        },
+        {
+          "name": "numbers.blacklistCount",
+          "type": "number",
+          "desc": "오늘 차단된 휴대전화 수"
+        },
+        {
+          "name": "channels.activeProjectCount",
+          "type": "number",
+          "desc": "현재 사용 가능한 프로젝트 수"
+        },
+        {
+          "name": "channels.activeCountryCount",
+          "type": "number",
+          "desc": "현재 사용 가능한 국가 수"
+        },
+        {
+          "name": "channels.abnormalChannelCount",
+          "type": "number",
+          "desc": "비정상 채널 수"
+        },
+        {
+          "name": "api.requestCountToday",
+          "type": "number",
+          "desc": "오늘의 API 요청 볼륨"
+        },
+        {
+          "name": "api.blockCountToday",
+          "type": "number",
+          "desc": "오늘의 차단 수"
+        },
+        {
+          "name": "trends.sevenDays",
+          "type": "array",
+          "desc": "7일 추세 배열, 각 항목에는 date, orderCount, successCount, amount가 포함될 수 있음"
+        },
+        {
+          "name": "projects.distribution",
+          "type": "array",
+          "desc": "프로젝트 분포 배열, 각 항목에 name, value, amount, successRate, color 포함 권장"
+        },
+        {
+          "name": "countries.distribution",
+          "type": "array",
+          "desc": "국가 분포 배열, 각 항목에 name, value, successRate, color 포함 권장"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "title": "설정",
+    "description": "계정 설정을 관리하고, 프로필, 비밀번호 및 시스템 디자인 테마를 수정합니다.",
+    "appearance": {
+      "title": "외관",
+      "description": "시스템 외관 맞춤 설정, 밝은/어두운 테마 자동 전환.",
+      "theme": {
+        "label": "테마",
+        "description": "대시보드 표시 테마 선택",
+        "light": "라이트 모드",
+        "dark": "다크 모드"
+      },
+      "language": {
+        "label": "언어",
+        "description": "기본 시스템 언어 선택",
+        "en": "영어",
+        "fr": "프랑스어",
+        "es": "스페인어",
+        "de": "독일어",
+        "pt": "포르투갈어",
+        "ru": "러시아어",
+        "ja": "일본어",
+        "ko": "한국어",
+        "zh": "중국어 간체"
+      }
+    },
+    "profile": {
+      "title": "프로필",
+      "description": "개인 정보 및 환경 설정 관리",
+      "personal_info": "기본 정보",
+      "personal_info_description": "기본 프로필 정보 수정",
+      "first_name": "이름",
+      "first_name_placeholder": "이름 입력",
+      "first_name_helper_text": "프로필에 표시되는 이름",
+      "last_name": "성",
+      "last_name_placeholder": "성 입력",
+      "last_name_helper_text": "프로필에 표시되는 성",
+      "username": "사용자 이름",
+      "username_placeholder": "사용자 이름 입력",
+      "username_helper_text": "공개적으로 표시되는 닉네임, 30일에 한 번만 변경 가능",
+      "email": "이메일",
+      "email_placeholder": "이메일 주소 입력",
+      "email_helper_text": "이메일은 인증 공급자가 중앙에서 관리하며 여기에서 변경할 수 없습니다.",
+      "update_profile": "프로필 저장",
+      "profile_updated": "프로필이 성공적으로 업데이트되었습니다",
+      "profile_update_failed": "프로필 업데이트에 실패했습니다. 나중에 다시 시도해 주세요.",
+      "password_section_title": "비밀번호 관리",
+      "password_section_description": "계정 보안을 보호하기 위해 정기적으로 비밀번호를 변경하세요",
+      "password_prompt": "로그인 비밀번호를 변경하려면 아래 버튼을 클릭하세요",
+      "change_password": "비밀번호 변경",
+      "current_password": "현재 비밀번호",
+      "current_password_placeholder": "현재 비밀번호 입력",
+      "new_password": "새 비밀번호",
+      "new_password_placeholder": "새 비밀번호 입력",
+      "new_password_helper_text": "비밀번호는 8자 이상이어야 합니다",
+      "confirm_password": "새 비밀번호 확인",
+      "confirm_password_placeholder": "새 비밀번호 다시 입력",
+      "update_password": "비밀번호 저장",
+      "password_updated": "비밀번호가 성공적으로 변경되었습니다",
+      "password_updated_description": "로그인 비밀번호가 업데이트되었습니다",
+      "password_update_failed": "비밀번호 변경 실패",
+      "current_password_required": "현재 비밀번호를 입력해 주세요",
+      "new_password_required": "새 비밀번호는 8자 이상 필요합니다",
+      "confirm_password_required": "확인을 위해 비밀번호를 다시 입력해 주세요",
+      "password_not_match": "두 새 비밀번호가 일치하지 않습니다",
+      "reverification_required": "재인증 필요",
+      "reverification_required_description": "보안상의 이유로 비밀번호를 변경하기 전에 로그아웃하고 다시 로그인해 주세요",
+      "current_password_incorrect": "현재 비밀번호가 올바르지 않습니다. 다시 시도해 주세요.",
+      "password_compromised": "이 비밀번호는 보안 침해의 위험이 있습니다. 다른 비밀번호를 선택하세요."
+    }
+  },
+  "dashboard": {
+    "title": "대시보드"
+  },
+  "home": {
+    "hero": {
+      "badge": "글로벌 SMS 수신 플랫폼",
+      "title": "투명하고 안정적이며 성공률이 높은 SMS 플랫폼",
+      "description": "인증 코드 수신 및 번호 서비스에 중점을 두고 투명한 가격, 투명한 데이터, 보안 보호, 풍부한 채널, 높은 성공률의 글로벌 SMS 기능을 제공하여 비즈니스 검증 프로세스를 보다 효율적으로 완료하도록 돕습니다.",
+      "cta": "지금 시작",
+      "secondary": "API 문서 보기"
+    },
+    "features": {
+      "title": "우리를 선택하는 이유",
+      "items": [
+        {
+          "title": "투명한 가격",
+          "description": "프로젝트 가격이 명확히 표시되며 숨겨진 비용이 없습니다. 번호 획득, 해제, 차단과 같은 작업이 직관적입니다."
+        },
+        {
+          "title": "데이터 투명성",
+          "description": "주문 상태, 코드 검색 및 번호 사용은 전체 프로세스에 걸쳐 완벽하게 추적 가능하여 감사 및 문제 해결을 용이하게 합니다."
+        },
+        {
+          "title": "보안 보호",
+          "description": "토큰 인증, 갱신 메커니즘 및 보안 방화벽 차단을 지원하여 API 액세스 및 비즈니스 데이터를 보호합니다."
+        },
+        {
+          "title": "풍부한 채널",
+          "description": "다국가, 다중 프로젝트 및 다중 채널 공급을 통해 다양한 비즈니스 시나리오 및 검증 요구에 유연하게 적응합니다."
+        },
+        {
+          "title": "높은 성공률",
+          "description": "안정적인 번호 리소스와 다중 채널 스케줄링 전략은 인증 코드 수신 성공률과 비즈니스 효율성을 효과적으로 향상시킵니다."
+        },
+        {
+          "title": "유연한 콜백",
+          "description": "능동적 폴링 및 콜백 푸시 모드를 모두 지원하여 자동화된 비즈니스 워크플로에 편리하게 통합할 수 있습니다."
+        }
+      ]
+    },
+    "stats": {
+      "title": "핵심 역량",
+      "items": [
+        {
+          "label": "가격 체계",
+          "value": "투명성 및 확인 가능"
+        },
+        {
+          "label": "채널 커버리지",
+          "value": "다국가 및 다중 프로젝트"
+        },
+        {
+          "label": "수신 모드",
+          "value": "폴링 + 콜백"
+        },
+        {
+          "label": "보안 기능",
+          "value": "방화벽 차단"
+        }
+      ]
+    }
+  },
+  "apiDoc": {
+    "hero": {
+      "title": "API 문서",
+      "description": "개발자가 이 플랫폼과 신속하게 연동하고 효율적이며 안정적인 서비스를 누릴 수 있도록 범용 API 문서를 제공합니다.",
+      "cta": "API 문서 보기"
+    },
+    "button": {
+      "start": "읽기 시작"
+    },
+    "toc": {
+      "title": "목차",
+      "introduction": "소개",
+      "authentication": "연동 전제 조건 및 인증",
+      "apiStandards": "범용 API 표준",
+      "responseFormat": "범용 응답 형식",
+      "apiList": "API 인터페이스 목록"
+    },
+    "sections": {
+      "introduction": {
+        "title": "소개",
+        "lead": "프로젝트 인터페이스를 사용하기 전에 다음 조건을 충족하는지 확인하세요:",
+        "items": [
+          "네트워크 요청에 대한 기본 지식 보유 😪",
+          "개발자 역량 보유 😨",
+          "이중 토큰 갱신 메커니즘에 익숙함 😥",
+          "디버그, 로그 쿼리 및 문제 해결 기능 보유 😁"
+        ],
+        "summary": "이 프로젝트는 비즈니스 기능 통합을 신속하게 실현하는 데 도움이 되는 범용 API 연동 솔루션을 제공하는 것을 목표로 합니다.",
+        "summaryTitle": "이 프로젝트는 범용 API여야 합니다",
+        "summaryItems": [
+          "고정된 요청 주소는 없습니다. 요청 주소는 귀하의 계정 주소에 따라 다릅니다.",
+          "보통 요청 주소는 현재 사용되는 IP / 도메인입니다.",
+          "개발 시 문서의 요구 사항을 엄격히 준수해 주세요.",
+          "기술 지원이 필요한 경우 문제를 설명하고 버그 재현 프로세스를 제시하며 요청 및 응답 메시지를 제공해 주세요."
+        ],
+        "note": "문서는 꽤 캐주얼하게 작성되었으니 살살 다뤄주세요 💔"
+      },
+      "authentication": {
+        "title": "연동 전제 조건 및 인증",
+        "lead": "연동 전에 대시보드 백엔드에서 APPID 및 apiKey 토큰을 획득해야 합니다:",
+        "items": [
+          "appid: 현재 사용되는 상인 / 사용자 ID.",
+          "apikey: 인터페이스 서명 또는 직접 인증을 위해 시스템에서 생성된 특정 암호화 키.",
+          "IP 화이트리스트: 서버의 아웃바운드 요청 IP로 구성되어야 합니다. 구성되지 않은 경우 방화벽에 의해 직접 차단됩니다.",
+          "여러 IP를 구성할 경우 영문 쉼표를 사용하여 구분해 주세요."
+        ]
+      },
+      "apiStandards": {
+        "title": "범용 API 표준",
+        "items": [
+          "요청 주소: 고정된 요청 주소가 없습니다. 요청 주소는 할당된 계정 주소(보통 현재 사용되는 IP / 도메인)에 따라 다릅니다.",
+          "요청 방법: 전역적으로 POST 방법이 사용됩니다. GET 방법은 허용되지 않습니다(문서에 달리 명시되지 않은 한).",
+          "요청 유형: 요청 헤더 Content-Type은 엄격하게 application/json으로 지정되어야 합니다.",
+          "명명 규칙: 대부분의 데이터 반환 필드는 camelCase 명명을 사용합니다. 그렇지 않은 경우 특정 인터페이스 문서에 특별히 명시됩니다."
+        ],
+        "baseUrlLabel": "현재 환경 요청 주소"
+      },
+      "responseFormat": {
+        "title": "범용 응답 형식",
+        "lead": "모든 인터페이스는 표준 JSON 형식 데이터를 반환합니다. 'code' 상태 코드를 기반으로 비즈니스 처리가 성공했는지 확인합니다.",
+        "successTitle": "성공 응답",
+        "errorTitle": "오류 응답",
+        "note": "참고: 코드가 200/0이 아닌 경우 보통 비즈니스 또는 시스템 예외가 발생했음을 의미합니다. 문제 해결을 위해 'msg' 필드를 참조하세요."
+      },
+      "apiList": {
+        "title": "API 인터페이스 목록",
+        "lead": "아래는 현재 열려 있는 핵심 인터페이스입니다. 호출 순서에 따라 연동하는 것이 좋습니다.",
+        "summaryTitle": "요약",
+        "authTitle": "인증",
+        "contentTypeTitle": "Content-Type",
+        "paramsTitle": "요청 매개변수",
+        "responseTitle": "응답 예시",
+        "table": {
+          "name": "매개변수 이름",
+          "type": "유형",
+          "required": "필수",
+          "description": "설명",
+          "example": "예시"
+        },
+        "requiredYes": "예",
+        "requiredNo": "아니요",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "토큰 획득",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "API 내의 모든 작업에 대해 이 인터페이스를 통해 token 및 refreshToken을 얻어야 합니다. 이 인터페이스는 POST/GET 매개변수 전달 및 form-data/json 입력을 지원합니다. 일관되게 json을 사용하는 것이 좋습니다.",
+            "auth": "아니요",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "현재 사용되는 계정 ID",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "플랫폼에서 생성된 apiKey",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"토큰을 성공적으로 획득했습니다\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "토큰 갱신",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "이 인터페이스는 GET/POST 요청을 지원하며 refreshToken 매개변수를 사용합니다. form-data/json을 지원합니다. 성공적인 갱신 후 새 토큰과 새 refreshToken을 받게 됩니다.",
+            "auth": "아니요",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "로그인 후 저장된 갱신 토큰",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"작업 성공\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "계정 정보 가져오기",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "사용자의 계정 정보를 가져옵니다. 필요한 경우 요청 헤더에 Authorization을 전달하세요. 토큰은 Bearer {Token} 접두사를 동반할 수 있습니다.",
+            "auth": "예",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "사용자 로그인 후 획득한 토큰, Bearer 접두사 지원",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"사용자 정보를 성공적으로 가져왔습니다\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "국가 및 지역 라이브러리",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "시스템 내 주소 정보 라이브러리를 가져옵니다. 국가 라이브러리는 일반적으로 크게 변경되지 않으므로 로컬에 저장하는 것이 좋습니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "선택적 토큰 요청 헤더",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"국가 목록을 성공적으로 가져왔습니다\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"Uzbekistan\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "활성 프로젝트 가져오기",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "현재 사용 가능한 온라인 프로젝트를 가져옵니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "선택적 토큰 요청 헤더",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"프로젝트 목록을 성공적으로 가져왔습니다\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "휴대전화 번호 획득",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "휴대전화 번호를 가져옵니다. form-data/json을 지원합니다. 번호를 획득한 후 상태가 인증 코드 대기 중으로 변경됩니다. 이 때 인증 코드 가져오기 인터페이스를 호출해야 합니다. 새로 추가된 반환 필드 orderNo는 인증 코드를 가져올 때 전달되어야 합니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "국가 ID, 프로젝트의 country 필드에 해당",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "프로젝트 ID",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "이전 번호를 계속 사용하려는 경우 전달 가능",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "번호 유형, 옵션은 sms / voice / incall. 'all' 또는 비워 둘 수도 있음",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "SMS 콜백 주소",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"번호 획득 성공, 잔액 동결됨\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "인증 코드 획득",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "form-data/json을 지원합니다. 이 인터페이스는 인증 코드를 얻기 위해 정기적인 폴링이 필요합니다. code=200을 반환한 후 해당 코드는 이후에 반복해서 반환되지 않습니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "번호 가져오기 인터페이스에서 반환된 고유 주문 번호",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "번호 가져오기 인터페이스에서 반환된 휴대전화 번호",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "번호 가져오기 인터페이스에서 반환된 pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"인증 코드 획득 성공, 요금 차감됨\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"SMS 내용\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "번호 해제",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "form-data/json을 지원합니다. 인터페이스 소비자는 추가 요금을 피하기 위해 능동적으로 해제 인터페이스를 호출할 수 있습니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "해제할 주문 번호",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "해제할 휴대전화 번호",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "해제할 pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"성공적으로 해제되었습니다\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "번호 차단",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "form-data/json을 지원합니다. 인터페이스 소비자는 이 인터페이스를 호출하여 번호를 차단할 수 있으며, 해당 번호는 이후에 검색되지 않습니다.",
+            "auth": "선택 사항",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "차단할 주문 번호",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "차단할 휴대전화 번호",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "차단할 pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"성공적으로 차단되었습니다\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "SMS 콜백 푸시",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "번호를 획득할 때 callbackUrl을 전달하세요. 나중에 운영자로부터 SMS가 수신되면 시스템이 이 주소로 능동적으로 푸시합니다.",
+            "auth": "비즈니스 측에서 제공하는 URL",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"SMS 내용\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "제품",
+        "items": {
+          "smsPlatform": "SMS 플랫폼",
+          "apiDocs": "API 문서",
+          "dashboard": "대시보드",
+          "pricing": "요금제"
+        }
+      },
+      "support": {
+        "title": "지원",
+        "items": {
+          "helpCenter": "도움말 센터",
+          "integrationGuide": "연동 가이드",
+          "faq": "자주 묻는 질문"
+        }
+      },
+      "company": {
+        "title": "회사",
+        "items": {
+          "about": "회사 소개",
+          "blog": "블로그 및 뉴스",
+          "contact": "연락처",
+          "terms": "서비스 약관",
+          "privacy": "개인정보 보호정책"
+        }
+      },
+      "resources": {
+        "title": "리소스",
+        "items": {
+          "countryLibrary": "국가 및 지역 라이브러리",
+          "projectList": "프로젝트 목록",
+          "callbackDocs": "콜백 문서",
+          "statusPage": "시스템 상태",
+          "security": "보안 성명"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없음",
+    "description": "죄송합니다. 방문하신 페이지가 존재하지 않거나 삭제되었습니다.",
+    "backHome": "홈으로 돌아가기"
+  },
+  "auth": {
+    "sign_in_success": "다시 오신 것을 환영합니다!",
+    "sign_in_success_description": "성공적으로 로그인되었습니다",
+    "sign_in_failed": "로그인 실패",
+    "sign_up_success": "계정이 성공적으로 등록되었습니다!",
+    "sign_up_success_description": "시스템에 오신 것을 환영합니다",
+    "sign_up_failed": "등록 실패",
+    "sign_out_success": "로그아웃됨",
+    "sign_out_success_description": "현재 계정에서 안전하게 로그아웃되었습니다",
+    "sign_out_failed": "로그아웃 실패",
+    "verification_code_sent": "인증 코드 전송됨",
+    "verification_code_sent_description": "이메일에서 인증 코드를 확인하세요",
+    "verification_code_resent": "인증 코드 재전송됨",
+    "verification_code_resent_description": "새로운 인증 코드가 이메일로 전송되었습니다",
+    "verification_failed": "인증 실패",
+    "verification_success": "이메일 인증 성공",
+    "verification_success_description": "이메일이 성공적으로 연동되고 인증되었습니다",
+    "captcha": {
+      "label": "그래픽 캡차",
+      "placeholder": "캡차 입력",
+      "image_alt": "캡차 이미지",
+      "loading": "로딩 중...",
+      "required": "캡차를 입력해 주세요"
+    },
+    "logout": {
+      "button": "로그아웃",
+      "title": "로그아웃",
+      "description": "현재 계정에서 로그아웃하시겠습니까?",
+      "loading": "로그아웃 중...",
+      "confirm": "로그아웃 확인"
+    },
+    "sign_in": {
+      "title": "로그인을 환영합니다",
+      "description": "계속하려면 로그인하세요",
+      "verify_title": "신원 확인",
+      "verify_description": "이메일로 전송된 인증 코드를 입력하세요",
+      "verify_new_device": "새로운 기기 로그인입니다. 신원 확인이 필요합니다.",
+      "account_label": "이메일 / 사용자 이름",
+      "account_placeholder": "이메일 또는 사용자 이름 입력",
+      "email_label": "이메일",
+      "password_label": "로그인 비밀번호",
+      "password_placeholder": "비밀번호 입력",
+      "remember_password": "비밀번호 저장",
+      "verification_code_label": "인증 코드",
+      "verification_code_placeholder": "인증 코드 입력",
+      "sign_in_button": "로그인",
+      "signing_in": "로그인 중...",
+      "verify_button": "확인",
+      "verifying": "확인 중...",
+      "resend_code": "코드를 받지 못하셨나요? 클릭하여 재전송",
+      "no_account": "계정이 없으신가요?",
+      "sign_up_link": "지금 등록하기",
+      "forgot_password": "비밀번호를 잊으셨나요?",
+      "reset_password_link": "비밀번호 재설정",
+      "second_factor_required": "이중 인증이 필요합니다. 현재 이메일 인증 서비스를 이용할 수 없습니다.",
+      "unexpected_status": "비정상적인 로그인 상태"
+    },
+    "sign_up": {
+      "title": "계정 등록",
+      "description": "계정을 빠르게 등록하여 전체 시스템 기능을 경험하세요",
+      "verify_title": "이메일 인증",
+      "verify_description": "등록을 완료하려면 이메일 인증 코드를 입력하세요",
+      "first_name_label": "이름",
+      "first_name_placeholder": "이름 입력",
+      "last_name_label": "성",
+      "last_name_placeholder": "성 입력",
+      "username_label": "사용자 이름",
+      "username_placeholder": "사용자 이름 입력",
+      "email_label": "이메일",
+      "password_label": "비밀번호 설정",
+      "password_placeholder": "비밀번호 입력",
+      "verification_code_label": "인증 코드",
+      "verification_code_placeholder": "인증 코드 입력",
+      "sign_up_button": "등록",
+      "signing_up": "등록 중...",
+      "verify_button": "이메일 확인",
+      "verifying": "확인 중...",
+      "resend_code": "코드를 받지 못하셨나요? 클릭하여 재전송",
+      "have_account": "이미 계정이 있으신가요?",
+      "sign_in_link": "로그인으로 이동",
+      "forgot_password": "비밀번호를 잊으셨나요?",
+      "reset_password_link": "비밀번호 재설정"
+    },
+    "reset_password": {
+      "title": "비밀번호 찾기",
+      "description": "이메일을 입력하여 인증 코드를 받고 비밀번호를 재설정하세요",
+      "reset_title": "비밀번호 재설정",
+      "reset_description": "이메일 인증 코드를 입력하고 새 비밀번호를 설정하세요",
+      "email_label": "이메일 주소",
+      "code_label": "인증 코드",
+      "code_placeholder": "이메일로 받은 인증 코드를 입력하세요",
+      "new_password_label": "새 비밀번호",
+      "new_password_placeholder": "새 비밀번호를 설정해 주세요",
+      "send_code_button": "인증 코드 전송",
+      "sending": "전송 중...",
+      "reset_button": "재설정 확인",
+      "resetting": "재설정 중...",
+      "resend_code": "코드를 받지 못하셨나요? 클릭하여 재전송",
+      "remember_password": "비밀번호가 기억나셨나요?",
+      "sign_in_link": "로그인으로 돌아가기"
+    }
+  },
+  "password_reset": {
+    "code_sent": "재설정 코드 전송됨",
+    "code_sent_description": "비밀번호 재설정 인증 코드가 이메일로 전송되었습니다",
+    "code_resent": "재설정 코드 재전송됨",
+    "code_resent_description": "새로운 비밀번호 재설정 인증 코드가 전송되었습니다",
+    "reset_success": "비밀번호가 성공적으로 재설정되었습니다",
+    "reset_success_description": "비밀번호가 재설정되었습니다. 로그인 페이지로 이동합니다...",
+    "reset_failed": "비밀번호 재설정 실패"
+  },
+  "profile": {
+    "title": "개인 센터",
+    "description": "프로필 보기 및 관리",
+    "first_name": "이름",
+    "last_name": "성",
+    "username": "사용자 이름",
+    "member_since": "가입일",
+    "edit_profile": "프로필 편집"
+  },
+  "balance": {
+    "title": "자금 계정"
+  },
+  "billing": {
+    "title": "결제 및 구독",
+    "description": "플랜 구독 및 청구 결제 관리",
+    "current_plan": "현재 플랜",
+    "current_plan_description": "현재 사용 중인 서비스 플랜",
+    "available_plans": "사용 가능한 플랜",
+    "month": "월",
+    "features": "플랜 기능",
+    "recommended": "추천",
+    "upgrade": "지금 업그레이드",
+    "payment_method": "결제 방법",
+    "payment_method_description": "기본 결제 계정 관리",
+    "no_payment_method": "아직 추가된 결제 방법이 없습니다",
+    "add_payment_method": "결제 방법 추가",
+    "add_payment_method_description": "프리미엄 플랜으로 업그레이드하려면 결제 계정을 연동하세요",
+    "billing_history": "결제 내역",
+    "billing_history_description": "이전 주문 및 소비 청구서 보기",
+    "no_invoices": "청구서 없음",
+    "no_invoices_description": "유료 주문이 생성된 후 기록이 여기에 표시됩니다",
+    "plans": {
+      "free": {
+        "name": "무료 플랜",
+        "description": "초보자가 시작하기에 적합합니다",
+        "feature_1": "기본 기능 1",
+        "feature_2": "기본 기능 2",
+        "feature_3": "기본 기능 3",
+        "feature_4": "기본 기능 4"
+      },
+      "pro": {
+        "name": "프로 플랜",
+        "description": "개인 및 소규모 팀에 적합합니다",
+        "feature_1": "무료 플랜의 모든 기능 포함",
+        "feature_2": "고급 기능 1",
+        "feature_3": "고급 기능 2",
+        "feature_4": "고급 기능 3",
+        "feature_5": "고급 기능 4",
+        "feature_6": "고급 기능 5"
+      },
+      "enterprise": {
+        "name": "엔터프라이즈 플랜",
+        "description": "대규모 조직 및 기업 대상",
+        "feature_1": "프로 플랜의 모든 기능 포함",
+        "feature_2": "엔터프라이즈 전용 기능 1",
+        "feature_3": "엔터프라이즈 전용 기능 2",
+        "feature_4": "엔터프라이즈 전용 기능 3",
+        "feature_5": "엔터프라이즈 전용 기능 4",
+        "feature_6": "엔터프라이즈 전용 기능 5"
+      }
+    }
+  }
+}

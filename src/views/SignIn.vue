@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>
+  <MainLayout>
     <SignIn />
   </MainLayout>
 </template>

@@ -1,88 +1,959 @@
 {
   "common": {
+    "success": "Succès",
+    "error": "Erreur",
     "save": "Enregistrer",
     "cancel": "Annuler",
     "submit": "Soumettre",
     "update": "Mettre à jour",
     "loading": "Chargement...",
-    "search": "Rechercher",
-    "selected_rows": "Ligne(s) sélectionnées",
-    "rows_per_page": "Lignes par page"
+    "all": "Tout"
+  },
+  "layouts": {
+    "header": {
+      "home": "Accueil",
+      "api": "API",
+      "blog": "Blog",
+      "help": "Aide",
+      "about": "À propos",
+      "signIn": "Se connecter"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "Échec de la connexion",
+      "authErr": "Échec de l'authentification",
+      "authErrToken": "Échec du rafraîchissement du token, veuillez vous reconnecter",
+      "authTimeOut": "Session expirée, veuillez vous reconnecter"
+    },
+    "failed": "Requête échouée",
+    "network": "Erreur réseau"
   },
   "navigation": {
     "dashboard": "Tableau de bord",
-    "profile": "Profil",
+    "profile": "Profil personnel",
     "appearance": "Apparence",
-    "settings": "Paramètres"
+    "settings": "Paramètres système",
+    "balance": "Centre de solde",
+    "openapi": "OpenAPI",
+    "numberRental": "Location de numéros",
+    "numberrental": "Location de numéros",
+    "receiveNumber": "Recevoir/Envoyer",
+    "releaseNumber": "Libérer le numéro",
+    "blacklistNumber": "Liste noire",
+    "packageSubscription": "Abonnement aux forfaits",
+    "packagesubscription": "Abonnement aux forfaits",
+    "packageOrders": "Commandes de forfaits",
+    "subscribePlan": "Souscrire un forfait",
+    "subscriptionNumberManagement": "Gestion des numéros",
+    "orderManagement": "Gestion des commandes",
+    "ordermanagement": "Gestion des commandes",
+    "myOrders": "Mes commandes",
+    "orderDownload": "Téléchargement",
+    "expenseStatistics": "Statistiques de consommation",
+    "fundChanges": "Mouvements de fonds",
+    "apiSupport": "Support technique",
+    "apiDoc": "Documentation API"
   },
   "pages": {
-    "page_one": "Page Une"
+    "balancePage": {
+      "title": "Centre de solde",
+      "description": "Consultez votre solde disponible, gelé, total et l'historique des transactions.",
+      "summary": {
+        "balance": "Solde disponible",
+        "freezeBalance": "Solde gelé",
+        "totalBalance": "Solde total",
+        "totalRecords": "Total des enregistrements",
+        "freezeAmount": "Montant gelé",
+        "unfreezeAmount": "Montant dégelé",
+        "consumptionAmount": "Montant consommé"
+      },
+      "recharge": {
+        "title": "Centre de recharge",
+        "description": "Choisissez un montant pour procéder au paiement (UI de test uniquement).",
+        "preset": "Montants rapides",
+        "custom": "Montant personnalisé",
+        "placeholder": "Entrez le montant de la recharge",
+        "action": "Payer",
+        "loading": "Paiement en cours...",
+        "tip": "Des frais de traitement s'appliquent à la recharge.",
+        "handlingFee": "Les frais de traitement sont de {{fee}}"
+      },
+      "records": {
+        "title": "Historique des mouvements",
+        "filters": {
+          "orderNo": "N° de commande",
+          "remark": "Remarque",
+          "source": "Source",
+          "changeType": "Type de mouvement",
+          "startTime": "Date de début",
+          "endTime": "Date de fin",
+          "timeRange": "Plage horaire",
+          "selectTimeRange": "Veuillez choisir une plage horaire",
+          "search": "Rechercher",
+          "reset": "Réinitialiser"
+        },
+        "table": {
+          "createTime": "Heure",
+          "source": "Source",
+          "remark": "Remarque",
+          "orderNo": "N° de commande",
+          "changeAmount": "Montant",
+          "beforeBalance": "Avant",
+          "afterBalance": "Après"
+        },
+        "empty": "Aucun enregistrement",
+        "pagination": {
+          "prev": "Précédent",
+          "next": "Suivant",
+          "jump": "Aller à",
+          "page": "Page"
+        },
+        "changeTypeOptions": {
+          "all": "Tout",
+          "1": "Recharge",
+          "2": "Consommation",
+          "3": "Remboursement",
+          "4": "Retrait",
+          "5": "Ajustement",
+          "6": "Gel",
+          "7": "Dégel",
+          "8": "Cadeau",
+          "9": "Pénalité"
+        },
+        "typeAmountLabels": {
+          "type1": "Stats recharge",
+          "type2": "Stats consommation",
+          "type3": "Stats remboursement",
+          "type4": "Stats retrait",
+          "type5": "Stats ajustement",
+          "type6": "Stats gel",
+          "type7": "Stats dégel",
+          "type8": "Stats cadeau"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "Commandes de forfaits",
+      "description": "Consultez les achats de forfaits, l'état des commandes et leur activation.",
+      "placeholderTitle": "Modèle initial des commandes de forfaits",
+      "placeholderDescription": "La page est initialisée et pourra ensuite accueillir la liste des commandes, les filtres et les détails.",
+      "filters": {
+        "orderNo": "N° de commande",
+        "status": "Statut",
+        "search": "Rechercher",
+        "reset": "Réinitialiser",
+        "all": "Tous"
+      },
+      "summary": {
+        "totalOrders": "Total des commandes",
+        "activeOrders": "Commandes actives",
+        "autoRenewOrders": "Renouvellement auto",
+        "totalAmount": "Montant total"
+      },
+      "table": {
+        "orderNo": "N° de commande",
+        "combo": "Forfait",
+        "duration": "Durée",
+        "phoneNumCount": "Qté de numéros",
+        "amount": "Montant",
+        "unitPrice": "Prix unitaire",
+        "status": "Statut",
+        "autoRenew": "Renouvellement auto",
+        "tempToken": "Jeton temporaire",
+        "actions": "Actions",
+        "timeInfo": "Informations de temps",
+        "subscribeTime": "Date d'abonnement",
+        "expireTime": "Date d'expiration"
+      },
+      "durationTypes": {
+        "day": "Jour",
+        "month": "Mois",
+        "year": "An"
+      },
+      "statusOptions": {
+        "0": "Création",
+        "1": "Actif",
+        "2": "Expiré",
+        "3": "Terminé"
+      },
+      "autoRenew": {
+        "enabled": "Activé",
+        "disabled": "Désactivé"
+      },
+      "actions": {
+        "renew": "Renouveler",
+        "viewNumbers": "Voir les numéros",
+        "receive": "Adresse de réception",
+        "refreshTempToken": "Rafraîchir le jeton"
+      },
+      "renewDialog": {
+        "title": "Récapitulatif du renouvellement",
+        "description": "Confirmez la quantité, la durée et le renouvellement automatique avant d'envoyer la commande.",
+        "plan": "Nom du forfait",
+        "numberCount": "Quantité de numéros",
+        "duration": "Durée du renouvellement",
+        "autoRenew": "Renouvellement automatique",
+        "autoRenewHint": "Une fois activé, le renouvellement sera tenté automatiquement à l'échéance selon cette configuration.",
+        "summary": "Récapitulatif du prix",
+        "unitPrice": "Prix unitaire",
+        "totalPrice": "Prix total",
+        "submitting": "Renouvellement..."
+      },
+      "numberSheet": {
+        "title": "Numéros abonnés",
+        "description": "Consultez la liste des numéros liés à la commande de forfait actuelle."
+      },
+      "receiveDialog": {
+        "title": "Adresse de rappel",
+        "description": "Lorsque le code de vérification est reçu, il sera rappelé vers cette adresse.",
+        "callbackUrl": "Adresse de rappel",
+        "placeholder": "Veuillez saisir l'adresse de rappel",
+        "save": "Enregistrer l'adresse",
+        "saving": "Enregistrement..."
+      },
+      "messages": {
+        "autoRenewUpdated": "Le statut du renouvellement automatique a été mis à jour",
+        "autoRenewFailed": "Échec de la mise à jour du renouvellement automatique",
+        "renewSuccess": "Renouvellement réussi",
+        "renewFailed": "Échec du renouvellement",
+        "saveCallbackSuccess": "Adresse de rappel enregistrée avec succès",
+        "saveCallbackFailed": "Échec de l'enregistrement de l'adresse de rappel",
+        "tempTokenRefreshSuccess": "Jeton temporaire actualisé",
+        "tempTokenRefreshFailed": "Échec de l'actualisation du jeton temporaire"
+      },
+      "empty": "Aucune commande de forfait",
+      "pagination": {
+        "prev": "Précédent",
+        "next": "Suivant",
+        "jump": "Aller"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "Souscrire un forfait",
+      "description": "Consultez les forfaits disponibles et créez des commandes d'abonnement.",
+      "placeholderTitle": "Modèle initial d'abonnement",
+      "placeholderDescription": "La page est initialisée et pourra ensuite intégrer les cartes de forfait, le parcours d'achat et le renouvellement.",
+      "filters": {
+        "title": "Filtres des forfaits exclusifs",
+        "description": "Filtrez les forfaits disponibles pour votre compte par pays et type de durée d'abonnement.",
+        "country": "Pays",
+        "durationType": "Type d'abonnement",
+        "allCountries": "Tous les pays",
+        "allTypes": "Tous les types",
+        "search": "Actualiser la liste",
+        "reset": "Réinitialiser les filtres",
+        "placeholders": {
+          "searchCountry": "Rechercher par nom / code / indicatif / ID"
+        }
+      },
+      "types": {
+        "day": "Jour",
+        "week": "Semaine",
+        "month": "Mois",
+        "year": "An"
+      },
+      "stats": {
+        "total": "Total des forfaits",
+        "active": "Forfaits disponibles"
+      },
+      "status": {
+        "enabled": "Disponible",
+        "disabled": "Désactivé"
+      },
+      "card": {
+        "country": "Pays concerné",
+        "price": "Prix du forfait",
+        "duration": "Période d'abonnement",
+        "remark": "Description",
+        "createdTime": "Créé le",
+        "updatedTime": "Mis à jour le",
+        "noRemark": "Aucune description",
+        "subscribe": "Souscrire"
+      },
+      "dialog": {
+        "title": "Récapitulatif d'abonnement",
+        "description": "Confirmez la quantité, la durée et le renouvellement automatique avant de soumettre la commande.",
+        "plan": "Nom du forfait",
+        "numberCount": "Quantité de numéros",
+        "duration": "Durée d'abonnement",
+        "autoRenew": "Renouvellement automatique",
+        "autoRenewHint": "Une fois activé, le renouvellement sera tenté automatiquement à l'échéance avec la configuration actuelle.",
+        "summary": "Récapitulatif du prix",
+        "unitPrice": "Prix unitaire",
+        "totalPrice": "Prix total",
+        "submitting": "Abonnement en cours..."
+      },
+      "empty": "Aucun forfait ne correspond aux filtres actuels",
+      "messages": {
+        "loadFailed": "Échec du chargement des forfaits d'abonnement",
+        "createSuccess": "Abonnement créé avec succès",
+        "createFailed": "Échec de la création de l'abonnement",
+        "invalidDuration": "Veuillez saisir une durée d'abonnement valide",
+        "invalidNumberCount": "Veuillez saisir une quantité de numéros valide"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "Gestion des numéros",
+      "description": "Gérez les numéros attribués par les commandes d'abonnement et leur association avec les forfaits et commandes.",
+      "placeholderTitle": "Modèle initial de gestion des numéros",
+      "placeholderDescription": "La page est initialisée et pourra ensuite intégrer la liste des numéros attribués, l'état d'affectation, les liaisons aux forfaits et les opérations."
+    },
+    "subscriptionNumberList": {
+      "title": "Liste des numéros abonnés",
+      "description": "Recherchez les numéros liés aux commandes de forfait via le numéro de commande et consultez leur statut et validité.",
+      "filters": {
+        "title": "Filtres",
+        "orderNo": "N° de commande",
+        "search": "Rechercher",
+        "reset": "Réinitialiser"
+      },
+      "actions": {
+        "renew": "Renouveler",
+        "viewNumbers": "Voir les numéros",
+        "receive": "Recevoir",
+        "refreshTempToken": "Actualiser le jeton temporaire"
+      },
+      "export": {
+        "button": "Exporter les numéros",
+        "loading": "Exportation...",
+        "successDescription": "Export réussi, veuillez consulter le centre de téléchargement.",
+        "failedDescription": "L'export des numéros a échoué, veuillez réessayer plus tard."
+      },
+      "summary": {
+        "totalNumbers": "Total des numéros"
+      },
+      "table": {
+        "orderNo": "N° de commande",
+        "phone": "Infos numéro",
+        "imsi": "IMSI",
+        "combo": "Infos forfait",
+        "status": "Statut",
+        "timeInfo": "Informations de temps",
+        "createdAt": "Créé le",
+        "expireTime": "Expire le",
+        "remark": "Remarque"
+      },
+      "statusOptions": {
+        "0": "Création",
+        "1": "Actif",
+        "2": "Expiré",
+        "3": "Terminé"
+      },
+      "numberSheet": {
+        "title": "Numéros abonnés",
+        "description": "Affichez les numéros attribués à la commande de forfait actuelle."
+      },
+      "receiveDialog": {
+        "title": "URL de rappel",
+        "description": "Lorsqu'un code de vérification est obtenu, il sera renvoyé à cette URL.",
+        "callbackUrl": "URL de rappel"
+      },
+      "empty": "Aucun numéro abonné",
+      "pagination": {
+        "prev": "Précédent",
+        "next": "Suivant",
+        "jump": "Aller"
+      }
+    },
+    "myOrdersPage": {
+      "title": "Mes commandes",
+      "description": "Suivez l'état de vos numéros, codes SMS, pays et projets.",
+      "filters": {
+        "country": "Pays",
+        "project": "Projet",
+        "status": "État",
+        "phone": "Numéro",
+        "orderNo": "N° de commande",
+        "timeRange": "Plage horaire",
+        "startTime": "Date début",
+        "endTime": "Date fin",
+        "search": "Rechercher",
+        "reset": "Réinitialiser",
+        "all": "Tout",
+        "searchCountry": "Chercher un pays",
+        "searchProject": "Chercher un projet",
+        "selectTimeRange": "Choisir une plage"
+      },
+      "summary": {
+        "totalOrders": "Total commandes",
+        "successAmount": "Montant réussi",
+        "failAmount": "Montant échoué",
+        "totalAmount": "Consommation totale"
+      },
+      "table": {
+        "orderNo": "N° de commande",
+        "country": "Pays",
+        "project": "Projet",
+        "phone": "Numéro",
+        "price": "Prix",
+        "status": "État",
+        "codeNum": "Code",
+        "smsContent": "Contenu SMS",
+        "sourceType": "Source",
+        "createTime": "Création",
+        "updateTime": "Mise à jour",
+        "timeInfo": "Temps"
+      },
+      "sourceTypeOptions": {
+        "1": "Interne",
+        "2": "API"
+      },
+      "statusOptions": {
+        "-1": "注文無効",
+        "-2": "減額異常",
+        "1": "進行中",
+        "2": "成功",
+        "3": "終了",
+        "4": "失敗",
+        "99": "事前入庫"
+      },
+      "empty": "Aucune commande trouvée",
+      "pagination": {
+        "prev": "Précédent",
+        "next": "Suivant",
+        "jump": "Aller à"
+      },
+      "export": {
+        "button": "Exporter",
+        "loading": "Exportation...",
+        "successTitle": "Export réussi",
+        "successDescription": "Fichier prêt dans le centre de téléchargement.",
+        "failedTitle": "Échec de l'export",
+        "failedDescription": "Erreur lors de l'exportation, réessayez."
+      }
+    },
+    "orderDownloadPage": {
+      "title": "Centre de téléchargement",
+      "description": "Gérez vos tâches d'exportation et téléchargez vos fichiers.",
+      "filters": {
+        "taskName": "Nom de la tâche",
+        "status": "État",
+        "startTime": "Date début",
+        "endTime": "Date fin",
+        "timeRange": "Plage horaire",
+        "selectTimeRange": "Choisir une plage",
+        "search": "Rechercher",
+        "reset": "Réinitialiser"
+      },
+      "summary": {
+        "totalTasks": "Total des tâches"
+      },
+      "table": {
+        "taskName": "Nom de la tâche",
+        "status": "État",
+        "admin": "Utilisateur",
+        "errorMsg": "Erreur",
+        "createTime": "Création",
+        "updateTime": "Mise à jour",
+        "action": "Action",
+        "download": "Télécharger"
+      },
+      "statusOptions": {
+        "0": "En attente",
+        "1": "En traitement",
+        "2": "Succès",
+        "3": "Échec"
+      },
+      "messages": {
+        "waitTitle": "Indisponible",
+        "waitDescription": "Veuillez attendre la fin du traitement.",
+        "fileMissingTitle": "Fichier absent",
+        "fileMissingDescription": "Aucun fichier trouvé pour cette tâche."
+      },
+      "empty": "Aucune tâche de téléchargement",
+      "pagination": {
+        "prev": "Précédent",
+        "next": "Suivant",
+        "jump": "Aller à"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "Statistiques de consommation",
+      "description": "Analyse de la consommation par pays, projet et période.",
+      "filters": {
+        "country": "Pays",
+        "project": "Projet",
+        "timeRange": "Plage horaire",
+        "startTime": "Date début",
+        "endTime": "Date fin",
+        "selectTimeRange": "Choisir une plage",
+        "search": "Rechercher",
+        "reset": "Réinitialiser",
+        "all": "Tout",
+        "searchCountry": "Chercher pays",
+        "searchProject": "Chercher projet"
+      },
+      "summary": {
+        "status1": "En demande",
+        "status2": "Réussi",
+        "status3": "Libéré",
+        "status4": "Liste noire",
+        "totalCount": "Total numéros"
+      },
+      "table": {
+        "getTime": "Date",
+        "country": "Pays",
+        "project": "Projet",
+        "status1": "En demande",
+        "status2": "Réussi",
+        "status3": "Libéré",
+        "status4": "Liste noire",
+        "totalCount": "Total"
+      },
+      "empty": "Aucune donnée statistique"
+    },
+    "releaseNumberPage": {
+      "title": "Libérer les numéros",
+      "description": "Historique des libérations de numéros avec filtres par PKEY et résultat."
+    },
+    "blacklistNumberPage": {
+      "title": "Numéros en liste noire",
+      "description": "Historique des numéros bannis avec filtres par PKEY et résultat."
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "Numéro",
+        "pkey": "PKEY",
+        "operationResult": "Résultat",
+        "allResult": "Tous les résultats",
+        "timeRange": "Plage horaire",
+        "selectTimeRange": "Choisir une plage",
+        "search": "Rechercher",
+        "reset": "Réinitialiser"
+      },
+      "table": {
+        "phone": "Numéro",
+        "pkey": "PKEY",
+        "operationResult": "Résultat",
+        "remark": "Remarque",
+        "createTime": "Heure"
+      },
+      "operationResultOptions": {
+        "success": "Succès",
+        "failed": "Échec"
+      },
+      "summary": {
+        "totalLogs": "Total des logs"
+      },
+      "empty": "Aucun log trouvé",
+      "pagination": {
+        "prev": "Précédent",
+        "next": "Suivant",
+        "jump": "Aller à"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "Réception de numéros",
+      "description": "Obtenez un numéro par projet/pays et attendez le code SMS automatiquement.",
+      "form": {
+        "title": "Obtenir un numéro",
+        "description": "Filtrez par canal, pays et prix. Réutilisation possible.",
+        "project": "Projet",
+        "country": "Pays",
+        "type": "Type de SMS",
+        "mobile": "Numéro spécifique",
+        "minPrice": "Prix min :",
+        "submit": "Obtenir maintenant",
+        "submitting": "Obtention...",
+        "types": {
+          "all": "Tous les types",
+          "sms": "SMS classique",
+          "voice": "Vocal vers SMS",
+          "incall": "Appel vers SMS"
+        },
+        "placeholders": {
+          "project": "Sélectionnez un projet",
+          "country": "Sélectionnez un pays",
+          "searchProject": "Nom / Code / ID du projet",
+          "searchCountry": "Nom / Code / Indicatif / ID",
+          "mobile": "Laissez vide ou entrez l'ancien numéro"
+        }
+      },
+      "currentPhone": {
+        "title": "Numéro actuel",
+        "description": "Le système interroge automatiquement le code après obtention.",
+        "empty": "Aucun numéro actif. Utilisez le formulaire à gauche.",
+        "phone": "Numéro",
+        "country": "Pays",
+        "countryTel": "Indicatif",
+        "port": "Port",
+        "getTime": "Heure d'obtention",
+        "pkey": "PKEY",
+        "dock": "ID Canal",
+        "polling": "Attente du code SMS...",
+        "pollingTip": "Interrogation automatique toutes les 10 secondes.",
+        "ready": "En attente"
+      },
+      "records": {
+        "title": "Historique récent",
+        "description": "Les codes reçus s'affichent ici. Vous pouvez libérer ou bannir.",
+        "empty": "Aucun historique récent",
+        "columns": {
+          "phone": "Numéro",
+          "code": "Code",
+          "smsContent": "Contenu",
+          "createTime": "Heure",
+          "actions": "Actions"
+        },
+        "actions": {
+          "black": "Bannir",
+          "release": "Libérer"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "Erreur config projet",
+        "selectProject": "Veuillez choisir un projet",
+        "selectCountry": "Veuillez choisir un pays",
+        "countryDataMissing": "Données pays manquantes",
+        "phoneSuccessTitle": "Numéro obtenu",
+        "phoneSuccessDescription": "Numéro prêt, attente du code activée.",
+        "phoneFailedDescription": "Échec de l'obtention du numéro",
+        "codeSuccessTitle": "Code reçu",
+        "codeSuccessDescription": "Le code a été ajouté à l'historique.",
+        "codeFailedDescription": "Échec de réception du code",
+        "waitingCodeSilent": "Attente... Nouvelle tentative dans 5s",
+        "blackSuccessTitle": "Numéro banni",
+        "blackSuccessDescription": "Numéro ajouté à la liste noire.",
+        "blackFailedDescription": "Échec de la mise en liste noire",
+        "releaseSuccessTitle": "Numéro libéré",
+        "releaseSuccessDescription": "Numéro libéré avec succès.",
+        "releaseFailedDescription": "Échec de la libération",
+        "refreshProjectSuccessTitle": "Projets mis à jour",
+        "refreshProjectSuccessDescription": "Liste des projets actualisée.",
+        "refreshProjectFailedDescription": "Échec de l'actualisation"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "Blog & Actualités",
+        "title": "Tendances, expériences et guides d'intégration",
+        "description": "Focus sur la réception SMS, la protection contre les risques et la gestion des canaux."
+      },
+      "featured": {
+        "title": "Articles à la une",
+        "items": [
+          {
+            "title": "Optimiser le taux de succès",
+            "description": "Stratégies basées sur le pays, le projet et le polling SMS."
+          },
+          {
+            "title": "Sécurité du mécanisme Double Token",
+            "description": "Comment utiliser token et refreshToken pour éviter les interruptions."
+          },
+          {
+            "title": "L'importance de la transparence",
+            "description": "Valeur du suivi des commandes et de l'analyse des anomalies."
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "Centre d'aide",
+        "title": "FAQ et Support rapide",
+        "description": "Solutions aux problèmes fréquents d'authentification, d'obtention de numéro et de polling."
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "items": [
+          {
+            "question": "Pourquoi aucun numéro n'est disponible ?",
+            "answer": "Vérifiez votre solde, l'état du projet et si votre IP est en liste blanche."
+          },
+          {
+            "question": "Pourquoi le code ne s'affiche pas ?",
+            "answer": "Assurez-vous d'être en phase d'attente et utilisez callbackUrl si nécessaire."
+          },
+          {
+            "question": "Que faire si le Token expire ?",
+            "answer": "Utilisez le refreshToken. S'il expire aussi, reconnectez-vous."
+          },
+          {
+            "question": "Pourquoi l'API est-elle bloquée ?",
+            "answer": "Souvent dû à une IP non autorisée ou une erreur d'authentification."
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "À propos de nous",
+        "title": "Expert en services SMS mondiaux",
+        "description": "Nous bâtissons une plateforme stable, transparente et sécurisée pour les développeurs."
+      },
+      "seo": {
+        "title": "À propos de nous",
+        "description": "Découvrez notre philosophie et nos services."
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "items": [
+          {
+            "title": "Priorité Stabilité",
+            "description": "Disponibilité continue via une gestion multi-canaux."
+          },
+          {
+            "title": "Transparence Totale",
+            "description": "Prix, états et données clairs pour chaque appel API."
+          },
+          {
+            "title": "Sécurité Contrôlée",
+            "description": "Protection des données via authentification et pare-feu."
+          }
+        ]
+      },
+      "contacts": {
+        "title": "Contactez-nous",
+        "description": "Pour tout support commercial ou technique, utilisez les canaux ci-dessous.",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "Telegram",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "Configuration OpenAPI",
+      "description": "Gérez vos accès API, IP autorisées, APPID et clés secrètes.",
+      "cards": {
+        "status": "État API",
+        "credentials": "Identifiants",
+        "whiteIp": "Liste blanche IP",
+        "guide": "Guide d'intégration",
+        "support": "Support technique"
+      },
+      "status": {
+        "enabled": "Activé",
+        "disabled": "Désactivé",
+        "openButton": "Activer maintenant",
+        "opening": "Activation...",
+        "hint": "Si votre compte n'a pas encore d'accès API, activez-le ici."
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "Clé API",
+        "copy": "Copier",
+        "empty": "Aucune donnée"
+      },
+      "whiteIp": {
+        "label": "IP autorisées",
+        "placeholder": "Entrez les IP séparées par des virgules",
+        "helper": "Utilisez l'IP de sortie de votre serveur pour éviter les blocages.",
+        "save": "Enregistrer la liste",
+        "saving": "Enregistrement..."
+      },
+      "guide": {
+        "items": [
+          "Vérifiez votre APPID, Clé API et IP avant de commencer.",
+          "Utilisez le format JSON pour toutes les requêtes globales.",
+          "Conservez précieusement vos tokens d'authentification."
+        ]
+      },
+      "support": {
+        "items": [
+          "Fournissez les logs de requête/réponse en cas de problème.",
+          "Vérifiez la config pays/projet si les codes ne sont pas reçus.",
+          "Contactez-nous pour des partenariats ou besoins spécifiques."
+        ]
+      },
+      "messages": {
+        "openSuccess": "OpenAPI activé avec succès",
+        "saveSuccess": "Liste blanche mise à jour"
+      }
+    }
   },
   "dashboard_cards": {
-    "stat_card_title": "Carte de Tableau de Bord",
-    "stat_card_subtitle": "Ajoutez vos statistiques ici",
-    "main_card_title": "Contenu Principal",
-    "main_card_subtitle": "Ajoutez votre contenu principal ici",
-    "side_card_title": "Contenu Secondaire",
-    "side_card_subtitle": "Ajoutez des informations supplémentaires ici"
+    "hero": {
+      "title": "Vue d'ensemble",
+      "description": "État du compte, accès API, aperçu financier et support système."
+    },
+    "overview": {
+      "availableBalance": "Solde disponible",
+      "availableBalanceDesc": "Montant utilisable immédiatement pour vos commandes.",
+      "todayAmount": "Consommation du jour",
+      "todayAmountDesc": "Cumul des dépenses basées sur les commandes d'aujourd'hui.",
+      "freezeBalance": "Solde gelé",
+      "freezeBalanceDesc": "Fonds en attente de règlement ou liés à des commandes en cours.",
+      "totalBalance": "Solde total",
+      "totalBalanceDesc": "Solde total = Disponible + Gelé.",
+      "successRate": "Taux de succès",
+      "successRateDesc": "Performance globale des commandes du jour.",
+      "waitingCodeCount": "En attente de code",
+      "waitingCodeCountDesc": "Numéros actifs attendant actuellement un SMS.",
+      "openApiStatus": "État OpenAPI",
+      "openApiEnabledDesc": "L'API est active pour l'intégration serveur.",
+      "openApiDisabledDesc": "API non active. Configurez-la dans la page OpenAPI."
+    },
+    "status": {
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "openApiEnabled": "OpenAPI activé",
+      "openApiDisabled": "OpenAPI désactivé"
+    },
+    "account": {
+      "title": "Compte & Identifiants",
+      "description": "Identité de l'utilisateur et accès API.",
+      "userName": "Utilisateur",
+      "appId": "APPID",
+      "email": "Email",
+      "apiKey": "Clé API"
+    },
+    "quickStats": {
+      "whiteIpCount": "Nombre d'IP",
+      "defaultCurrency": "Devise",
+      "supportTelegram": "Telegram",
+      "siteName": "Nom du site",
+      "todayOrders": "Commandes (Jour)",
+      "inUseCount": "Numéros utilisés"
+    },
+    "accountMetrics": {
+      "title": "État de l'accès",
+      "openApi": "Capacité OpenAPI",
+      "security": "Sécurité IP",
+      "billing": "Solde total",
+      "support": "Email support",
+      "whitelistReady": "IP configurées",
+      "whitelistMissing": "IP manquantes"
+    },
+    "business": {
+      "title": "Cockpit d'activité",
+      "description": "Structure métier prête pour les données réelles du backend.",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "Vue Commandes",
+          "description": "Commandes du jour, succès, échecs et tendances sur 7 jours."
+        },
+        {
+          "key": "numbers",
+          "title": "Activité Numéros",
+          "description": "En cours, en attente, libérés et liste noire par pays/projet."
+        },
+        {
+          "key": "channels",
+          "title": "État Canaux",
+          "description": "Disponibilité, pays supportés et temps de réponse moyen."
+        },
+        {
+          "key": "security",
+          "title": "Sécurité & API",
+          "description": "Volume de requêtes, hits liste blanche et blocages."
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "Répartition solde",
+      "description": "Visualisation du solde disponible vs gelé.",
+      "available": "Disponible",
+      "freeze": "Gelé"
+    },
+    "orderRatio": {
+      "title": "État des commandes",
+      "description": "Répartition des succès, échecs et traitements du jour.",
+      "success": "Réussies",
+      "fail": "Échouées",
+      "processing": "En cours"
+    },
+    "projectRatio": {
+      "title": "Part par projet",
+      "description": "Volume de commandes ou consommation par projet principal.",
+      "successRate": "Taux de succès :"
+    },
+    "countryRatio": {
+      "title": "Part par pays",
+      "description": "Analyse de l'activité par pays majeur.",
+      "successRate": "Taux de succès :"
+    },
+    "trend": {
+      "title": "Tendance (7 jours)",
+      "description": "Évolution graphique des commandes et de la consommation.",
+      "totalOrders": "Total (Aujourd'hui)",
+      "successRate": "Succès (Aujourd'hui)",
+      "failCount": "Échecs (Aujourd'hui)",
+      "latestWindow": "Détails sur 7 jours",
+      "ordersUnit": "cmd"
+    },
+    "todo": {
+      "title": "Modules suggérés",
+      "items": [
+        "Comparaison Aujourd'hui / Hier",
+        "Top Pays par taux de succès",
+        "Classement consommation par projet",
+        "Flux de numéros sur 7 jours"
+      ]
+    },
+    "support": {
+      "title": "Site & Support",
+      "description": "Contacts directs pour l'assistance technique.",
+      "siteName": "Nom du site",
+      "email": "Email contact",
+      "telegram": "Telegram",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "Structure API suggérée",
+      "description": "Format de retour recommandé pour /admin/dashboard/summary.",
+      "columns": {
+        "name": "Champ",
+        "type": "Type",
+        "desc": "Description"
+      },
+      "fields": [
+        { "name": "balance.available", "type": "number|string", "desc": "Solde disponible" },
+        { "name": "balance.freeze", "type": "number|string", "desc": "Solde gelé" },
+        { "name": "balance.total", "type": "number|string", "desc": "Solde total" },
+        { "name": "orders.todayCount", "type": "number", "desc": "Total commandes jour" },
+        { "name": "orders.successCount", "type": "number", "desc": "Commandes réussies" },
+        { "name": "orders.failCount", "type": "number", "desc": "Commandes échouées" },
+        { "name": "orders.successRate", "type": "number|string", "desc": "Taux de réussite (%)" },
+        { "name": "orders.totalAmount", "type": "number|string", "desc": "Montant total consommé" },
+        { "name": "orders.processingCount", "type": "number", "desc": "Commandes en cours" },
+        { "name": "numbers.inUseCount", "type": "number", "desc": "Numéros actifs" },
+        { "name": "numbers.waitingCodeCount", "type": "number", "desc": "Numéros attendant code" },
+        { "name": "numbers.releaseCount", "type": "number", "desc": "Libérés aujourd'hui" },
+        { "name": "numbers.blacklistCount", "type": "number", "desc": "Bannis aujourd'hui" },
+        { "name": "channels.activeProjectCount", "type": "number", "desc": "Projets actifs" },
+        { "name": "channels.activeCountryCount", "type": "number", "desc": "Pays actifs" },
+        { "name": "channels.abnormalChannelCount", "type": "number", "desc": "Canaux anormaux" },
+        { "name": "api.requestCountToday", "type": "number", "desc": "Requêtes API jour" },
+        { "name": "api.blockCountToday", "type": "number", "desc": "Interceptions jour" },
+        { "name": "trends.sevenDays", "type": "array", "desc": "Données sur 7 jours" },
+        { "name": "projects.distribution", "type": "array", "desc": "Répartition projets" },
+        { "name": "countries.distribution", "type": "array", "desc": "Répartition pays" }
+      ]
+    }
   },
   "settings": {
     "title": "Paramètres",
-    "description": "Gérez les paramètres de votre compte. Mettez à jour votre profil, changez votre mot de passe et personnalisez l'apparence de l'application.",
-    "profile": {
-      "title": "Profile",
-      "description": "Gérez les paramètres de votre profil. Mettez à jour vos informations personnelles et vos préférences.",
-      "personal_info": "Informations personnelles",
-      "personal_info_description": "Mettez à jour vos informations de profil de base.",
-      "username": "Nom d'utilisateur",
-      "username_placeholder": "Entrez votre nom d'utilisateur",
-      "username_helper_text": "C'est votre nom d'affichage public. Cela peut être votre vrai nom ou un pseudonyme. Vous ne pouvez le changer qu'une fois tous les 30 jours.",
-      "email_placeholder": "Entrez votre adresse e-mail",
-      "email": "Email",
-      "email_helper_text": "Vous pouvez gérer les adresses e-mail vérifiées dans vos paramètres de messagerie.",
-      "bio_helper_text": "Écrivez une courte biographie sur vous-même. Cela peut inclure vos intérêts, votre profession ou toute autre information que vous souhaitez partager.",
-      "bio_placeholder": "Écrivez une courte biographie sur vous-même",
-      "update_profile": "Mettre à jour le profil",
-      "profile_updated": "Profil mis à jour avec succès",
-      "profile_update_failed": "Échec de la mise à jour du profil. Veuillez réessayer.",
-      "first_name": "Prénom",
-      "first_name_placeholder": "Entrez votre prénom",
-      "first_name_helper_text": "Votre prénom tel qu'il apparaît dans votre profil.",
-      "last_name": "Nom",
-      "last_name_placeholder": "Entrez votre nom",
-      "last_name_helper_text": "Votre nom tel qu'il apparaît dans votre profil.",
-      "password_section_title": "Mot de passe",
-      "password_section_description": "Mettez à jour votre mot de passe pour sécuriser votre compte.",
-      "password_prompt": "Cliquez sur le bouton ci-dessous pour changer votre mot de passe.",
-      "change_password": "Changer le mot de passe",
-      "current_password": "Mot de passe actuel",
-      "current_password_placeholder": "Entrez votre mot de passe actuel",
-      "new_password": "Nouveau mot de passe",
-      "new_password_placeholder": "Entrez votre nouveau mot de passe",
-      "new_password_helper_text": "Le mot de passe doit contenir au moins 8 caractères.",
-      "confirm_password": "Confirmer le nouveau mot de passe",
-      "confirm_password_placeholder": "Re-entrez votre nouveau mot de passe",
-      "update_password": "Mettre à jour le mot de passe",
-      "password_updated": "Mot de passe mis à jour avec succès",
-      "password_updated_description": "Votre mot de passe a été modifié.",
-      "password_update_failed": "Échec de la mise à jour du mot de passe",
-      "reverification_required": "Vérification supplémentaire requise",
-      "reverification_required_description": "Pour des raisons de sécurité, veuillez vous déconnecter et vous reconnecter avant de changer votre mot de passe.",
-      "current_password_incorrect": "Le mot de passe actuel est incorrect. Veuillez réessayer.",
-      "password_compromised": "Ce mot de passe a été compromis lors d'une violation de données. Veuillez choisir un mot de passe différent."
-    },
+    "description": "Gérez votre compte, profil, mot de passe et l'apparence du système.",
     "appearance": {
       "title": "Apparence",
-      "description": "Personnalisez l'apparence de l'application. Basculez automatiquement entre les thèmes jour et nuit.",
+      "description": "Personnalisez l'interface (mode clair/sombre).",
       "theme": {
         "label": "Thème",
-        "description": "Sélectionnez le thème du tableau de bord.",
-        "light": "Clair",
-        "dark": "Sombre"
+        "description": "Choisissez le style d'affichage",
+        "light": "Mode clair",
+        "dark": "Mode sombre"
       },
       "language": {
         "label": "Langue",
-        "description": "Sélectionnez votre langue préférée.",
+        "description": "Langue préférée du système",
         "en": "Anglais",
         "fr": "Français",
         "es": "Espagnol",
@@ -94,15 +965,49 @@
         "zh": "Chinois"
       }
     },
-    "account":{
-      "title": "Compte",
-      "description": "Gérez les paramètres de votre compte. Modifiez votre mot de passe et gérez vos adresses e-mail.",
-      "name": "Nom",
-      "name_placeholder": "Entrez votre nom",
-      "name_helper_text": "C'est le nom qui sera affiché sur votre profil.",
-      "birthday": "Date de naissance",
-      "birthday_placeholder": "Sélectionnez votre date de naissance",
-      "birthday_helper_text": "Votre date de naissance est utilisée pour personnaliser votre expérience. Elle ne sera pas affichée publiquement."
+    "profile": {
+      "title": "Profil personnel",
+      "description": "Gérez vos informations et préférences.",
+      "personal_info": "Infos de base",
+      "personal_info_description": "Éditez votre profil",
+      "first_name": "Prénom",
+      "first_name_placeholder": "Entrez votre prénom",
+      "first_name_helper_text": "S'affiche sur votre profil",
+      "last_name": "Nom",
+      "last_name_placeholder": "Entrez votre nom",
+      "last_name_helper_text": "S'affiche sur votre profil",
+      "username": "Nom d'utilisateur",
+      "username_placeholder": "Entrez un pseudo",
+      "username_helper_text": "Modifiable tous les 30 jours",
+      "email": "Email",
+      "email_placeholder": "Adresse email",
+      "email_helper_text": "Géré par l'auth, non modifiable ici",
+      "update_profile": "Enregistrer le profil",
+      "profile_updated": "Profil mis à jour",
+      "profile_update_failed": "Échec de mise à jour",
+      "password_section_title": "Gestion du mot de passe",
+      "password_section_description": "Sécurisez votre compte",
+      "password_prompt": "Cliquez ci-dessous pour modifier",
+      "change_password": "Changer le mot de passe",
+      "current_password": "Mot de passe actuel",
+      "current_password_placeholder": "Entrez l'ancien mot de passe",
+      "new_password": "Nouveau mot de passe",
+      "new_password_placeholder": "8 caractères minimum",
+      "new_password_helper_text": "Minimum 8 caractères",
+      "confirm_password": "Confirmer",
+      "confirm_password_placeholder": "Répétez le nouveau mot de passe",
+      "update_password": "Enregistrer le mot de passe",
+      "password_updated": "Mot de passe modifié",
+      "password_updated_description": "Mise à jour réussie",
+      "password_update_failed": "Échec de modification",
+      "current_password_required": "Mot de passe actuel requis",
+      "new_password_required": "8 caractères minimum requis",
+      "confirm_password_required": "Veuillez confirmer le mot de passe",
+      "password_not_match": "Les mots de passe ne correspondent pas",
+      "reverification_required": "Ré-authentification requise",
+      "reverification_required_description": "Pour votre sécurité, reconnectez-vous",
+      "current_password_incorrect": "Mot de passe actuel erroné",
+      "password_compromised": "Ce mot de passe est risqué, choisissez-en un autre"
     }
   },
   "dashboard": {
@@ -110,159 +1015,590 @@
   },
   "home": {
     "hero": {
-      "title": "Concentrez-vous sur ce qui compte",
-      "description": "Cette intégration de composants d'authentification personnalisés Vue & Clerk vous fera gagner des heures de développement.",
-      "cta": "Commencer à construire"
+      "badge": "Service SMS Mondial",
+      "title": "Prix clairs, canaux stables, succès garanti",
+      "description": "Plateforme experte en réception SMS : transparence des données, sécurité maximale et couverture mondiale.",
+      "cta": "Démarrer",
+      "secondary": "Documentation API"
+    },
+    "features": {
+      "title": "Pourquoi nous ?",
+      "items": [
+        { "title": "Prix Transparents", "description": "Aucun frais caché, tarifs affichés pour chaque action." },
+        { "title": "Données Claires", "description": "Traçabilité complète des commandes et des SMS." },
+        { "title": "Sécurité", "description": "Auth par Token, pare-feu et protection des données." },
+        { "title": "Canaux Riches", "description": "Multiples pays et projets pour tous vos besoins." },
+        { "title": "Taux de Succès", "description": "Ressources stables pour une efficacité optimale." },
+        { "title": "Callback Flexible", "description": "Supporte le polling et les webhooks (push)." }
+      ]
+    },
+    "stats": {
+      "title": "Capacités clés",
+      "items": [
+        { "label": "Tarification", "value": "Transparente" },
+        { "label": "Couverture", "value": "Multi-pays" },
+        { "label": "Modes", "value": "Polling + Push" },
+        { "label": "Sécurité", "value": "Pare-feu actif" }
+      ]
     }
   },
+  "apiDoc": {
+    "hero": {
+      "title": "Documentation API",
+      "description": "Guides complets pour une intégration rapide et stable.",
+      "cta": "Lire la doc"
+    },
+    "button": { "start": "Commencer" },
+    "toc": {
+      "title": "Sommaire",
+      "introduction": "Introduction",
+      "authentication": "Authentification",
+      "apiStandards": "Normes API",
+      "responseFormat": "Format de réponse",
+      "apiList": "Liste des points d'accès"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Avant de commencer",
+        "lead": "Assurez-vous de posséder les prérequis suivants :",
+        "items": [
+          "Bases des requêtes HTTP 😪",
+          "Compétences de développeur 😨",
+          "Maîtrise du Double Token 😥",
+          "Capacité de débogage et lecture de logs 😁"
+        ],
+        "summary": "Cette API est conçue pour une intégration métier universelle.",
+        "summaryTitle": "Une API Universelle",
+        "summaryItems": [
+          "L'URL dépend de votre instance (IP/Domaine).",
+          "Respectez strictement le format de la doc.",
+          "Pour tout support, fournissez les payloads de requête/réponse."
+        ],
+        "note": "Documentation écrite avec amour (soyez indulgents) 💔"
+      },
+      "authentication": {
+        "title": "Prérequis & Authentification",
+        "lead": "Récupérez vos identifiants dans votre console :",
+        "items": [
+          "appid : Votre ID marchand/utilisateur.",
+          "apikey : Clé secrète pour la signature ou l'auth directe.",
+          "Liste blanche IP : Indispensable pour ne pas être bloqué par le pare-feu.",
+          "Séparez plusieurs IP par des virgules."
+        ]
+      },
+      "apiStandards": {
+        "title": "Normes API",
+        "items": [
+          "URL : Basée sur votre compte (IP ou domaine actuel).",
+          "Méthode : POST uniquement (sauf mention contraire).",
+          "Type : Content-Type doit être application/json.",
+          "Naming : Format camelCase par défaut."
+        ],
+        "baseUrlLabel": "URL actuelle de l'environnement"
+      },
+      "responseFormat": {
+        "title": "Format de réponse",
+        "lead": "Réponses au format JSON standard. Fiez-vous au champ 'code'.",
+        "successTitle": "Réponse Succès",
+        "errorTitle": "Réponse Erreur",
+        "note": "Note : Un code différent de 200/0 indique une anomalie (voir le champ 'msg')."
+      },
+      "apiList": {
+        "title": "Liste des API",
+        "lead": "Points d'accès ouverts suggérés par ordre d'appel.",
+        "summaryTitle": "Résumé",
+        "authTitle": "Auth",
+        "contentTypeTitle": "Type de requête",
+        "paramsTitle": "Paramètres",
+        "responseTitle": "Exemple de réponse",
+        "table": {
+          "name": "Nom",
+          "type": "Type",
+          "required": "Requis",
+          "description": "Description",
+          "example": "Exemple"
+        },
+        "requiredYes": "Oui",
+        "requiredNo": "Non",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "Obtenir le Token",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "Avant toute opération dans l'API, vous devez obtenir un token et un refreshToken via cette interface. Cette interface prend en charge les paramètres POST/GET ainsi que les entrées form-data/json, et il est recommandé d'utiliser uniformément le format json.",
+            "auth": "Non",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "ID du compte actuellement utilisé",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "apiKey générée par la plateforme",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Token obtenu avec succès\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "Rafraîchir le Token",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "Cette interface prend en charge les requêtes GET/POST. Le paramètre de requête est refreshToken, avec prise en charge de form-data/json. Après un rafraîchissement réussi, vous obtiendrez un nouveau token et un nouveau refreshToken.",
+            "auth": "Non",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "Jeton de rafraîchissement enregistré après la connexion",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Opération réussie\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "Obtenir les informations du compte",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "Récupère les informations du compte utilisateur. Si nécessaire, transmettez Authorization dans l'en-tête de requête ; le token seul ou avec le préfixe Bearer {valeur du Token} sont tous deux pris en charge.",
+            "auth": "Oui",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Token obtenu après connexion de l'utilisateur, préfixe Bearer pris en charge",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Informations utilisateur obtenues avec succès\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "Bibliothèque pays/régions",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "Récupère la bibliothèque d'informations géographiques du système. La bibliothèque des pays évolue très peu ; il est recommandé de la stocker localement.",
+            "auth": "Optionnel",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "En-tête token optionnel",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Liste des pays obtenue avec succès\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"Ouzbékistan\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "Obtenir les projets en cours",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "Récupère les projets disponibles en ligne.",
+            "auth": "Optionnel",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "En-tête token optionnel",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Liste des projets obtenue avec succès\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "Obtenir un numéro de téléphone",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "Obtient un numéro de téléphone, compatible form-data/json. Après obtention du numéro, son statut devient en attente du code de vérification ; vous devez alors appeler l'interface de récupération du code. Le champ orderNo est désormais renvoyé et doit être transmis lors de la récupération du code.",
+            "auth": "Optionnel",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "ID du pays, correspondant au champ country du projet",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "ID du projet",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "À transmettre si vous souhaitez continuer à utiliser le numéro précédent",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "Type de numéro, parmi sms / voice / incall ; vous pouvez aussi transmettre all ou laisser vide",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "Adresse de rappel SMS",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Numéro obtenu avec succès, le solde a été gelé\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "Obtenir le code de vérification",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "Compatible form-data/json. Cette interface doit être interrogée périodiquement pour récupérer le code de vérification. Après le retour de code=200, le code ne sera plus renvoyé une seconde fois.",
+            "auth": "Optionnel",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de commande unique renvoyé par l'interface d'obtention du numéro",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de téléphone renvoyé par l'interface d'obtention du numéro",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey renvoyé par l'interface d'obtention du numéro",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Code de vérification obtenu avec succès, facturation terminée\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"Contenu du SMS\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "Libérer le numéro",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "Compatible form-data/json. L'appelant peut déclencher activement la libération du numéro afin d'éviter des frais supplémentaires.",
+            "auth": "Optionnel",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de commande à libérer",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de téléphone à libérer",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey à libérer",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Libération réussie\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "Mettre un numéro sur liste noire",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "Compatible form-data/json. L'appelant peut placer ce numéro sur liste noire ; il ne sera plus attribué par la suite.",
+            "auth": "Optionnel",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de commande à placer sur liste noire",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Numéro de téléphone à placer sur liste noire",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "pkey à placer sur liste noire",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Ajout à la liste noire réussi\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "Push de rappel SMS",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "Lorsque vous transmettez callbackUrl au moment d'obtenir un numéro, le système enverra automatiquement les SMS reçus de l'opérateur à cette adresse.",
+            "auth": "URL fournie par la partie métier",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"Contenu du SMS\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "Produits",
+        "items": {
+          "smsPlatform": "Plateforme de réception SMS",
+          "apiDocs": "Documentation API",
+          "dashboard": "Console",
+          "pricing": "Plans tarifaires"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "items": {
+          "helpCenter": "Centre d'aide",
+          "integrationGuide": "Guide d'intégration",
+          "faq": "FAQ"
+        }
+      },
+      "company": {
+        "title": "Entreprise",
+        "items": {
+          "about": "À propos",
+          "blog": "Blog",
+          "contact": "Contact",
+          "terms": "Conditions de service",
+          "privacy": "Politique de confidentialité"
+        }
+      },
+      "resources": {
+        "title": "Ressources",
+        "items": {
+          "countryLibrary": "Bibliothèque pays/régions",
+          "projectList": "Liste des projets",
+          "callbackDocs": "Documentation de rappel",
+          "statusPage": "État du système",
+          "security": "Consignes de sécurité"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Désolé, cette page n'existe plus ou a été déplacée.",
+    "backHome": "Retour à l'accueil"
+  },
   "auth": {
-    "sign_in_success": "Bon retour!",
-    "sign_in_success_description": "Vous vous êtes connecté avec succès.",
+    "sign_in_success": "Bon retour !",
+    "sign_in_success_description": "Connexion au compte réussie",
     "sign_in_failed": "Échec de la connexion",
-    "sign_up_success": "Compte créé avec succès!",
-    "sign_up_success_description": "Bienvenue! Votre compte a été créé.",
+    "sign_up_success": "Inscription réussie !",
+    "sign_up_success_description": "Bienvenue dans le système",
     "sign_up_failed": "Échec de l'inscription",
     "sign_out_success": "Déconnexion réussie",
-    "sign_out_success_description": "Vous avez été déconnecté de votre compte.",
+    "sign_out_success_description": "Vous avez quitté votre compte en toute sécurité",
     "sign_out_failed": "Échec de la déconnexion",
     "verification_code_sent": "Code de vérification envoyé",
-    "verification_code_sent_description": "Veuillez vérifier votre e-mail pour le code de vérification.",
+    "verification_code_sent_description": "Veuillez consulter votre boîte mail pour voir le code de vérification",
     "verification_code_resent": "Code de vérification renvoyé",
-    "verification_code_resent_description": "Un nouveau code de vérification a été envoyé à votre e-mail.",
+    "verification_code_resent_description": "Un nouveau code de vérification a été envoyé à votre adresse e-mail",
     "verification_failed": "Échec de la vérification",
-    "verification_success": "E-mail vérifié avec succès",
-    "verification_success_description": "Votre e-mail a été vérifié.",
+    "verification_success": "Adresse e-mail vérifiée",
+    "verification_success_description": "Votre e-mail a bien été associé et vérifié",
+    "captcha": {
+      "label": "Captcha visuel",
+      "placeholder": "Veuillez saisir le captcha",
+      "image_alt": "Image du captcha",
+      "loading": "Chargement...",
+      "required": "Veuillez saisir le captcha"
+    },
+    "logout": {
+      "button": "Se déconnecter",
+      "title": "Déconnexion",
+      "description": "Êtes-vous sûr de vouloir vous déconnecter du compte actuel ?",
+      "loading": "Déconnexion...",
+      "confirm": "Confirmer la déconnexion"
+    },
     "sign_in": {
-      "title": "Bon retour",
+      "title": "Bienvenue",
       "description": "Connectez-vous à votre compte pour continuer",
-      "verify_title": "Vérifier l'identité",
-      "verify_description": "Veuillez entrer le code de vérification envoyé à votre e-mail.",
-      "verify_new_device": "Pour des raisons de sécurité, veuillez vérifier votre identité sur ce nouvel appareil.",
+      "verify_title": "Vérification d'identité",
+      "verify_description": "Veuillez saisir le code reçu par e-mail",
+      "verify_new_device": "Connexion depuis un nouvel appareil détectée, une vérification est requise",
+      "account_label": "E-mail / Nom d'utilisateur",
+      "account_placeholder": "Veuillez saisir votre adresse e-mail ou votre nom d'utilisateur",
       "email_label": "E-mail",
       "password_label": "Mot de passe",
-      "password_placeholder": "••••••••",
+      "password_placeholder": "Veuillez saisir votre mot de passe",
+      "remember_password": "Mémoriser le mot de passe",
       "verification_code_label": "Code de vérification",
-      "verification_code_placeholder": "Entrez le code",
+      "verification_code_placeholder": "Veuillez saisir le code de vérification",
       "sign_in_button": "Se connecter",
-      "signing_in": "Connexion en cours...",
+      "signing_in": "Connexion...",
       "verify_button": "Vérifier",
-      "verifying": "Vérification en cours...",
-      "resend_code": "Vous n'avez pas reçu le code? Cliquez pour renvoyer",
-      "no_account": "Vous n'avez pas de compte?",
-      "sign_up_link": "S'inscrire",
-      "forgot_password": "Mot de passe oublié?",
+      "verifying": "Vérification...",
+      "resend_code": "Vous n'avez pas reçu le code ? Cliquez pour le renvoyer",
+      "no_account": "Vous n'avez pas encore de compte ?",
+      "sign_up_link": "S'inscrire maintenant",
+      "forgot_password": "Mot de passe oublié ?",
       "reset_password_link": "Réinitialiser le mot de passe",
-      "second_factor_required": "La vérification du deuxième facteur est requise mais le code e-mail n'est pas disponible.",
-      "unexpected_status": "Statut inattendu"
+      "second_factor_required": "Une vérification secondaire est requise, mais le service de code e-mail n'est pas encore disponible",
+      "unexpected_status": "État de connexion inattendu"
     },
     "sign_up": {
-      "title": "S'inscrire",
-      "description": "Rejoignez des milliers d'utilisateurs satisfaits qui ont simplifié leur processus de gestion des e-mails.",
-      "verify_title": "Vérifier l'e-mail",
-      "verify_description": "Veuillez entrer le code de vérification envoyé à votre e-mail.",
+      "title": "Inscription au compte",
+      "description": "Créez rapidement un compte et profitez de toutes les fonctionnalités du système",
+      "verify_title": "Vérification de l'e-mail",
+      "verify_description": "Saisissez le code reçu par e-mail pour terminer l'inscription",
       "first_name_label": "Prénom",
-      "first_name_placeholder": "Jean",
+      "first_name_placeholder": "Veuillez saisir votre prénom",
       "last_name_label": "Nom",
-      "last_name_placeholder": "Dupont",
+      "last_name_placeholder": "Veuillez saisir votre nom",
+      "username_label": "Nom d'utilisateur",
+      "username_placeholder": "Veuillez saisir votre nom d'utilisateur",
       "email_label": "E-mail",
-      "password_label": "Mot de passe",
-      "password_placeholder": "••••••••",
+      "password_label": "Définir le mot de passe",
+      "password_placeholder": "Veuillez saisir votre mot de passe",
       "verification_code_label": "Code de vérification",
-      "verification_code_placeholder": "Entrez le code",
+      "verification_code_placeholder": "Veuillez saisir le code de vérification",
       "sign_up_button": "S'inscrire",
-      "signing_up": "Inscription en cours...",
+      "signing_up": "Inscription...",
       "verify_button": "Vérifier l'e-mail",
-      "verifying": "Vérification en cours...",
-      "resend_code": "Vous n'avez pas reçu le code? Cliquez pour renvoyer",
-      "have_account": "Vous avez déjà un compte?",
-      "sign_in_link": "Se connecter",
-      "forgot_password": "Mot de passe oublié?",
+      "verifying": "Vérification...",
+      "resend_code": "Vous n'avez pas reçu le code ? Cliquez pour le renvoyer",
+      "have_account": "Vous avez déjà un compte ?",
+      "sign_in_link": "Aller à la connexion",
+      "forgot_password": "Mot de passe oublié ?",
       "reset_password_link": "Réinitialiser le mot de passe"
     },
     "reset_password": {
       "title": "Mot de passe oublié",
-      "description": "Entrez votre adresse e-mail et nous vous enverrons un lien de réinitialisation",
+      "description": "Saisissez votre adresse e-mail pour recevoir un code et réinitialiser votre mot de passe",
       "reset_title": "Réinitialiser le mot de passe",
-      "reset_description": "Entrez le code envoyé à votre e-mail et votre nouveau mot de passe",
-      "email_label": "E-mail",
+      "reset_description": "Saisissez le code reçu par e-mail et définissez un nouveau mot de passe",
+      "email_label": "Adresse e-mail",
       "code_label": "Code de vérification",
-      "code_placeholder": "Entrez le code de l'e-mail",
+      "code_placeholder": "Saisissez le code reçu par e-mail",
       "new_password_label": "Nouveau mot de passe",
-      "new_password_placeholder": "••••••••",
-      "send_code_button": "Envoyer le code de réinitialisation",
-      "sending": "Envoi en cours...",
-      "reset_button": "Réinitialiser le mot de passe",
-      "resetting": "Réinitialisation en cours...",
-      "resend_code": "Vous n'avez pas reçu le code? Cliquez pour renvoyer",
-      "remember_password": "Vous vous souvenez de votre mot de passe?",
-      "sign_in_link": "Se connecter"
+      "new_password_placeholder": "Veuillez définir un nouveau mot de passe",
+      "send_code_button": "Envoyer le code de vérification",
+      "sending": "Envoi...",
+      "reset_button": "Confirmer la réinitialisation",
+      "resetting": "Réinitialisation...",
+      "resend_code": "Vous n'avez pas reçu le code ? Cliquez pour le renvoyer",
+      "remember_password": "Vous vous souvenez de votre mot de passe ?",
+      "sign_in_link": "Retour à la connexion"
     }
   },
   "password_reset": {
     "code_sent": "Code de réinitialisation envoyé",
-    "code_sent_description": "Le code de réinitialisation du mot de passe a été envoyé à votre e-mail.",
+    "code_sent_description": "Le code de réinitialisation du mot de passe a été envoyé à votre adresse e-mail",
     "code_resent": "Code de réinitialisation renvoyé",
-    "code_resent_description": "Un nouveau code de réinitialisation du mot de passe a été envoyé à votre e-mail.",
+    "code_resent_description": "Un nouveau code de réinitialisation du mot de passe a été envoyé",
     "reset_success": "Réinitialisation du mot de passe réussie",
-    "reset_success_description": "Votre mot de passe a été réinitialisé avec succès. Redirection...",
+    "reset_success_description": "Le mot de passe a été réinitialisé, redirection vers la page de connexion...",
     "reset_failed": "Échec de la réinitialisation du mot de passe"
   },
   "profile": {
-    "title": "Profil",
-    "description": "Consultez et gérez vos informations de profil.",
+    "title": "Centre personnel",
+    "description": "Consultez et gérez vos informations personnelles",
     "first_name": "Prénom",
     "last_name": "Nom",
-    "username": "Nom d'utilisateur",
+    "username": "Pseudo",
     "member_since": "Membre depuis",
     "edit_profile": "Modifier le profil"
   },
+  "balance": {
+    "title": "Compte de fonds"
+  },
   "billing": {
-    "title": "Facturation",
-    "description": "Gérez votre abonnement et vos informations de facturation.",
-    "current_plan": "Plan actuel",
-    "current_plan_description": "Vous êtes actuellement sur ce plan",
-    "available_plans": "Plans disponibles",
+    "title": "Facturation et abonnement",
+    "description": "Gérez les abonnements aux offres et les factures de paiement",
+    "current_plan": "Offre actuelle",
+    "current_plan_description": "L'offre de service que vous utilisez actuellement",
+    "available_plans": "Offres disponibles",
     "month": "mois",
-    "features": "Fonctionnalités incluses",
+    "features": "Avantages de l'offre",
     "recommended": "Recommandé",
-    "upgrade": "Mettre à niveau",
-    "payment_method": "Méthode de paiement",
-    "payment_method_description": "Gérez vos méthodes de paiement",
-    "no_payment_method": "Aucune méthode de paiement enregistrée",
-    "add_payment_method": "Ajouter une méthode de paiement",
-    "add_payment_method_description": "Ajoutez une méthode de paiement pour mettre à niveau votre plan",
+    "upgrade": "Mettre à niveau maintenant",
+    "payment_method": "Mode de paiement",
+    "payment_method_description": "Gérez le compte de paiement par défaut",
+    "no_payment_method": "Aucun mode de paiement ajouté pour le moment",
+    "add_payment_method": "Ajouter un mode de paiement",
+    "add_payment_method_description": "Liez un compte de paiement pour passer à une offre payante",
     "billing_history": "Historique de facturation",
-    "billing_history_description": "Consultez vos factures et paiements antérieurs",
+    "billing_history_description": "Consultez les commandes passées et les factures de consommation",
     "no_invoices": "Aucune facture pour le moment",
-    "no_invoices_description": "Votre historique de facturation apparaîtra ici après votre premier paiement",
+    "no_invoices_description": "Les enregistrements s'afficheront ici après la création d'une commande payante",
     "plans": {
       "free": {
-        "name": "Gratuit",
-        "description": "Parfait pour commencer",
-        "feature_1": "Fonctionnalité de base 1",
-        "feature_2": "Fonctionnalité de base 2",
-        "feature_3": "Fonctionnalité de base 3",
-        "feature_4": "Fonctionnalité de base 4"
+        "name": "Version gratuite",
+        "description": "Convient aux débutants",
+        "feature_1": "Fonction de base 1",
+        "feature_2": "Fonction de base 2",
+        "feature_3": "Fonction de base 3",
+        "feature_4": "Fonction de base 4"
       },
       "pro": {
-        "name": "Pro",
-        "description": "Pour les professionnels et les équipes",
-        "feature_1": "Toutes les fonctionnalités gratuites",
-        "feature_2": "Fonctionnalité avancée 1",
-        "feature_3": "Fonctionnalité avancée 2",
-        "feature_4": "Fonctionnalité avancée 3",
-        "feature_5": "Fonctionnalité avancée 4",
-        "feature_6": "Fonctionnalité avancée 5"
+        "name": "Version Pro",
+        "description": "Convient aux particuliers et aux petites équipes",
+        "feature_1": "Inclut toutes les fonctionnalités de la version gratuite",
+        "feature_2": "Fonction avancée 1",
+        "feature_3": "Fonction avancée 2",
+        "feature_4": "Fonction avancée 3",
+        "feature_5": "Fonction avancée 4",
+        "feature_6": "Fonction avancée 5"
       },
       "enterprise": {
-        "name": "Entreprise",
-        "description": "Pour les grandes organisations",
-        "feature_1": "Toutes les fonctionnalités Pro",
-        "feature_2": "Fonctionnalité entreprise 1",
-        "feature_3": "Fonctionnalité entreprise 2",
-        "feature_4": "Fonctionnalité entreprise 3",
-        "feature_5": "Fonctionnalité entreprise 4",
-        "feature_6": "Fonctionnalité entreprise 5"
+        "name": "Version Entreprise",
+        "description": "Destinée aux grandes organisations et entreprises",
+        "feature_1": "Inclut toutes les fonctionnalités de la version Pro",
+        "feature_2": "Fonction entreprise 1",
+        "feature_3": "Fonction entreprise 2",
+        "feature_4": "Fonction entreprise 3",
+        "feature_5": "Fonction entreprise 4",
+        "feature_6": "Fonction entreprise 5"
       }
     }
   }

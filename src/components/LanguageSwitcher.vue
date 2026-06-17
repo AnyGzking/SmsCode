@@ -26,6 +26,22 @@ const currentLanguage = computed(() => {
         <Check v-if="locale === 'en'" class="h-4 w-4 mr-2" />
         <span :class="{ 'ml-6': locale !== 'en' }">English</span>
       </DropdownMenuItem>
+      <DropdownMenuItem @click="setLocale('ru')" class="cursor-pointer">
+        <Check v-if="locale === 'ru'" class="h-4 w-4 mr-2" />
+        <span :class="{ 'ml-6': locale !== 'ru' }">Русский</span>
+      </DropdownMenuItem>
+      <DropdownMenuItem @click="setLocale('ko')" class="cursor-pointer">
+        <Check v-if="locale === 'ko'" class="h-4 w-4 mr-2" />
+        <span :class="{ 'ml-6': locale !== 'ko' }">한국어</span>
+      </DropdownMenuItem>
+      <DropdownMenuItem @click="setLocale('ja')" class="cursor-pointer">
+        <Check v-if="locale === 'ja'" class="h-4 w-4 mr-2" />
+        <span :class="{ 'ml-6': locale !== 'ja' }">日本語</span>
+      </DropdownMenuItem>
+      <DropdownMenuItem @click="setLocale('zh')" class="cursor-pointer">
+        <Check v-if="locale === 'zh'" class="h-4 w-4 mr-2" />
+        <span :class="{ 'ml-6': locale !== 'zh' }">简体中文</span>
+      </DropdownMenuItem>
       <DropdownMenuItem @click="setLocale('fr')" class="cursor-pointer">
         <Check v-if="locale === 'fr'" class="h-4 w-4 mr-2" />
         <span :class="{ 'ml-6': locale !== 'fr' }">Français</span>

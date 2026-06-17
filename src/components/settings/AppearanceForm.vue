@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils';
 import { toTypedSchema } from '@vee-validate/zod';
 import { useForm } from 'vee-validate';
-import { h } from 'vue';
 import * as z from 'zod';
 import { buttonVariants } from '@/components/ui/button';
 import { toast } from '@/components/ui/toast';
@@ -23,12 +22,15 @@ import RadioGroup from '../ui/radio-group/RadioGroup.vue';
 import { useI18n } from 'vue-i18n';
 import { setLocale } from '@/plugins/i18n';
 
+const supportedLanguages = ['en', 'zh', 'fr', 'ru', 'ko', 'ja'] as const
+type SupportedLanguage = (typeof supportedLanguages)[number]
+
 const appearanceFormSchema = toTypedSchema(
   z.object({
     theme: z.enum(['light', 'dark'], {
       required_error: 'Please select a theme.',
     }),
-    language: z.enum(['en', 'fr'], {
+    language: z.enum(supportedLanguages, {
       required_error: 'Please select a language.',
     }),
   })
@@ -40,7 +42,7 @@ const { handleSubmit } = useForm({
   validationSchema: appearanceFormSchema,
   initialValues: {
     theme: 'light',
-    language: (localStorage.getItem('locale') as 'en' | 'fr') || 'en',
+    language: (localStorage.getItem('locale') as SupportedLanguage) || 'en',
   },
 });
 
@@ -51,12 +53,8 @@ const onSubmit = handleSubmit((values) => {
     setLocale(values.language);
   }
   toast({
-    title: 'You submitted the following values:',
-    description: h(
-      'pre',
-      { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' },
-      h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))
-    ),
+    title: t('common.success'),
+    description: t('settings.appearance.description'),
   });
 });
 </script>
@@ -90,8 +88,20 @@ const onSubmit = handleSubmit((values) => {
               <option value="en" class="cursor-pointer">
                 {{ t('settings.appearance.language.en') }}
               </option>
+              <option value="zh" class="cursor-pointer">
+                {{ t('settings.appearance.language.zh') }}
+              </option>
               <option value="fr" class="cursor-pointer">
                 {{ t('settings.appearance.language.fr') }}
+              </option>
+              <option value="ru" class="cursor-pointer">
+                {{ t('settings.appearance.language.ru') }}
+              </option>
+              <option value="ko" class="cursor-pointer">
+                {{ t('settings.appearance.language.ko') }}
+              </option>
+              <option value="ja" class="cursor-pointer">
+                {{ t('settings.appearance.language.ja') }}
               </option>
             </select>
           </FormControl>

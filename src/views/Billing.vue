@@ -5,14 +5,9 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { useI18n } from 'vue-i18n'
 import { CreditCard, Calendar, Download, Check } from 'lucide-vue-next'
-import { ref, computed, watchEffect } from 'vue'
+import { ref, computed } from 'vue'
 
 const { t } = useI18n()
-
-// Update browser tab title based on current language
-watchEffect(() => {
-  document.title = t('billing.title')
-})
 
 interface Invoice {
   id: string
@@ -23,6 +18,12 @@ interface Invoice {
 }
 
 const currentPlanKey = ref('free')
+
+const formatPrice = (value: string | number) => {
+  const parsed = Number(value || 0)
+  if (!Number.isFinite(parsed)) return '0.0000'
+  return parsed.toFixed(4)
+}
 
 const currentPlan = computed(() => ({
   name: t('billing.plans.free.name'),
@@ -169,7 +170,7 @@ const invoices = ref<Invoice[]>([
           </CardHeader>
           <CardContent class="space-y-3 pb-3">
             <div class="flex items-baseline gap-1.5">
-              <span class="text-2xl font-bold">${{ plan.price }}</span>
+              <span class="text-2xl font-bold">${{ formatPrice(plan.price) }}</span>
               <span class="text-muted-foreground text-xs">/{{ t('billing.month') }}</span>
             </div>
             <Separator />

@@ -1,0 +1,1708 @@
+{
+  "common": {
+    "success": "成功",
+    "error": "错误",
+    "save": "保存",
+    "cancel": "取消",
+    "submit": "提交",
+    "update": "更新",
+    "loading": "加载中...",
+    "all": "全部"
+  },
+  "layouts": {
+    "header": {
+      "home": "首页",
+      "api": "API",
+      "blog": "博客",
+      "help": "帮助",
+      "about": "关于",
+      "signIn": "登录"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "登录失败",
+      "authErr": "认证失败",
+      "authErrToken": "刷新Token失败，请重新登录",
+      "authTimeOut": "登录已过期，请重新登录"
+    },
+    "failed": "请求失败",
+    "network": "网络错误"
+  },
+  "navigation": {
+    "dashboard": "控制台",
+    "profile": "个人资料",
+    "appearance": "外观设置",
+    "settings": "系统设置",
+    "balance": "余额中心",
+    "openapi": "OpenAPI",
+    "numberRental": "号码租赁",
+    "numberrental": "号码租赁",
+    "receiveNumber": "收发号码",
+    "releaseNumber": "释放号码",
+    "blacklistNumber": "加黑号码",
+    "packageSubscription": "套餐订阅",
+    "packagesubscription": "套餐订阅",
+    "packageOrders": "套餐订单",
+    "subscribePlan": "订阅套餐",
+    "subscriptionNumberManagement": "号码管理",
+    "orderManagement": "订单管理",
+    "ordermanagement": "订单管理",
+    "myOrders": "我的订单",
+    "orderDownload": "订单下载",
+    "expenseStatistics": "消费统计",
+    "fundChanges": "资金变动",
+    "apiSupport": "技术支持",
+    "apiDoc": "API 文档"
+  },
+  "pages": {
+    "balancePage": {
+      "title": "余额中心",
+      "description": "查看账户余额、冻结余额、总余额，并查询资金变动记录。",
+      "summary": {
+        "balance": "可用余额",
+        "freezeBalance": "冻结余额",
+        "totalBalance": "总余额",
+        "totalRecords": "总记录数",
+        "freezeAmount": "冻结金额",
+        "unfreezeAmount": "解冻金额",
+        "consumptionAmount": "消费金额"
+      },
+      "recharge": {
+        "title": "充值中心",
+        "description": "选择充值面额后可进入支付流程，支付成功后余额自动到账！",
+        "preset": "快速选择面额",
+        "custom": "自定义面额",
+        "placeholder": "请输入充值金额",
+        "action": "去支付",
+        "loading": "支付中...",
+        "tip": "充值会收取手续费",
+        "handlingFee": "手续费为 {{fee}}"
+      },
+      "records": {
+        "title": "余额变动记录",
+        "filters": {
+          "orderNo": "订单号",
+          "remark": "备注",
+          "source": "来源",
+          "changeType": "变动类型",
+          "startTime": "开始时间",
+          "endTime": "结束时间",
+          "timeRange": "时间范围",
+        "selectTimeRange": "请选择时间范围",
+          "search": "查询",
+          "reset": "重置"
+        },
+        "table": {
+          "createTime": "时间",
+          "source": "来源",
+          "remark": "备注",
+          "orderNo": "订单号",
+          "changeAmount": "变动金额",
+          "beforeBalance": "变动前",
+          "afterBalance": "变动后"
+        },
+        "empty": "暂无记录",
+        "pagination": {
+          "prev": "上一页",
+          "next": "下一页",
+          "jump": "跳转",
+          "page": "页"
+        },
+        "changeTypeOptions": {
+          "all": "全部",
+          "1": "充值",
+          "2": "消费",
+          "3": "退款",
+          "4": "提现",
+          "5": "调账",
+          "6": "冻结",
+          "7": "解冻",
+          "8": "赠送",
+          "9": "扣罚"
+        },
+        "typeAmountLabels": {
+          "type1": "充值统计",
+          "type2": "消费统计",
+          "type3": "退款统计",
+          "type4": "提现统计",
+          "type5": "调账统计",
+          "type6": "冻结统计",
+          "type7": "解冻统计",
+          "type8": "赠送统计"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "套餐订单",
+      "description": "查看套餐购买记录、订单状态与生效情况。",
+      "placeholderTitle": "套餐订单初始化模板",
+      "placeholderDescription": "当前页面已完成初始化，后续可以继续接入订单列表、筛选和详情能力。",
+      "filters": {
+        "orderNo": "订单号",
+        "status": "状态",
+        "search": "查询",
+        "reset": "重置",
+        "all": "全部"
+      },
+      "summary": {
+        "totalOrders": "总订单数",
+        "activeOrders": "正常订单",
+        "autoRenewOrders": "自动续费订单",
+        "totalAmount": "总金额"
+      },
+      "table": {
+        "orderNo": "订单号",
+        "combo": "套餐信息",
+        "duration": "订阅时长",
+        "phoneNumCount": "号码数量",
+        "amount": "订单金额",
+        "unitPrice": "单价",
+        "status": "订单状态",
+        "autoRenew": "自动续费",
+        "tempToken": "临时令牌",
+        "actions": "操作",
+        "timeInfo": "时间信息",
+        "subscribeTime": "订阅时间",
+        "expireTime": "到期时间"
+      },
+      "durationTypes": {
+        "day": "天",
+        "month": "月",
+        "year": "年"
+      },
+      "statusOptions": {
+        "0": "创建中",
+        "1": "正常",
+        "2": "已过期",
+        "3": "已结束"
+      },
+      "autoRenew": {
+        "enabled": "已开启",
+        "disabled": "未开启"
+      },
+      "actions": {
+        "renew": "手动续费",
+        "viewNumbers": "查看号码",
+        "receive": "接收",
+        "refreshTempToken": "刷新令牌"
+      },
+      "renewDialog": {
+        "title": "续费清单",
+        "description": "确认续费数量、续费时长与自动续费配置后提交订单。",
+        "plan": "套餐名称",
+        "numberCount": "续费号码数量",
+        "duration": "续费时长",
+        "autoRenew": "自动续费",
+        "autoRenewHint": "开启后到期将按当前续费配置自动尝试续费。",
+        "summary": "费用清单",
+        "unitPrice": "单位价格",
+        "totalPrice": "总价",
+        "submitting": "续费中..."
+      },
+      "numberSheet": {
+        "title": "订阅号码",
+        "description": "查看当前套餐订单关联的号码列表。"
+      },
+      "receiveDialog": {
+        "title": "接收回调地址",
+        "description": "获取验证码时会将验证码回调到这个地址。",
+        "callbackUrl": "回调地址",
+        "placeholder": "请输入回调地址",
+        "save": "保存地址",
+        "saving": "保存中..."
+      },
+      "messages": {
+        "autoRenewUpdated": "自动续费状态已更新",
+        "autoRenewFailed": "自动续费状态更新失败",
+        "renewSuccess": "套餐续费成功",
+        "renewFailed": "套餐续费失败",
+        "saveCallbackSuccess": "回调地址保存成功",
+        "saveCallbackFailed": "回调地址保存失败",
+        "tempTokenRefreshSuccess": "临时令牌已刷新",
+        "tempTokenRefreshFailed": "临时令牌刷新失败"
+      },
+      "empty": "暂无套餐订单记录",
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页",
+        "jump": "跳转"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "订阅套餐",
+      "description": "查看可选套餐并创建订阅订单。",
+      "placeholderTitle": "订阅套餐初始化模板",
+      "placeholderDescription": "当前页面已完成初始化，后续可以继续补充套餐卡片、购买流程与续费能力。",
+      "filters": {
+        "title": "专属套餐筛选",
+        "description": "支持按国家和订阅时长类型快速筛选当前账号可订阅的套餐。",
+        "country": "国家",
+        "durationType": "订阅类型",
+        "allCountries": "全部国家",
+        "allTypes": "全部类型",
+        "search": "刷新列表",
+        "reset": "重置筛选",
+        "placeholders": {
+          "searchCountry": "搜索国家名称 / 编码 / 区号 / ID"
+        }
+      },
+      "types": {
+        "day": "天",
+        "week": "周",
+        "month": "月",
+        "year": "年"
+      },
+      "stats": {
+        "total": "套餐总数",
+        "active": "可订阅套餐"
+      },
+      "status": {
+        "enabled": "可订阅",
+        "disabled": "已停用"
+      },
+      "card": {
+        "country": "适用国家",
+        "price": "套餐价格",
+        "duration": "订阅周期",
+        "remark": "套餐说明",
+        "createdTime": "创建时间",
+        "updatedTime": "更新时间",
+        "noRemark": "暂无说明",
+        "subscribe": "订阅套餐"
+      },
+      "dialog": {
+        "title": "订阅清单",
+        "description": "确认订阅数量、订阅时长与自动续费配置后提交订单。",
+        "plan": "套餐名称",
+        "numberCount": "订阅号码数量",
+        "duration": "订阅时长",
+        "autoRenew": "自动续费",
+        "autoRenewHint": "开启后到期将按当前配置自动尝试续费。",
+        "summary": "费用清单",
+        "unitPrice": "单位价格",
+        "totalPrice": "总价",
+        "submitting": "订阅中..."
+      },
+      "empty": "暂无符合条件的订阅套餐",
+      "messages": {
+        "loadFailed": "获取订阅套餐失败",
+        "createSuccess": "套餐订阅成功",
+        "createFailed": "套餐订阅失败",
+        "invalidDuration": "请输入正确的订阅时长",
+        "invalidNumberCount": "请输入正确的订阅号码数量"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "号码管理",
+      "description": "管理订阅订单分配的号码，并查看号码与套餐、订阅订单之间的关联关系。",
+      "placeholderTitle": "号码管理初始化模板",
+      "placeholderDescription": "当前页面已完成初始化，后续可以继续补充订阅号码列表、分配状态、套餐关联与操作能力。"
+    },
+    "subscriptionNumberList": {
+      "title": "订阅号码列表",
+      "description": "按订单号查询套餐订单关联的号码，并查看号码状态与有效期。",
+      "filters": {
+        "title": "查询条件",
+        "orderNo": "订单号",
+        "search": "查询",
+        "reset": "重置"
+      },
+      "export": {
+        "button": "导出号码",
+        "loading": "导出中...",
+        "successDescription": "导出成功，请前往下载中心查看。",
+        "failedDescription": "号码导出失败，请稍后重试。"
+      },
+      "summary": {
+        "totalNumbers": "号码总数"
+      },
+      "table": {
+        "orderNo": "订单号",
+        "phone": "号码信息",
+        "imsi": "IMSI",
+        "combo": "套餐信息",
+        "status": "状态",
+        "timeInfo": "时间信息",
+        "createdAt": "创建时间",
+        "expireTime": "到期时间",
+        "remark": "备注"
+      },
+      "statusOptions": {
+        "0": "创建中",
+        "1": "正常",
+        "2": "已过期",
+        "3": "已结束"
+      },
+      "empty": "暂无订阅号码记录",
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页",
+        "jump": "跳转"
+      }
+    },
+    "myOrdersPage": {
+      "title": "我的订单",
+      "description": "查看号码订单状态、验证码内容、国家、项目和订单信息。",
+      "filters": {
+        "country": "国家",
+        "project": "项目",
+        "status": "订单状态",
+        "phone": "号码",
+        "orderNo": "订单号",
+        "timeRange": "时间范围",
+        "startTime": "开始时间",
+        "endTime": "结束时间",
+        "search": "查询",
+        "reset": "重置",
+        "all": "全部",
+        "searchCountry": "搜索国家",
+        "searchProject": "搜索项目",
+        "selectTimeRange": "请选择时间范围"
+      },
+      "summary": {
+        "totalOrders": "总订单数",
+        "successAmount": "成功金额",
+        "failAmount": "失败金额",
+        "totalAmount": "总消费金额"
+      },
+      "table": {
+        "orderNo": "订单号",
+        "country": "国家",
+        "project": "项目",
+        "phone": "号码",
+        "price": "价格",
+        "status": "状态",
+        "codeNum": "验证码",
+        "smsContent": "短信内容",
+        "sourceType": "来源",
+        "createTime": "创建时间",
+        "updateTime": "更新时间",
+        "timeInfo": "时间"
+      },
+      "sourceTypeOptions": {
+        "1": "站内",
+        "2": "API",
+        "3": "订阅"
+      },
+      "statusOptions": {
+        "-1": "废单",
+        "-2": "扣费异常",
+        "1": "进行中",
+        "2": "成功",
+        "3": "已结束",
+        "4": "失败",
+        "99": "预入库"
+      },
+      "empty": "暂无订单记录",
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页",
+        "jump": "跳转"
+      },
+      "export": {
+        "button": "导出订单",
+        "loading": "导出中...",
+        "successTitle": "导出成功",
+        "successDescription": "导出成功，请前往订单下载中心下载。",
+        "failedTitle": "导出失败",
+        "failedDescription": "订单导出失败，请稍后重试。"
+      }
+    },
+    "orderDownloadPage": {
+      "title": "订单下载中心",
+      "description": "查看订单导出任务状态、查询参数、处理结果，并在成功后下载文件。",
+      "filters": {
+        "taskName": "任务名称",
+        "status": "状态",
+        "startTime": "开始时间",
+        "endTime": "结束时间",
+        "timeRange": "时间范围",
+        "selectTimeRange": "请选择时间范围",
+        "search": "查询",
+        "reset": "重置"
+      },
+      "summary": {
+        "totalTasks": "总任务数"
+      },
+      "table": {
+        "taskName": "任务名称",
+        "status": "状态",
+        "admin": "提交用户",
+        "errorMsg": "错误信息",
+        "createTime": "创建时间",
+        "updateTime": "更新时间",
+        "action": "操作",
+        "download": "下载"
+      },
+      "statusOptions": {
+        "0": "排队",
+        "1": "处理中",
+        "2": "成功",
+        "3": "失败"
+      },
+      "messages": {
+        "waitTitle": "暂不可下载",
+        "waitDescription": "请等待订单处理完成后再下载。",
+        "fileMissingTitle": "文件不存在",
+        "fileMissingDescription": "当前任务缺少可下载文件。"
+      },
+      "empty": "暂无下载任务",
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页",
+        "jump": "跳转"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "消费统计",
+      "description": "按照国家、项目和时间范围查看号码消费统计结果，并汇总不同状态的数量。",
+      "filters": {
+        "country": "国家",
+        "project": "项目",
+        "timeRange": "时间范围",
+        "startTime": "开始时间",
+        "endTime": "结束时间",
+        "selectTimeRange": "请选择时间范围",
+        "search": "查询",
+        "reset": "重置",
+        "all": "全部",
+        "searchCountry": "搜索国家",
+        "searchProject": "搜索项目"
+      },
+      "summary": {
+        "status1": "请求中数量",
+        "status2": "成功数量",
+        "status3": "释放数量",
+        "status4": "加黑数量",
+        "totalCount": "号码总数"
+      },
+      "table": {
+        "getTime": "消费时间",
+        "country": "国家信息",
+        "project": "项目信息",
+        "status1": "请求中",
+        "status2": "成功",
+        "status3": "释放",
+        "status4": "加黑",
+        "totalCount": "号码总数"
+      },
+      "empty": "暂无统计数据"
+    },
+    "releaseNumberPage": {
+      "title": "释放号码",
+      "description": "查看号码释放日志，支持按时间、号码、PKEY 和操作结果筛选。"
+    },
+    "blacklistNumberPage": {
+      "title": "加黑号码",
+      "description": "查看号码加黑日志，支持按时间、号码、PKEY 和操作结果筛选。"
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "号码",
+        "pkey": "PKEY",
+        "operationResult": "操作结果",
+        "allResult": "全部结果",
+        "timeRange": "时间范围",
+        "selectTimeRange": "请选择时间范围",
+        "search": "查询",
+        "reset": "重置"
+      },
+      "table": {
+        "phone": "号码",
+        "pkey": "PKEY",
+        "operationResult": "操作结果",
+        "remark": "备注",
+        "createTime": "操作时间"
+      },
+      "operationResultOptions": {
+        "success": "成功",
+        "failed": "失败"
+      },
+      "summary": {
+        "totalLogs": "总日志数"
+      },
+      "empty": "暂无日志记录",
+      "pagination": {
+        "prev": "上一页",
+        "next": "下一页",
+        "jump": "跳转"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "收发号码",
+      "description": "选择项目、国家与短信类型后获取号码，并自动轮询验证码结果。",
+      "form": {
+        "title": "获取号码",
+        "description": "按项目渠道配置筛选国家与价格，支持复用历史号码。",
+        "project": "项目",
+        "country": "国家",
+        "type": "短信类型",
+        "mobile": "指定号码",
+        "minPrice": "最低价：",
+        "submit": "立即获取号码",
+        "submitting": "获取中...",
+        "types": {
+          "all": "全部类型",
+          "sms": "普通短信",
+          "voice": "语音转短信",
+          "incall": "来电转短信"
+        },
+        "placeholders": {
+          "project": "请选择项目",
+          "country": "请选择国家",
+          "searchProject": "搜索项目名称 / 编码 / ID",
+          "searchCountry": "搜索国家名称 / 编码 / 区号 / ID",
+          "mobile": "如需继续使用上个号码可在此填写"
+        }
+      },
+      "currentPhone": {
+        "title": "当前号码",
+        "description": "号码获取成功后会自动轮询验证码。",
+        "empty": "暂未获取号码，请先在左侧完成筛选并发起获取。",
+        "phone": "号码",
+        "country": "国家",
+        "countryTel": "国家区号",
+        "port": "端口",
+        "getTime": "获取时间",
+        "pkey": "PKEY",
+        "dock": "通道标识",
+        "polling": "轮询验证码中",
+        "pollingTip": "系统每 10 秒自动拉取一次验证码结果。",
+        "ready": "轮询空闲"
+      },
+      "records": {
+        "title": "接码记录",
+        "description": "成功获取验证码后会展示在此，可继续释放或加黑号码。",
+        "empty": "暂无接码记录",
+        "columns": {
+          "phone": "号码",
+          "code": "验证码",
+          "smsContent": "短信内容",
+          "createTime": "获取时间",
+          "actions": "操作"
+        },
+        "actions": {
+          "black": "加黑",
+          "release": "释放"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "获取项目渠道配置失败",
+        "selectProject": "请先选择项目",
+        "selectCountry": "请先选择国家",
+        "countryDataMissing": "当前国家信息缺失，请重新选择",
+        "phoneSuccessTitle": "号码获取成功",
+        "phoneSuccessDescription": "已成功获取号码，系统开始自动轮询验证码。",
+        "phoneFailedDescription": "号码获取失败",
+        "codeSuccessTitle": "验证码获取成功",
+        "codeSuccessDescription": "验证码已成功同步到接码记录。",
+        "codeFailedDescription": "验证码获取失败",
+        "waitingCodeSilent": "等待验证码,5秒后重新调用",
+        "blackSuccessTitle": "号码已加黑",
+        "blackSuccessDescription": "当前号码已加入黑名单。",
+        "blackFailedDescription": "号码加黑失败",
+        "releaseSuccessTitle": "号码已释放",
+        "releaseSuccessDescription": "当前号码已成功释放。",
+        "releaseFailedDescription": "号码释放失败",
+        "refreshProjectSuccessTitle": "项目已刷新",
+        "refreshProjectSuccessDescription": "项目列表已更新。",
+        "refreshProjectFailedDescription": "刷新项目列表失败"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "博客与资讯",
+        "title": "接码行业动态、实战经验与接入指南",
+        "description": "聚焦验证码接收、项目接入、风控防护与渠道运营，持续输出适合开发者与业务团队阅读的内容。"
+      },
+      "featured": {
+        "title": "精选文章",
+        "items": [
+          {
+            "title": "如何提升接码成功率",
+            "description": "从国家、项目、渠道调度与验证码轮询策略几个维度，提升整体接收效果。"
+          },
+          {
+            "title": "双 Token 机制如何设计更安全",
+            "description": "通过 token 与 refreshToken 配合，降低鉴权失效带来的业务中断风险。"
+          },
+          {
+            "title": "为什么数据透明对接码平台很重要",
+            "description": "从订单追踪、状态回溯、异常排查角度，解释透明数据能力的价值。"
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "帮助中心",
+        "title": "常见问题与快速支持",
+        "description": "汇总接码业务接入、鉴权、号码获取、验证码轮询与异常排查中的高频问题，帮助你快速定位并解决问题。"
+      },
+      "faq": {
+        "title": "常见问题",
+        "items": [
+          {
+            "question": "为什么我获取不到号码？",
+            "answer": "请先检查余额、项目状态、国家项目是否可用，以及当前 IP 是否在白名单中。"
+          },
+          {
+            "question": "为什么验证码一直没有返回？",
+            "answer": "请确认号码状态是否已进入等待验证码阶段，并按接口要求定时轮询获取验证码，必要时启用 callbackUrl。"
+          },
+          {
+            "question": "Token 失效后怎么办？",
+            "answer": "请使用 refreshToken 刷新获取新的 token；若 refreshToken 也失效，则需要重新通过鉴权接口获取。"
+          },
+          {
+            "question": "为什么接口被拦截？",
+            "answer": "多数情况下是 IP 白名单未配置、鉴权信息错误或安全防火墙策略触发导致。"
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "关于我们",
+        "title": "专注全球接码与验证码接入服务",
+        "description": "我们致力于构建更稳定、更透明、更安全的接码能力平台，为开发者、工作室与企业团队提供可靠的短信验证码接收服务。"
+      },
+      "seo": {
+        "title": "关于我们",
+        "description": "了解我们的平台理念、服务能力与联系方式。"
+      },
+      "values": {
+        "title": "我们的理念",
+        "items": [
+          {
+            "title": "稳定优先",
+            "description": "通过多渠道调度与资源整合，为业务提供持续可用的号码与验证码服务。"
+          },
+          {
+            "title": "透明可信",
+            "description": "坚持价格透明、状态透明、数据透明，让每一次调用都有据可查。"
+          },
+          {
+            "title": "安全可控",
+            "description": "通过鉴权、刷新机制、防火墙与白名单策略，保障平台与客户数据安全。"
+          }
+        ]
+      },
+      "contacts": {
+        "title": "联系我们",
+        "description": "如果你需要渠道支持、商务合作、接口接入帮助或技术协助，可以通过以下方式联系团队。",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "Telegram",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "OpenAPI 配置",
+      "description": "管理你的 API 开关、白名单 IP、APPID 以及密钥信息，并查看对接与技术支持指引。",
+      "cards": {
+        "status": "API 状态",
+        "credentials": "接口凭据",
+        "whiteIp": "白名单 IP",
+        "guide": "对接指引",
+        "support": "技术支持"
+      },
+      "status": {
+        "enabled": "已开启",
+        "disabled": "未开启",
+        "openButton": "立即开启",
+        "opening": "开启中...",
+        "hint": "如果你的账号尚未开启 API，可在这里主动开通。"
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "API Key",
+        "copy": "复制",
+        "empty": "暂无数据"
+      },
+      "whiteIp": {
+        "label": "白名单 IP",
+        "placeholder": "请输入白名单 IP，多个请用英文逗号分隔",
+        "helper": "建议填写服务器出口 IP，未配置可能被安全策略拦截。",
+        "save": "保存白名单",
+        "saving": "保存中..."
+      },
+      "guide": {
+        "items": [
+          "对接前请确认已获取 APPID、API Key 以及白名单 IP。",
+          "全局接口建议统一使用 JSON 请求格式。",
+          "登录态相关接口请妥善保存 token 和 refreshToken。"
+        ]
+      },
+      "support": {
+        "items": [
+          "如遇对接问题，请提供请求报文与响应报文便于定位。",
+          "如果验证码接收异常，请核查项目、国家和回调地址配置。",
+          "如需渠道支持或商务合作，请通过关于我们页面联系方式联系团队。"
+        ]
+      },
+      "messages": {
+        "openSuccess": "OpenAPI 已成功开启",
+        "saveSuccess": "白名单 IP 保存成功"
+      }
+    }
+  },
+  "dashboard_cards": {
+    "hero": {
+      "title": "业务控制台总览",
+      "description": "集中查看账户状态、OpenAPI 开通情况、资金概览与系统支持信息。后续可直接扩展为实时订单、渠道、验证码与收入驾驶舱。"
+    },
+    "overview": {
+      "availableBalance": "可用余额",
+      "availableBalanceDesc": "当前可直接用于下单、取号和业务消费的账户余额。",
+      "todayAmount": "今日消费金额",
+      "todayAmountDesc": "按今日订单统计的累计消费金额，适合用户快速了解资金消耗。",
+      "freezeBalance": "冻结余额",
+      "freezeBalanceDesc": "订单处理中或待结算阶段暂时冻结的资金。",
+      "totalBalance": "总余额",
+      "totalBalanceDesc": "账户总余额 = 可用余额 + 冻结余额。",
+      "successRate": "订单成功率",
+      "successRateDesc": "按今日订单汇总的整体成功率，用于判断当前业务质量。",
+      "waitingCodeCount": "待码数量",
+      "waitingCodeCountDesc": "当前仍在等待验证码的号码数，方便用户判断处理时效。",
+      "openApiStatus": "OpenAPI 状态",
+      "openApiEnabledDesc": "当前账号已开启 API 能力，可直接进行服务端集成。",
+      "openApiDisabledDesc": "当前账号尚未开启 API 能力，建议前往 OpenAPI 页面配置。"
+    },
+    "status": {
+      "enabled": "已开启",
+      "disabled": "未开启",
+      "openApiEnabled": "OpenAPI 已启用",
+      "openApiDisabled": "OpenAPI 未启用"
+    },
+    "account": {
+      "title": "账号与凭证",
+      "description": "展示当前登录账号的基础身份、接口凭证和接入状态。",
+      "userName": "当前用户",
+      "appId": "APPID",
+      "email": "邮箱",
+      "apiKey": "API Key"
+    },
+    "quickStats": {
+      "whiteIpCount": "白名单数量",
+      "defaultCurrency": "货币单位",
+      "supportTelegram": "Telegram",
+      "siteName": "站点名称",
+      "todayOrders": "今日订单",
+      "inUseCount": "使用中号码"
+    },
+    "accountMetrics": {
+      "title": "接入状态",
+      "openApi": "OpenAPI 能力",
+      "security": "白名单安全",
+      "billing": "账户总额",
+      "support": "支持邮箱",
+      "whitelistReady": "已配置白名单",
+      "whitelistMissing": "未配置白名单"
+    },
+    "business": {
+      "title": "业务驾驶舱",
+      "description": "这里先按当前项目的业务模型搭建结构，后端只需按字段返回真实数据即可替换占位内容。",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "订单总览",
+          "description": "建议接入今日订单数、成功数、失败数、成功率、总消费金额，并支持最近 7 天趋势。"
+        },
+        {
+          "key": "numbers",
+          "title": "号码业务",
+          "description": "建议接入当前取号数、待码数、已释放数、已加黑数，以及国家 / 项目维度分布。"
+        },
+        {
+          "key": "channels",
+          "title": "渠道状态",
+          "description": "建议接入渠道可用率、项目支持国家数、异常渠道数、平均取码耗时等指标。"
+        },
+        {
+          "key": "security",
+          "title": "安全与接入",
+          "description": "建议接入 OpenAPI 请求量、白名单命中数、拦截数、最近 API 异常数等数据。"
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "余额占比",
+      "description": "展示可用余额与冻结余额的结构占比，帮助用户快速理解资金状态。",
+      "available": "可用余额",
+      "freeze": "冻结余额"
+    },
+    "orderRatio": {
+      "title": "订单状态占比",
+      "description": "以占比形式展示今日订单的成功、失败与处理中分布。",
+      "success": "成功订单",
+      "fail": "失败订单",
+      "processing": "处理中"
+    },
+    "projectRatio": {
+      "title": "项目占比",
+      "description": "展示主要项目的订单或消费占比，便于用户判断业务重心。",
+      "successRate": "成功率："
+    },
+    "countryRatio": {
+      "title": "国家占比",
+      "description": "展示主要国家的业务占比与成功率表现。",
+      "successRate": "成功率："
+    },
+    "trend": {
+      "title": "近 7 日趋势",
+      "description": "建议后端返回订单量、成功率、消费金额趋势，用于图形化展示业务变化。",
+      "totalOrders": "今日订单总数",
+      "successRate": "今日成功率",
+      "failCount": "今日失败数",
+      "latestWindow": "近 7 日明细",
+      "ordersUnit": "单"
+    },
+    "todo": {
+      "title": "建议后续接入的数据模块",
+      "items": [
+        "今日 / 昨日订单对比",
+        "国家维度成功率 Top 排名",
+        "项目维度消费金额排行",
+        "近 7 日取号与接码趋势"
+      ]
+    },
+    "support": {
+      "title": "站点与支持",
+      "description": "直接展示站点名称与对接联系方式，便于运营和技术联动。",
+      "siteName": "站点名称",
+      "email": "联系邮箱",
+      "telegram": "Telegram",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "建议后端接口结构",
+      "description": "建议新增一个控制台汇总接口，例如 /admin/dashboard/summary，按下列字段返回。",
+      "columns": {
+        "name": "字段名",
+        "type": "类型",
+        "desc": "说明"
+      },
+      "fields": [
+        {
+          "name": "balance.available",
+          "type": "number|string",
+          "desc": "当前可用余额"
+        },
+        {
+          "name": "balance.freeze",
+          "type": "number|string",
+          "desc": "当前冻结余额"
+        },
+        {
+          "name": "balance.total",
+          "type": "number|string",
+          "desc": "总余额，可后端直接返回"
+        },
+        {
+          "name": "orders.todayCount",
+          "type": "number",
+          "desc": "今日订单总数"
+        },
+        {
+          "name": "orders.successCount",
+          "type": "number",
+          "desc": "成功订单数"
+        },
+        {
+          "name": "orders.failCount",
+          "type": "number",
+          "desc": "失败订单数"
+        },
+        {
+          "name": "orders.successRate",
+          "type": "number|string",
+          "desc": "成功率，建议返回百分比值或可格式化数字"
+        },
+        {
+          "name": "orders.totalAmount",
+          "type": "number|string",
+          "desc": "订单总消费金额"
+        },
+        {
+          "name": "orders.processingCount",
+          "type": "number",
+          "desc": "处理中订单数，用于订单状态占比图"
+        },
+        {
+          "name": "numbers.inUseCount",
+          "type": "number",
+          "desc": "当前使用中号码数量"
+        },
+        {
+          "name": "numbers.waitingCodeCount",
+          "type": "number",
+          "desc": "等待验证码中的号码数"
+        },
+        {
+          "name": "numbers.releaseCount",
+          "type": "number",
+          "desc": "今日释放号码数"
+        },
+        {
+          "name": "numbers.blacklistCount",
+          "type": "number",
+          "desc": "今日加黑号码数"
+        },
+        {
+          "name": "channels.activeProjectCount",
+          "type": "number",
+          "desc": "当前可用项目数"
+        },
+        {
+          "name": "channels.activeCountryCount",
+          "type": "number",
+          "desc": "当前可用国家数"
+        },
+        {
+          "name": "channels.abnormalChannelCount",
+          "type": "number",
+          "desc": "异常渠道数"
+        },
+        {
+          "name": "api.requestCountToday",
+          "type": "number",
+          "desc": "今日 API 请求量"
+        },
+        {
+          "name": "api.blockCountToday",
+          "type": "number",
+          "desc": "今日拦截次数"
+        },
+        {
+          "name": "trends.sevenDays",
+          "type": "array",
+          "desc": "近 7 日趋势数组，每项可含 date、orderCount、successCount、amount"
+        },
+        {
+          "name": "projects.distribution",
+          "type": "array",
+          "desc": "项目占比数组，每项建议含 name、value、amount、successRate、color"
+        },
+        {
+          "name": "countries.distribution",
+          "type": "array",
+          "desc": "国家占比数组，每项建议含 name、value、successRate、color"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "description": "管理账号配置，修改个人资料、密码及系统外观风格。",
+    "appearance": {
+      "title": "外观",
+      "description": "自定义系统外观，自动切换浅色/深色主题。",
+      "theme": {
+        "label": "主题",
+        "description": "选择控制台显示主题",
+        "light": "浅色模式",
+        "dark": "深色模式"
+      },
+      "language": {
+        "label": "语言",
+        "description": "选择系统首选语言",
+        "en": "英语",
+        "fr": "法语",
+        "es": "西班牙语",
+        "de": "德语",
+        "pt": "葡萄牙语",
+        "ru": "俄语",
+        "ja": "日语",
+        "ko": "韩语",
+        "zh": "简体中文"
+      }
+    },
+    "profile": {
+      "title": "个人资料",
+      "description": "管理个人信息与偏好设置",
+      "personal_info": "基础信息",
+      "personal_info_description": "编辑你的基础个人资料",
+      "first_name": "名",
+      "first_name_placeholder": "请输入名字",
+      "first_name_helper_text": "个人资料展示的名字",
+      "last_name": "姓",
+      "last_name_placeholder": "请输入姓氏",
+      "last_name_helper_text": "个人资料展示的姓氏",
+      "username": "用户名",
+      "username_placeholder": "请输入用户名",
+      "username_helper_text": "对外展示昵称，每30天仅可修改一次",
+      "email": "邮箱",
+      "email_placeholder": "请输入邮箱地址",
+      "email_helper_text": "邮箱由认证方统一管理，无法在此修改",
+      "update_profile": "保存资料",
+      "profile_updated": "个人资料更新成功",
+      "profile_update_failed": "资料更新失败，请稍后重试",
+      "password_section_title": "密码管理",
+      "password_section_description": "定期修改密码，保障账号安全",
+      "password_prompt": "点击下方按钮修改登录密码",
+      "change_password": "修改密码",
+      "current_password": "当前密码",
+      "current_password_placeholder": "请输入原密码",
+      "new_password": "新密码",
+      "new_password_placeholder": "请输入新密码",
+      "new_password_helper_text": "密码长度至少8位",
+      "confirm_password": "确认新密码",
+      "confirm_password_placeholder": "再次输入新密码",
+      "update_password": "保存密码",
+      "password_updated": "密码修改成功",
+      "password_updated_description": "你的登录密码已更新",
+      "password_update_failed": "密码修改失败",
+      "current_password_required": "请输入当前密码",
+      "new_password_required": "新密码至少需要 8 位",
+      "confirm_password_required": "请再次输入确认密码",
+      "password_not_match": "两次输入的新密码不一致",
+      "reverification_required": "需要重新验证身份",
+      "reverification_required_description": "为保障安全，请退出账号重新登录后再修改密码",
+      "current_password_incorrect": "原密码输入错误，请重新输入",
+      "password_compromised": "该密码存在安全泄露风险，请更换其他密码"
+    }
+  },
+  "dashboard": {
+    "title": "控制台"
+  },
+  "home": {
+    "hero": {
+      "badge": "全球接码服务平台",
+      "title": "价格透明，渠道稳定，成功率更高的接码平台",
+      "description": "专注验证码接收与号码服务，提供价格透明、数据透明、安全防护、渠道丰富与高成功率的全球接码能力，帮助你更高效地完成业务验证流程。",
+      "cta": "立即开始",
+      "secondary": "查看 API 文档"
+    },
+    "features": {
+      "title": "为什么选择我们",
+      "items": [
+        {
+          "title": "价格透明",
+          "description": "项目价格清晰可见，无隐藏收费，号码获取、释放、加黑等操作一目了然。"
+        },
+        {
+          "title": "数据透明",
+          "description": "订单状态、验证码获取、号码使用过程全链路可追踪，便于审计与排查。"
+        },
+        {
+          "title": "安全防护",
+          "description": "支持 Token 鉴权、刷新机制与安全防火墙拦截，保障接口访问与业务数据安全。"
+        },
+        {
+          "title": "渠道丰富",
+          "description": "多国家、多项目、多渠道供应，灵活适配不同业务场景与验证需求。"
+        },
+        {
+          "title": "成功率高",
+          "description": "稳定号码资源与多通道调度策略，有效提升验证码接收成功率与业务效率。"
+        },
+        {
+          "title": "灵活回调",
+          "description": "支持主动轮询与回调推送两种模式，方便接入自动化业务流程。"
+        }
+      ]
+    },
+    "stats": {
+      "title": "核心能力",
+      "items": [
+        {
+          "label": "价格体系",
+          "value": "透明可查"
+        },
+        {
+          "label": "渠道覆盖",
+          "value": "多国多项目"
+        },
+        {
+          "label": "接码模式",
+          "value": "轮询 + 回调"
+        },
+        {
+          "label": "安全能力",
+          "value": "防火墙拦截"
+        }
+      ]
+    }
+  },
+  "apiDoc": {
+    "hero": {
+      "title": "API 文档",
+      "description": "提供通用 API 接口文档，帮助开发者快速对接本平台，享受高效稳定的服务。",
+      "cta": "查看 API 文档"
+    },
+    "button": {
+      "start": "开始阅读"
+    },
+    "toc": {
+      "title": "目录",
+      "introduction": "写在前面",
+      "authentication": "对接前提与认证",
+      "apiStandards": "通用 API 规范",
+      "responseFormat": "通用响应格式",
+      "apiList": "API 接口列表"
+    },
+    "sections": {
+      "introduction": {
+        "title": "写在前面",
+        "lead": "在使用该项目接口之前，请确保您满足以下条件：",
+        "items": [
+          "具备网络请求的基础知识 😪",
+          "具有开发者能力 😨",
+          "熟知双 Token 刷新机制 😥",
+          "具备调试、查询日志、排错问题的能力 😁"
+        ],
+        "summary": "本项目旨在提供一套通用的 API 接入方案，帮助您快速实现业务功能集成。",
+        "summaryTitle": "本项目应当是一套通用 API",
+        "summaryItems": [
+          "没有固定请求地址，请求地址取决于你的账户地址。",
+          "通常请求地址是在用的 IP / 域名。",
+          "请严格按照文档要求进行开发。",
+          "如需技术支持请描述问题、BUG 复现流程，以及请求报文和响应报文。"
+        ],
+        "note": "文档写得比较随意，轻点骂 💔"
+      },
+      "authentication": {
+        "title": "对接前提与认证",
+        "lead": "在对接之前，你应该在控制台后台拿到你的 APPID 和 apiKey 令牌：",
+        "items": [
+          "appid：目前使用的商户 / 用户 ID。",
+          "apikey：系统特有加密生成的密钥，用于接口签名或直接认证。",
+          "IP 白名单：必须配置为你的服务器请求出网 IP，不配置会被防火墙直接拦截。",
+          "配置多个 IP 时请使用英文逗号分开。"
+        ]
+      },
+      "apiStandards": {
+        "title": "通用 API 规范",
+        "items": [
+          "请求地址：没有固定请求地址，请求地址取决于你的账户分配地址（通常是当前正在使用的 IP / 域名）。",
+          "请求方法：全局使用 POST 请求，不接受 GET 方法（除非文档中特殊说明）。",
+          "请求类型：请求头 Content-Type 必须严格指定为 application/json。",
+          "命名规范：大部分数据返回字段都是驼峰式命名，如果不是，会在具体接口文档中特别注明。"
+        ],
+        "baseUrlLabel": "当前环境请求地址"
+      },
+      "responseFormat": {
+        "title": "通用响应格式",
+        "lead": "所有的接口返回的均为标准 JSON 格式数据。根据 code 状态码判断业务处理是否成功。",
+        "successTitle": "成功响应",
+        "errorTitle": "错误响应",
+        "note": "注：code 为非 200/0 时，通常代表业务或系统发生异常，请参考 msg 字段进行排查。"
+      },
+      "apiList": {
+        "title": "API 接口列表",
+        "lead": "以下是当前开放的核心接口，建议按调用顺序进行接入。",
+        "summaryTitle": "摘要",
+        "authTitle": "鉴权",
+        "contentTypeTitle": "请求类型",
+        "paramsTitle": "请求参数",
+        "responseTitle": "响应示例",
+        "table": {
+          "name": "参数名",
+          "type": "类型",
+          "required": "必填",
+          "description": "说明",
+          "example": "示例"
+        },
+        "requiredYes": "是",
+        "requiredNo": "否",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "获取 Token",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "在 Api 内任何操作，你必须通过此接口获取到 token 和 refreshToken。此接口支持 POST/GET 传参数，支持 form-data/json 传入，建议统一使用 json。",
+            "auth": "否",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "当前使用的户 ID",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "平台生成的 apiKey",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取Token成功\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "刷新 Token",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "此接口支持 GET/POST 请求，请求参数 refreshToken，支持 form-data/json，刷新成功后会拿到新的 token 和新的 refreshToken。",
+            "auth": "否",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "登录后保存的刷新令牌",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"操作成功\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "获取账户信息",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "获取用户的账户信息，如果需要的话，请求头传递 Authorization，token 可携带 Bearer {Token值} 均支持。",
+            "auth": "是",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "用户登录后获取的 token，支持 Bearer 前缀",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取用户信息成功\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "国家地区库",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "获取系统内的地址信息库。国家库基本没有什么变化，建议存储到本地。",
+            "auth": "可选",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "可选 token 请求头",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取国家列表成功\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"乌兹别克斯坦\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "获取在用项目",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "获取线上可用项目。",
+            "auth": "可选",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "可选 token 请求头",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取项目列表成功\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "获取手机号码",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "获取手机号码，支持 form-data/json。获取号码后状态会变成等待验证码，此时需要调用获取验证码接口。新增返回 orderNo，获取验证码时需要传递。",
+            "auth": "可选",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "国家 ID，对应项目中的 country 字段",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "项目 ID",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "想继续使用上一个号码时可传",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "号码类型，可选 sms / voice / incall，也可传 all 或空",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "短信回调地址",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取号码成功，余额已冻结\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "获取验证码",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "支持 form-data/json。此接口需要定时轮询以获取验证码，返回 code=200 后，后续不再重复返回验证码。",
+            "auth": "可选",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "获取号码接口返回的唯一订单号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "获取号码接口返回的手机号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "获取号码接口返回的pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+           "successExample": "{\n  \"code\": 200,\n  \"msg\": \"获取验证码成功，已完成扣费\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"短信内容\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "释放号码",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "支持 form-data/json。接口方可主动调用释放接口，避免额外的付费。",
+            "auth": "可选",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "需要释放的订单号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "需要释放的手机号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "需要释放的pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"释放成功\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "加黑号码",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "支持 form-data/json。接口方可调用此号码加黑，后续不会再获取到该号码。",
+            "auth": "可选",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "需要加黑的订单号",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "需要加黑的手机号",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "需要加黑的pkey",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"加黑成功\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "短信回调推送",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "在获取号码时传入 callbackUrl，后续系统接收到运营商短信时，会主动推送到这个地址。",
+            "auth": "由业务方提供 URL",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"短信内容\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "产品",
+        "items": {
+          "smsPlatform": "接码平台",
+          "apiDocs": "API 文档",
+          "dashboard": "控制台",
+          "pricing": "价格方案"
+        }
+      },
+      "support": {
+        "title": "支持",
+        "items": {
+          "helpCenter": "帮助中心",
+          "integrationGuide": "接入指南",
+          "faq": "常见问题"
+        }
+      },
+      "company": {
+        "title": "公司",
+        "items": {
+          "about": "关于我们",
+          "blog": "博客资讯",
+          "contact": "联系我们",
+          "terms": "服务条款",
+          "privacy": "隐私政策"
+        }
+      },
+      "resources": {
+        "title": "资源",
+        "items": {
+          "countryLibrary": "国家地区库",
+          "projectList": "项目列表",
+          "callbackDocs": "回调文档",
+          "statusPage": "系统状态",
+          "security": "安全说明"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "页面不存在",
+    "description": "抱歉，你访问的页面不存在或已被移除。",
+    "backHome": "返回首页"
+  },
+  "auth": {
+    "sign_in_success": "欢迎回来！",
+    "sign_in_success_description": "账号登录成功",
+    "sign_in_failed": "登录失败",
+    "sign_up_success": "账号注册成功！",
+    "sign_up_success_description": "欢迎使用本系统",
+    "sign_up_failed": "注册失败",
+    "sign_out_success": "已退出登录",
+    "sign_out_success_description": "你已安全退出当前账号",
+    "sign_out_failed": "退出失败",
+    "verification_code_sent": "验证码已发送",
+    "verification_code_sent_description": "请前往邮箱查看验证码",
+    "verification_code_resent": "验证码已重新发送",
+    "verification_code_resent_description": "新的验证码已发送至你的邮箱",
+    "verification_failed": "验证失败",
+    "verification_success": "邮箱验证通过",
+    "verification_success_description": "你的邮箱已完成绑定验证",
+    "captcha": {
+      "label": "图形验证码",
+      "placeholder": "请输入验证码",
+      "image_alt": "验证码图片",
+      "loading": "加载中...",
+      "required": "请输入验证码"
+    },
+    "logout": {
+      "button": "退出登录",
+      "title": "退出登录",
+      "description": "确定要退出当前账号吗？",
+      "loading": "退出中...",
+      "confirm": "确认退出"
+    },
+    "sign_in": {
+      "title": "欢迎登录",
+      "description": "登录账号以继续操作",
+      "verify_title": "身份验证",
+      "verify_description": "请输入邮箱收到的验证码",
+      "verify_new_device": "当前为新设备登录，需完成身份验证",
+      "account_label": "邮箱 / 用户名",
+      "account_placeholder": "请输入邮箱或用户名",
+      "email_label": "邮箱",
+      "password_label": "登录密码",
+      "password_placeholder": "请输入密码",
+      "remember_password": "记住密码",
+      "verification_code_label": "验证码",
+      "verification_code_placeholder": "请输入验证码",
+      "sign_in_button": "登录",
+      "signing_in": "登录中...",
+      "verify_button": "验证",
+      "verifying": "验证中...",
+      "resend_code": "未收到验证码？点击重新发送",
+      "no_account": "还没有账号？",
+      "sign_up_link": "立即注册",
+      "forgot_password": "忘记密码？",
+      "reset_password_link": "重置密码",
+      "second_factor_required": "需要二次验证，暂未提供邮箱验证码服务",
+      "unexpected_status": "登录状态异常"
+    },
+    "sign_up": {
+      "title": "账号注册",
+      "description": "快速注册账号，体验完整系统功能",
+      "verify_title": "邮箱验证",
+      "verify_description": "输入邮箱验证码完成注册",
+      "first_name_label": "名字",
+      "first_name_placeholder": "请输入名字",
+      "last_name_label": "姓氏",
+      "last_name_placeholder": "请输入姓氏",
+      "username_label": "用户名",
+      "username_placeholder": "请输入用户名",
+      "email_label": "邮箱",
+      "password_label": "设置密码",
+      "password_placeholder": "请输入密码",
+      "verification_code_label": "验证码",
+      "verification_code_placeholder": "请输入验证码",
+      "sign_up_button": "注册",
+      "signing_up": "注册中...",
+      "verify_button": "验证邮箱",
+      "verifying": "验证中...",
+      "resend_code": "未收到验证码？点击重新发送",
+      "have_account": "已有账号？",
+      "sign_in_link": "前往登录",
+      "forgot_password": "忘记密码？",
+      "reset_password_link": "重置密码"
+    },
+    "reset_password": {
+      "title": "忘记密码",
+      "description": "输入邮箱，获取验证码重置密码",
+      "reset_title": "重置密码",
+      "reset_description": "输入邮箱验证码并设置新密码",
+      "email_label": "邮箱地址",
+      "code_label": "验证码",
+      "code_placeholder": "填写邮箱收到的验证码",
+      "new_password_label": "新密码",
+      "new_password_placeholder": "请设置新密码",
+      "send_code_button": "发送验证码",
+      "sending": "发送中...",
+      "reset_button": "确认重置",
+      "resetting": "重置中...",
+      "resend_code": "未收到验证码？点击重新发送",
+      "remember_password": "记起密码了？",
+      "sign_in_link": "返回登录"
+    }
+  },
+  "password_reset": {
+    "code_sent": "重置验证码已发送",
+    "code_sent_description": "密码重置验证码已发送至你的邮箱",
+    "code_resent": "重置验证码已重发",
+    "code_resent_description": "新的密码重置验证码已发送",
+    "reset_success": "密码重置成功",
+    "reset_success_description": "密码已重置，正在跳转登录页...",
+    "reset_failed": "密码重置失败"
+  },
+  "profile": {
+    "title": "个人中心",
+    "description": "查看和管理你的个人资料",
+    "first_name": "名",
+    "last_name": "姓",
+    "username": "用户名",
+    "member_since": "注册时间",
+    "edit_profile": "编辑资料"
+  },
+  "balance": {
+    "title": "资金账户"
+  },
+  "billing": {
+    "title": "账单订阅",
+    "description": "管理套餐订阅与支付账单",
+    "current_plan": "当前套餐",
+    "current_plan_description": "你当前使用的服务套餐",
+    "available_plans": "可选套餐",
+    "month": "月",
+    "features": "套餐权益",
+    "recommended": "推荐",
+    "upgrade": "立即升级",
+    "payment_method": "支付方式",
+    "payment_method_description": "管理默认付款账户",
+    "no_payment_method": "暂未添加支付方式",
+    "add_payment_method": "添加支付方式",
+    "add_payment_method_description": "绑定付款账户，升级付费套餐",
+    "billing_history": "账单记录",
+    "billing_history_description": "查看历史订单与消费发票",
+    "no_invoices": "暂无账单",
+    "no_invoices_description": "产生付费订单后，记录将展示在此处",
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "description": "适合新手入门使用",
+        "feature_1": "基础功能一",
+        "feature_2": "基础功能二",
+        "feature_3": "基础功能三",
+        "feature_4": "基础功能四"
+      },
+      "pro": {
+        "name": "专业版",
+        "description": "适合个人与小团队使用",
+        "feature_1": "包含免费版全部功能",
+        "feature_2": "高级功能一",
+        "feature_3": "高级功能二",
+        "feature_4": "高级功能三",
+        "feature_5": "高级功能四",
+        "feature_6": "高级功能五"
+      },
+      "enterprise": {
+        "name": "企业版",
+        "description": "面向大型组织与企业",
+        "feature_1": "包含专业版全部功能",
+        "feature_2": "企业专属功能一",
+        "feature_3": "企业专属功能二",
+        "feature_4": "企业专属功能三",
+        "feature_5": "企业专属功能四",
+        "feature_6": "企业专属功能五"
+      }
+    }
+  }
+}

@@ -1,43 +1,1029 @@
 {
   "common": {
+    "success": "Success",
+    "error": "Error",
     "save": "Save",
     "cancel": "Cancel",
     "submit": "Submit",
     "update": "Update",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "all": "All"
+  },
+  "layouts": {
+    "header": {
+      "home": "Home",
+      "api": "API",
+      "blog": "Blog",
+      "help": "Help",
+      "about": "About",
+      "signIn": "Sign In"
+    }
+  },
+  "http": {
+    "login": {
+      "errTitle": "Login Failed",
+      "authErr": "Authentication Failed",
+      "authErrToken": "Failed to refresh Token, please log in again",
+      "authTimeOut": "Login expired, please log in again"
+    },
+    "failed": "Request Failed",
+    "network": "Network Error"
   },
   "navigation": {
     "dashboard": "Dashboard",
     "profile": "Profile",
     "appearance": "Appearance",
-    "settings": "Settings"
+    "settings": "Settings",
+    "balance": "Balance Center",
+    "openapi": "OpenAPI",
+    "numberRental": "Number Rental",
+    "numberrental": "Number Rental",
+    "receiveNumber": "Receive Number",
+    "releaseNumber": "Release Number",
+    "blacklistNumber": "Blacklist Number",
+    "packageSubscription": "Package Subscription",
+    "packagesubscription": "Package Subscription",
+    "packageOrders": "Package Orders",
+    "subscribePlan": "Subscribe Plan",
+    "subscriptionNumberManagement": "Number Management",
+    "orderManagement": "Order Management",
+    "ordermanagement": "Order Management",
+    "myOrders": "My Orders",
+    "orderDownload": "Order Download",
+    "expenseStatistics": "Expense Statistics",
+    "fundChanges": "Fund Changes",
+    "apiSupport": "Technical Support",
+    "apiDoc": "API Documentation"
   },
   "pages": {
-    "page_one": "Page One"
+    "balancePage": {
+      "title": "Balance Center",
+      "description": "View account balance, frozen balance, total balance, and query fund change records.",
+      "summary": {
+        "balance": "Available Balance",
+        "freezeBalance": "Frozen Balance",
+        "totalBalance": "Total Balance",
+        "totalRecords": "Total Records",
+        "freezeAmount": "Frozen Amount",
+        "unfreezeAmount": "Unfrozen Amount",
+        "consumptionAmount": "Consumption Amount"
+      },
+      "recharge": {
+        "title": "Recharge Center",
+        "description": "Select the recharge denomination to enter the payment process. Currently, only the payment UI is reserved.",
+        "preset": "Quick Select Denomination",
+        "custom": "Custom Denomination",
+        "placeholder": "Please enter recharge amount",
+        "action": "Go to Pay",
+        "loading": "Processing...",
+        "tip": "A handling fee will be charged for recharge.",
+        "handlingFee": "Handling fee is {{fee}}"
+      },
+      "records": {
+        "title": "Balance Change Records",
+        "filters": {
+          "orderNo": "Order No.",
+          "remark": "Remark",
+          "source": "Source",
+          "changeType": "Change Type",
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "timeRange": "Time Range",
+          "selectTimeRange": "Please select time range",
+          "search": "Search",
+          "reset": "Reset"
+        },
+        "table": {
+          "createTime": "Time",
+          "source": "Source",
+          "remark": "Remark",
+          "orderNo": "Order No.",
+          "changeAmount": "Change Amount",
+          "beforeBalance": "Before Change",
+          "afterBalance": "After Change"
+        },
+        "empty": "No records found",
+        "pagination": {
+          "prev": "Previous",
+          "next": "Next",
+          "jump": "Go to",
+          "page": "Page"
+        },
+        "changeTypeOptions": {
+          "all": "All",
+          "1": "Recharge",
+          "2": "Consumption",
+          "3": "Refund",
+          "4": "Withdrawal",
+          "5": "Adjustment",
+          "6": "Freeze",
+          "7": "Unfreeze",
+          "8": "Gift",
+          "9": "Penalty"
+        },
+        "typeAmountLabels": {
+          "type1": "Recharge Statistics",
+          "type2": "Consumption Statistics",
+          "type3": "Refund Statistics",
+          "type4": "Withdrawal Statistics",
+          "type5": "Adjustment Statistics",
+          "type6": "Freeze Statistics",
+          "type7": "Unfreeze Statistics",
+          "type8": "Gift Statistics"
+        }
+      }
+    },
+    "packageOrdersPage": {
+      "title": "Package Orders",
+      "description": "View package purchase records, order status, and activation details.",
+      "placeholderTitle": "Package Orders Initial Template",
+      "placeholderDescription": "This page has been initialized and can be expanded later with order lists, filters, and detail views.",
+      "filters": {
+        "orderNo": "Order No.",
+        "status": "Status",
+        "search": "Search",
+        "reset": "Reset",
+        "all": "All"
+      },
+      "summary": {
+        "totalOrders": "Total Orders",
+        "activeOrders": "Active Orders",
+        "autoRenewOrders": "Auto Renew Orders",
+        "totalAmount": "Total Amount"
+      },
+      "table": {
+        "orderNo": "Order No.",
+        "combo": "Plan Info",
+        "duration": "Duration",
+        "phoneNumCount": "Number Count",
+        "amount": "Order Amount",
+        "unitPrice": "Unit Price",
+        "status": "Order Status",
+        "autoRenew": "Auto Renew",
+        "tempToken": "Temp Token",
+        "actions": "Actions",
+        "timeInfo": "Time Info",
+        "subscribeTime": "Subscribe Time",
+        "expireTime": "Expire Time"
+      },
+      "durationTypes": {
+        "day": "Day",
+        "month": "Month",
+        "year": "Year"
+      },
+      "statusOptions": {
+        "0": "Creating",
+        "1": "Active",
+        "2": "Expired",
+        "3": "Ended"
+      },
+      "autoRenew": {
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "actions": {
+        "renew": "Manual Renew",
+        "viewNumbers": "View Numbers",
+        "receive": "Receive",
+        "refreshTempToken": "Refresh Token"
+      },
+      "renewDialog": {
+        "title": "Renewal Summary",
+        "description": "Confirm renewal quantity, duration, and auto-renew settings before submitting the order.",
+        "plan": "Plan Name",
+        "numberCount": "Renewed Number Count",
+        "duration": "Renewal Duration",
+        "autoRenew": "Auto Renew",
+        "autoRenewHint": "When enabled, renewal will be attempted automatically on expiration using the current renewal settings.",
+        "summary": "Price Summary",
+        "unitPrice": "Unit Price",
+        "totalPrice": "Total Price",
+        "submitting": "Renewing..."
+      },
+      "numberSheet": {
+        "title": "Subscribed Numbers",
+        "description": "View the number list linked to the current package order."
+      },
+      "receiveDialog": {
+        "title": "Receive Callback URL",
+        "description": "When a verification code is obtained, it will be callback to this URL.",
+        "callbackUrl": "Callback URL",
+        "placeholder": "Please enter callback URL",
+        "save": "Save URL",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "autoRenewUpdated": "Auto-renew status updated",
+        "autoRenewFailed": "Failed to update auto-renew status",
+        "renewSuccess": "Package renewed successfully",
+        "renewFailed": "Failed to renew package",
+        "saveCallbackSuccess": "Callback URL saved successfully",
+        "saveCallbackFailed": "Failed to save callback URL",
+        "tempTokenRefreshSuccess": "Temporary token refreshed",
+        "tempTokenRefreshFailed": "Failed to refresh temporary token"
+      },
+      "empty": "No package order records",
+      "pagination": {
+        "prev": "Prev",
+        "next": "Next",
+        "jump": "Go"
+      }
+    },
+    "subscribePlanPage": {
+      "title": "Subscribe Plan",
+      "description": "View available plans and create subscription orders.",
+      "placeholderTitle": "Subscribe Plan Initial Template",
+      "placeholderDescription": "This page has been initialized and can be extended later with plan cards, purchase flow, and renewal features.",
+      "filters": {
+        "title": "Exclusive Plan Filters",
+        "description": "Filter the plans available for your account by country and subscription duration type.",
+        "country": "Country",
+        "durationType": "Subscription Type",
+        "allCountries": "All Countries",
+        "allTypes": "All Types",
+        "search": "Refresh List",
+        "reset": "Reset Filters",
+        "placeholders": {
+          "searchCountry": "Search by country name / code / dial code / ID"
+        }
+      },
+      "types": {
+        "day": "Day",
+        "week": "Week",
+        "month": "Month",
+        "year": "Year"
+      },
+      "stats": {
+        "total": "Total Plans",
+        "active": "Available Plans"
+      },
+      "status": {
+        "enabled": "Available",
+        "disabled": "Disabled"
+      },
+      "card": {
+        "country": "Available Country",
+        "price": "Plan Price",
+        "duration": "Subscription Period",
+        "remark": "Plan Notes",
+        "createdTime": "Created Time",
+        "updatedTime": "Updated Time",
+        "noRemark": "No notes",
+        "subscribe": "Subscribe"
+      },
+      "dialog": {
+        "title": "Subscription Summary",
+        "description": "Confirm quantity, duration, and auto-renew settings before submitting the order.",
+        "plan": "Plan Name",
+        "numberCount": "Subscribed Number Count",
+        "duration": "Subscription Duration",
+        "autoRenew": "Auto Renew",
+        "autoRenewHint": "When enabled, renewal will be attempted automatically on expiration with the current settings.",
+        "summary": "Price Summary",
+        "unitPrice": "Unit Price",
+        "totalPrice": "Total Price",
+        "submitting": "Subscribing..."
+      },
+      "empty": "No subscription plans matched the current filters",
+      "messages": {
+        "loadFailed": "Failed to load subscription plans",
+        "createSuccess": "Subscription created successfully",
+        "createFailed": "Failed to create subscription",
+        "invalidDuration": "Please enter a valid subscription duration",
+        "invalidNumberCount": "Please enter a valid subscribed number count"
+      }
+    },
+    "subscriptionNumberManagementPage": {
+      "title": "Number Management",
+      "description": "Manage numbers assigned from subscription orders and view their links to plans and subscription orders.",
+      "placeholderTitle": "Number Management Initial Template",
+      "placeholderDescription": "This page has been initialized and can later be expanded with assigned number lists, allocation status, plan bindings, and operations."
+    },
+    "subscriptionNumberList": {
+      "title": "Subscribed Number List",
+      "description": "Search numbers linked to package orders by order number and view status and validity.",
+      "filters": {
+        "title": "Filters",
+        "orderNo": "Order No.",
+        "search": "Search",
+        "reset": "Reset"
+      },
+      "export": {
+        "button": "Export Numbers",
+        "loading": "Exporting...",
+        "successDescription": "Export successful, please check the download center.",
+        "failedDescription": "Number export failed, please try again later."
+      },
+      "summary": {
+        "totalNumbers": "Total Numbers"
+      },
+      "table": {
+        "orderNo": "Order No.",
+        "phone": "Number Info",
+        "imsi": "IMSI",
+        "combo": "Plan Info",
+        "status": "Status",
+        "timeInfo": "Time Info",
+        "createdAt": "Created Time",
+        "expireTime": "Expire Time",
+        "remark": "Remark"
+      },
+      "statusOptions": {
+        "0": "Creating",
+        "1": "Active",
+        "2": "Expired",
+        "3": "Ended"
+      },
+      "empty": "No subscribed number records",
+      "pagination": {
+        "prev": "Prev",
+        "next": "Next",
+        "jump": "Go"
+      }
+    },
+    "myOrdersPage": {
+      "title": "My Orders",
+      "description": "View number order status, verification code content, country, project, and order information.",
+      "filters": {
+        "country": "Country",
+        "project": "Project",
+        "status": "Order Status",
+        "phone": "Number",
+        "orderNo": "Order No.",
+        "timeRange": "Time Range",
+        "startTime": "Start Time",
+        "endTime": "End Time",
+        "search": "Search",
+        "reset": "Reset",
+        "all": "All",
+        "searchCountry": "Search Country",
+        "searchProject": "Search Project",
+        "selectTimeRange": "Please select time range"
+      },
+      "summary": {
+        "totalOrders": "Total Orders",
+        "successAmount": "Success Amount",
+        "failAmount": "Failed Amount",
+        "totalAmount": "Total Consumption Amount"
+      },
+      "table": {
+        "orderNo": "Order No.",
+        "country": "Country",
+        "project": "Project",
+        "phone": "Number",
+        "price": "Price",
+        "status": "Status",
+        "codeNum": "Verification Code",
+        "smsContent": "SMS Content",
+        "sourceType": "Source",
+        "createTime": "Creation Time",
+        "updateTime": "Update Time",
+        "timeInfo": "Time"
+      },
+      "sourceTypeOptions": {
+        "1": "On-site",
+        "2": "API",
+        "3": "Subscription"
+      },
+      "statusOptions": {
+        "-1": "Voided Order",
+        "-2": "Abnormal Deduction",
+        "1": "In Progress",
+        "2": "Success",
+        "3": "Ended",
+        "4": "Failed",
+        "99": "Pre-Warehousing"
+      },
+      "empty": "No order records found",
+      "pagination": {
+        "prev": "Previous",
+        "next": "Next",
+        "jump": "Go to"
+      },
+      "export": {
+        "button": "Export Orders",
+        "loading": "Exporting...",
+        "successTitle": "Export Successful",
+        "successDescription": "Export successful, please go to the Order Download Center to download.",
+        "failedTitle": "Export Failed",
+        "failedDescription": "Order export failed, please try again later."
+      }
+    },
+    "orderDownloadPage": {
+      "title": "Order Download Center",
+      "description": "View order export task status, query parameters, processing results, and download files after success.",
+      "filters": {
+        "taskName": "Task Name",
+        "status": "Status",
+        "startTime": "Start Time",
+        "endTime": "End Time",
+        "timeRange": "Time Range",
+        "selectTimeRange": "Please select time range",
+        "search": "Search",
+        "reset": "Reset"
+      },
+      "summary": {
+        "totalTasks": "Total Tasks"
+      },
+      "table": {
+        "taskName": "Task Name",
+        "status": "Status",
+        "admin": "Submitted By",
+        "errorMsg": "Error Message",
+        "createTime": "Creation Time",
+        "updateTime": "Update Time",
+        "action": "Action",
+        "download": "Download"
+      },
+      "statusOptions": {
+        "0": "Queued",
+        "1": "Processing",
+        "2": "Success",
+        "3": "Failed"
+      },
+      "messages": {
+        "waitTitle": "Temporarily Unavailable for Download",
+        "waitDescription": "Please wait for the order processing to complete before downloading.",
+        "fileMissingTitle": "File Does Not Exist",
+        "fileMissingDescription": "The current task is missing a downloadable file."
+      },
+      "empty": "No download tasks found",
+      "pagination": {
+        "prev": "Previous",
+        "next": "Next",
+        "jump": "Go to"
+      }
+    },
+    "expenseStatisticsPage": {
+      "title": "Expense Statistics",
+      "description": "View number consumption statistics by country, project, and time range, and summarize the quantity in different statuses.",
+      "filters": {
+        "country": "Country",
+        "project": "Project",
+        "timeRange": "Time Range",
+        "startTime": "Start Time",
+        "endTime": "End Time",
+        "selectTimeRange": "Please select time range",
+        "search": "Search",
+        "reset": "Reset",
+        "all": "All",
+        "searchCountry": "Search Country",
+        "searchProject": "Search Project"
+      },
+      "summary": {
+        "status1": "Requesting Count",
+        "status2": "Success Count",
+        "status3": "Released Count",
+        "status4": "Blacklisted Count",
+        "totalCount": "Total Numbers"
+      },
+      "table": {
+        "getTime": "Consumption Time",
+        "country": "Country Info",
+        "project": "Project Info",
+        "status1": "Requesting",
+        "status2": "Success",
+        "status3": "Released",
+        "status4": "Blacklisted",
+        "totalCount": "Total Numbers"
+      },
+      "empty": "No statistics data found"
+    },
+    "releaseNumberPage": {
+      "title": "Release Number",
+      "description": "View number release logs, supporting filtering by time, number, PKEY, and operation result."
+    },
+    "blacklistNumberPage": {
+      "title": "Blacklist Number",
+      "description": "View number blacklisting logs, supporting filtering by time, number, PKEY, and operation result."
+    },
+    "numberLogPage": {
+      "filters": {
+        "phone": "Number",
+        "pkey": "PKEY",
+        "operationResult": "Operation Result",
+        "allResult": "All Results",
+        "timeRange": "Time Range",
+        "selectTimeRange": "Please select time range",
+        "search": "Search",
+        "reset": "Reset"
+      },
+      "table": {
+        "phone": "Number",
+        "pkey": "PKEY",
+        "operationResult": "Operation Result",
+        "remark": "Remark",
+        "createTime": "Operation Time"
+      },
+      "operationResultOptions": {
+        "success": "Success",
+        "failed": "Failed"
+      },
+      "summary": {
+        "totalLogs": "Total Logs"
+      },
+      "empty": "No log records found",
+      "pagination": {
+        "prev": "Previous",
+        "next": "Next",
+        "jump": "Go to"
+      }
+    },
+    "receiveNumberPage": {
+      "title": "Receive Number",
+      "description": "Select a project, country, and SMS type to get a number, and automatically poll for the verification code result.",
+      "form": {
+        "title": "Get Number",
+        "description": "Filter countries and prices according to the project channel configuration. Supports reusing historical numbers.",
+        "project": "Project",
+        "country": "Country",
+        "type": "SMS Type",
+        "mobile": "Specify Number",
+        "minPrice": "Min Price:",
+        "submit": "Get Number Now",
+        "submitting": "Getting...",
+        "types": {
+          "all": "All Types",
+          "sms": "Standard SMS",
+          "voice": "Voice to SMS",
+          "incall": "Incoming Call to SMS"
+        },
+        "placeholders": {
+          "project": "Please select a project",
+          "country": "Please select a country",
+          "searchProject": "Search project name / code / ID",
+          "searchCountry": "Search country name / code / area code / ID",
+          "mobile": "Fill in here to continue using the previous number"
+        }
+      },
+      "currentPhone": {
+        "title": "Current Number",
+        "description": "After successfully obtaining the number, the system will automatically poll for the verification code.",
+        "empty": "No number obtained yet. Please complete filtering on the left and initiate the request.",
+        "phone": "Number",
+        "country": "Country",
+        "countryTel": "Country Area Code",
+        "port": "Port",
+        "getTime": "Acquisition Time",
+        "pkey": "PKEY",
+        "dock": "Channel Identifier",
+        "polling": "Polling for verification code",
+        "pollingTip": "The system automatically fetches the verification code result every 10 seconds.",
+        "ready": "Polling idle"
+      },
+      "records": {
+        "title": "Verification Code Records",
+        "description": "Successfully obtained verification codes will be displayed here. You can continue to release or blacklist the number.",
+        "empty": "No verification code records found",
+        "columns": {
+          "phone": "Number",
+          "code": "Verification Code",
+          "smsContent": "SMS Content",
+          "createTime": "Acquisition Time",
+          "actions": "Actions"
+        },
+        "actions": {
+          "black": "Blacklist",
+          "release": "Release"
+        }
+      },
+      "messages": {
+        "loadProjectConfigFailed": "Failed to get project channel configuration",
+        "selectProject": "Please select a project first",
+        "selectCountry": "Please select a country first",
+        "countryDataMissing": "Current country information is missing, please reselect",
+        "phoneSuccessTitle": "Number Obtained Successfully",
+        "phoneSuccessDescription": "The number has been successfully obtained, and the system has started automatically polling for the verification code.",
+        "phoneFailedDescription": "Failed to obtain number",
+        "codeSuccessTitle": "Verification Code Obtained Successfully",
+        "codeSuccessDescription": "The verification code has been successfully synchronized to the records.",
+        "codeFailedDescription": "Failed to obtain verification code",
+        "waitingCodeSilent": "Waiting for verification code, retrying in 5 seconds",
+        "blackSuccessTitle": "Number Blacklisted",
+        "blackSuccessDescription": "The current number has been added to the blacklist.",
+        "blackFailedDescription": "Failed to blacklist number",
+        "releaseSuccessTitle": "Number Released",
+        "releaseSuccessDescription": "The current number has been successfully released.",
+        "releaseFailedDescription": "Failed to release number",
+        "refreshProjectSuccessTitle": "Projects Refreshed",
+        "refreshProjectSuccessDescription": "The project list has been updated.",
+        "refreshProjectFailedDescription": "Failed to refresh the project list"
+      }
+    },
+    "blog": {
+      "hero": {
+        "badge": "Blog & News",
+        "title": "Industry Trends, Practical Experience, and Integration Guides",
+        "description": "Focusing on verification code reception, project integration, risk control protection, and channel operations. Continuously outputting content suitable for developers and business teams."
+      },
+      "featured": {
+        "title": "Featured Articles",
+        "items": [
+          {
+            "title": "How to Improve the Success Rate of Receiving Codes",
+            "description": "Improve overall reception performance from the dimensions of country, project, channel scheduling, and verification code polling strategies."
+          },
+          {
+            "title": "How to Design a More Secure Dual Token Mechanism",
+            "description": "Reduce the risk of business interruption caused by authentication failure through the cooperation of token and refreshToken."
+          },
+          {
+            "title": "Why Data Transparency is Important for Receiving Platforms",
+            "description": "Explain the value of transparent data capabilities from the perspectives of order tracking, status backtracking, and anomaly troubleshooting."
+          }
+        ]
+      }
+    },
+    "help": {
+      "hero": {
+        "badge": "Help Center",
+        "title": "Frequently Asked Questions & Quick Support",
+        "description": "Summarizes high-frequency problems in business integration, authentication, number acquisition, verification code polling, and anomaly troubleshooting to help you quickly locate and solve issues."
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Why can't I get a number?",
+            "answer": "Please first check your balance, project status, whether the country project is available, and whether the current IP is in the whitelist."
+          },
+          {
+            "question": "Why hasn't the verification code been returned?",
+            "answer": "Please confirm whether the number status has entered the waiting for verification code stage, and regularly poll for the verification code according to the interface requirements. Enable callbackUrl if necessary."
+          },
+          {
+            "question": "What should I do if the Token expires?",
+            "answer": "Please use refreshToken to refresh and get a new token; if the refreshToken also expires, you need to re-authenticate via the authentication interface."
+          },
+          {
+            "question": "Why is the interface intercepted?",
+            "answer": "In most cases, it is caused by the IP whitelist not being configured, authentication information errors, or triggered security firewall policies."
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "badge": "About Us",
+        "title": "Focusing on Global Number Receiving & Verification Code Integration Services",
+        "description": "We are committed to building a more stable, transparent, and secure code-receiving capability platform, providing reliable SMS verification code reception services for developers, studios, and enterprise teams."
+      },
+      "seo": {
+        "title": "About Us",
+        "description": "Learn about our platform philosophy, service capabilities, and contact information."
+      },
+      "values": {
+        "title": "Our Philosophy",
+        "items": [
+          {
+            "title": "Stability First",
+            "description": "Through multi-channel scheduling and resource integration, we provide continuously available number and verification code services for your business."
+          },
+          {
+            "title": "Transparent & Trustworthy",
+            "description": "Adhering to price transparency, status transparency, and data transparency, ensuring every API call is traceable."
+          },
+          {
+            "title": "Secure & Controllable",
+            "description": "Ensuring the security of platform and customer data through authentication, refresh mechanisms, firewalls, and whitelist policies."
+          }
+        ]
+      },
+      "contacts": {
+        "title": "Contact Us",
+        "description": "If you need channel support, business cooperation, API integration help, or technical assistance, you can contact the team through the following methods.",
+        "items": [
+          {
+            "key": "telegram",
+            "title": "Telegram",
+            "defaultValue": "@letsms_support",
+            "defaultHref": "https://t.me/letsms_support"
+          },
+          {
+            "key": "github",
+            "title": "GitHub",
+            "defaultValue": "github.com/letsms",
+            "defaultHref": "https://github.com/letsms"
+          },
+          {
+            "key": "whatsapp",
+            "title": "WhatsApp",
+            "defaultValue": "+86 188 0000 0000",
+            "defaultHref": "https://wa.me/8618800000000"
+          }
+        ]
+      }
+    },
+    "openApiPage": {
+      "title": "OpenAPI Configuration",
+      "description": "Manage your API switches, whitelist IPs, APPID, and secret key information, and view integration and technical support guidelines.",
+      "cards": {
+        "status": "API Status",
+        "credentials": "API Credentials",
+        "whiteIp": "Whitelist IP",
+        "guide": "Integration Guide",
+        "support": "Technical Support"
+      },
+      "status": {
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "openButton": "Enable Now",
+        "opening": "Enabling...",
+        "hint": "If your account has not yet enabled API, you can actively activate it here."
+      },
+      "credentials": {
+        "appid": "APPID",
+        "apiKey": "API Key",
+        "copy": "Copy",
+        "empty": "No Data"
+      },
+      "whiteIp": {
+        "label": "Whitelist IP",
+        "placeholder": "Please enter whitelist IPs, separating multiple IPs with English commas",
+        "helper": "It is recommended to fill in the server's egress IP. Unconfigured IPs may be intercepted by security policies.",
+        "save": "Save Whitelist",
+        "saving": "Saving..."
+      },
+      "guide": {
+        "items": [
+          "Before integrating, please confirm you have obtained the APPID, API Key, and configured the whitelist IP.",
+          "It is recommended to uniformly use the JSON request format for global interfaces.",
+          "Please securely save the token and refreshToken for login state-related interfaces."
+        ]
+      },
+      "support": {
+        "items": [
+          "If you encounter integration issues, please provide the request and response messages for easier troubleshooting.",
+          "If receiving the verification code is abnormal, please check the project, country, and callback address configurations.",
+          "If you need channel support or business cooperation, please contact the team via the contact info on the About Us page."
+        ]
+      },
+      "messages": {
+        "openSuccess": "OpenAPI has been successfully enabled",
+        "saveSuccess": "Whitelist IP saved successfully"
+      }
+    }
   },
   "dashboard_cards": {
-    "stat_card_title": "Dashboard Card",
-    "stat_card_subtitle": "Add your statistics here",
-    "main_card_title": "Main Content",
-    "main_card_subtitle": "Add your primary content here",
-    "side_card_title": "Secondary Content",
-    "side_card_subtitle": "Add additional information here"
+    "hero": {
+      "title": "Business Dashboard Overview",
+      "description": "Centrally view account status, OpenAPI activation, financial overview, and system support information. This can later be expanded into a real-time order, channel, verification code, and revenue cockpit."
+    },
+    "overview": {
+      "availableBalance": "Available Balance",
+      "availableBalanceDesc": "The account balance currently available directly for placing orders, fetching numbers, and business consumption.",
+      "todayAmount": "Today's Consumption Amount",
+      "todayAmountDesc": "The cumulative consumption amount based on today's orders, suitable for quickly understanding fund usage.",
+      "freezeBalance": "Frozen Balance",
+      "freezeBalanceDesc": "Funds temporarily frozen during order processing or the pending settlement phase.",
+      "totalBalance": "Total Balance",
+      "totalBalanceDesc": "Total Account Balance = Available Balance + Frozen Balance.",
+      "successRate": "Order Success Rate",
+      "successRateDesc": "The overall success rate based on today's orders, used to judge current business quality.",
+      "waitingCodeCount": "Waiting Code Count",
+      "waitingCodeCountDesc": "The number of phones currently still waiting for a verification code, helping users judge processing timeliness.",
+      "openApiStatus": "OpenAPI Status",
+      "openApiEnabledDesc": "The current account has enabled API capabilities and can perform direct server integration.",
+      "openApiDisabledDesc": "The current account has not yet enabled API capabilities. We recommend configuring it on the OpenAPI page."
+    },
+    "status": {
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "openApiEnabled": "OpenAPI Enabled",
+      "openApiDisabled": "OpenAPI Not Enabled"
+    },
+    "account": {
+      "title": "Account & Credentials",
+      "description": "Displays the basic identity, interface credentials, and integration status of the currently logged-in account.",
+      "userName": "Current User",
+      "appId": "APPID",
+      "email": "Email",
+      "apiKey": "API Key"
+    },
+    "quickStats": {
+      "whiteIpCount": "Whitelist Count",
+      "defaultCurrency": "Currency Unit",
+      "supportTelegram": "Telegram",
+      "siteName": "Site Name",
+      "todayOrders": "Today's Orders",
+      "inUseCount": "Numbers in Use"
+    },
+    "accountMetrics": {
+      "title": "Integration Status",
+      "openApi": "OpenAPI Capabilities",
+      "security": "Whitelist Security",
+      "billing": "Total Balance",
+      "support": "Support Email",
+      "whitelistReady": "Whitelist Configured",
+      "whitelistMissing": "Whitelist Not Configured"
+    },
+    "business": {
+      "title": "Business Cockpit",
+      "description": "The structure here is temporarily built based on the current project's business model. The backend only needs to return real data according to the fields to replace placeholder content.",
+      "sections": [
+        {
+          "key": "orders",
+          "title": "Orders Overview",
+          "description": "It is recommended to integrate today's total orders, successes, failures, success rate, and total consumption amount, and support a 7-day trend."
+        },
+        {
+          "key": "numbers",
+          "title": "Number Business",
+          "description": "It is recommended to integrate the current number fetching count, waiting code count, released count, blacklisted count, and distribution across countries/projects."
+        },
+        {
+          "key": "channels",
+          "title": "Channel Status",
+          "description": "It is recommended to integrate channel availability rates, number of countries supported by projects, number of abnormal channels, average code retrieval time, and other metrics."
+        },
+        {
+          "key": "security",
+          "title": "Security & Integration",
+          "description": "It is recommended to integrate OpenAPI request volume, whitelist hits, interceptions, recent API exceptions, and other data."
+        }
+      ]
+    },
+    "balanceRatio": {
+      "title": "Balance Ratio",
+      "description": "Displays the structural proportion of available balance and frozen balance, helping users quickly understand their fund status.",
+      "available": "Available Balance",
+      "freeze": "Frozen Balance"
+    },
+    "orderRatio": {
+      "title": "Order Status Ratio",
+      "description": "Displays the distribution of today's successful, failed, and processing orders as a proportion.",
+      "success": "Successful Orders",
+      "fail": "Failed Orders",
+      "processing": "Processing"
+    },
+    "projectRatio": {
+      "title": "Project Ratio",
+      "description": "Displays the order or consumption proportion of major projects, making it easier for users to identify their core business.",
+      "successRate": "Success Rate:"
+    },
+    "countryRatio": {
+      "title": "Country Ratio",
+      "description": "Displays the business proportion and success rate performance of major countries.",
+      "successRate": "Success Rate:"
+    },
+    "trend": {
+      "title": "7-Day Trend",
+      "description": "It is recommended for the backend to return trends in order volume, success rate, and consumption amount for graphical representation of business changes.",
+      "totalOrders": "Total Orders Today",
+      "successRate": "Today's Success Rate",
+      "failCount": "Today's Failures",
+      "latestWindow": "Last 7 Days Details",
+      "ordersUnit": "Orders"
+    },
+    "todo": {
+      "title": "Data Modules Suggested for Future Integration",
+      "items": [
+        "Today / Yesterday Order Comparison",
+        "Top Success Rate Ranking by Country",
+        "Consumption Amount Ranking by Project",
+        "Number Fetching & Receiving Trend for the Last 7 Days"
+      ]
+    },
+    "support": {
+      "title": "Site & Support",
+      "description": "Directly displays the site name and integration contact info to facilitate operational and technical coordination.",
+      "siteName": "Site Name",
+      "email": "Contact Email",
+      "telegram": "Telegram",
+      "github": "Github"
+    },
+    "backend": {
+      "title": "Suggested Backend Interface Structure",
+      "description": "It is recommended to add a summary interface for the console, such as /admin/dashboard/summary, returning data according to the following fields.",
+      "columns": {
+        "name": "Field Name",
+        "type": "Type",
+        "desc": "Description"
+      },
+      "fields": [
+        {
+          "name": "balance.available",
+          "type": "number|string",
+          "desc": "Current Available Balance"
+        },
+        {
+          "name": "balance.freeze",
+          "type": "number|string",
+          "desc": "Current Frozen Balance"
+        },
+        {
+          "name": "balance.total",
+          "type": "number|string",
+          "desc": "Total Balance, can be directly returned by the backend"
+        },
+        {
+          "name": "orders.todayCount",
+          "type": "number",
+          "desc": "Today's Total Orders"
+        },
+        {
+          "name": "orders.successCount",
+          "type": "number",
+          "desc": "Number of Successful Orders"
+        },
+        {
+          "name": "orders.failCount",
+          "type": "number",
+          "desc": "Number of Failed Orders"
+        },
+        {
+          "name": "orders.successRate",
+          "type": "number|string",
+          "desc": "Success Rate, suggested to return a percentage value or a formatable number"
+        },
+        {
+          "name": "orders.totalAmount",
+          "type": "number|string",
+          "desc": "Total Consumption Amount of Orders"
+        },
+        {
+          "name": "orders.processingCount",
+          "type": "number",
+          "desc": "Number of Processing Orders, used for the order status proportion chart"
+        },
+        {
+          "name": "numbers.inUseCount",
+          "type": "number",
+          "desc": "Number of phones currently in use"
+        },
+        {
+          "name": "numbers.waitingCodeCount",
+          "type": "number",
+          "desc": "Number of phones waiting for a verification code"
+        },
+        {
+          "name": "numbers.releaseCount",
+          "type": "number",
+          "desc": "Number of phones released today"
+        },
+        {
+          "name": "numbers.blacklistCount",
+          "type": "number",
+          "desc": "Number of phones blacklisted today"
+        },
+        {
+          "name": "channels.activeProjectCount",
+          "type": "number",
+          "desc": "Number of currently available projects"
+        },
+        {
+          "name": "channels.activeCountryCount",
+          "type": "number",
+          "desc": "Number of currently available countries"
+        },
+        {
+          "name": "channels.abnormalChannelCount",
+          "type": "number",
+          "desc": "Number of abnormal channels"
+        },
+        {
+          "name": "api.requestCountToday",
+          "type": "number",
+          "desc": "Today's API Request Volume"
+        },
+        {
+          "name": "api.blockCountToday",
+          "type": "number",
+          "desc": "Today's Interception Count"
+        },
+        {
+          "name": "trends.sevenDays",
+          "type": "array",
+          "desc": "7-day trend array, each item may contain date, orderCount, successCount, amount"
+        },
+        {
+          "name": "projects.distribution",
+          "type": "array",
+          "desc": "Project distribution array, each item suggested to contain name, value, amount, successRate, color"
+        },
+        {
+          "name": "countries.distribution",
+          "type": "array",
+          "desc": "Country distribution array, each item suggested to contain name, value, successRate, color"
+        }
+      ]
+    }
   },
   "settings": {
     "title": "Settings",
-    "description": "Manage your account settings. Update your profile, change your password, and customize the app's appearance.",
+    "description": "Manage account settings, modify your profile, password, and system appearance style.",
     "appearance": {
       "title": "Appearance",
-      "description": "Customize the appearance of the app. Automatically switch between day and night themes.",
+      "description": "Customize system appearance, auto-switch light/dark theme.",
       "theme": {
         "label": "Theme",
-        "description": "Select the theme for the dashboard.",
-        "light": "Light",
-        "dark": "Dark"
+        "description": "Select dashboard display theme",
+        "light": "Light Mode",
+        "dark": "Dark Mode"
       },
       "language": {
         "label": "Language",
-        "description": "Select your preferred language.",
+        "description": "Select preferred system language",
         "en": "English",
         "fr": "French",
         "es": "Spanish",
@@ -46,48 +1032,52 @@
         "ru": "Russian",
         "ja": "Japanese",
         "ko": "Korean",
-        "zh": "Chinese"
+        "zh": "Simplified Chinese"
       }
     },
     "profile": {
       "title": "Profile",
-      "description": "Manage your profile settings. Update your personal information and preferences.",
-      "personal_info": "Personal Information",
-      "personal_info_description": "Update your basic profile information.",
+      "description": "Manage personal information and preferences",
+      "personal_info": "Basic Information",
+      "personal_info_description": "Edit your basic profile details",
       "first_name": "First Name",
-      "first_name_placeholder": "Enter your first name",
-      "first_name_helper_text": "Your first name as it appears in your profile.",
+      "first_name_placeholder": "Enter first name",
+      "first_name_helper_text": "The first name displayed on your profile",
       "last_name": "Last Name",
-      "last_name_placeholder": "Enter your last name",
-      "last_name_helper_text": "Your last name as it appears in your profile.",
+      "last_name_placeholder": "Enter last name",
+      "last_name_helper_text": "The last name displayed on your profile",
       "username": "Username",
-      "username_placeholder": "Enter your username",
-      "username_helper_text": "This is your public display name. It can be your real name or a pseudonym. You can only change this once every 30 days.",
+      "username_placeholder": "Enter username",
+      "username_helper_text": "Publicly displayed nickname, can only be changed once every 30 days",
       "email": "Email",
-      "email_placeholder": "Enter your email address",
-      "email_helper_text": "Your email is managed by your authentication provider and cannot be changed here.",
-      "update_profile": "Update Profile",
+      "email_placeholder": "Enter email address",
+      "email_helper_text": "Email is centrally managed by the authentication provider and cannot be changed here",
+      "update_profile": "Save Profile",
       "profile_updated": "Profile updated successfully",
-      "profile_update_failed": "Failed to update profile. Please try again.",
-      "password_section_title": "Password",
-      "password_section_description": "Update your password to keep your account secure.",
-      "password_prompt": "Click the button below to change your password.",
+      "profile_update_failed": "Failed to update profile, please try again later",
+      "password_section_title": "Password Management",
+      "password_section_description": "Change your password regularly to protect account security",
+      "password_prompt": "Click the button below to change your login password",
       "change_password": "Change Password",
       "current_password": "Current Password",
-      "current_password_placeholder": "Enter your current password",
+      "current_password_placeholder": "Enter current password",
       "new_password": "New Password",
-      "new_password_placeholder": "Enter your new password",
-      "new_password_helper_text": "Password must be at least 8 characters long.",
+      "new_password_placeholder": "Enter new password",
+      "new_password_helper_text": "Password must be at least 8 characters long",
       "confirm_password": "Confirm New Password",
-      "confirm_password_placeholder": "Re-enter your new password",
-      "update_password": "Update Password",
-      "password_updated": "Password updated successfully",
-      "password_updated_description": "Your password has been changed.",
-      "password_update_failed": "Failed to update password",
-      "reverification_required": "Additional verification required",
-      "reverification_required_description": "For security reasons, please sign out and sign back in before changing your password.",
-      "current_password_incorrect": "Current password is incorrect. Please try again.",
-      "password_compromised": "This password has been compromised in a data breach. Please choose a different password."
+      "confirm_password_placeholder": "Re-enter new password",
+      "update_password": "Save Password",
+      "password_updated": "Password changed successfully",
+      "password_updated_description": "Your login password has been updated",
+      "password_update_failed": "Failed to change password",
+      "current_password_required": "Please enter your current password",
+      "new_password_required": "New password requires at least 8 characters",
+      "confirm_password_required": "Please re-enter to confirm password",
+      "password_not_match": "The two new passwords do not match",
+      "reverification_required": "Re-verification required",
+      "reverification_required_description": "For security reasons, please log out and log in again before changing your password",
+      "current_password_incorrect": "Current password incorrect, please try again",
+      "password_compromised": "This password is at risk of security compromise, please choose another password"
     }
   },
   "dashboard": {
@@ -95,159 +1085,623 @@
   },
   "home": {
     "hero": {
-      "title": "Focus On What Matters",
-      "description": "This Vue & Clerk custom auth component integration will save you hours of development time.",
-      "cta": "Start Building"
+      "badge": "Global SMS Receiving Platform",
+      "title": "A Transparent, Stable, and High-Success Rate SMS Platform",
+      "description": "Focusing on verification code reception and number services, providing transparent pricing, transparent data, security protection, rich channels, and high-success-rate global SMS capabilities to help you complete your business verification processes more efficiently.",
+      "cta": "Start Now",
+      "secondary": "View API Documentation"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "items": [
+        {
+          "title": "Transparent Pricing",
+          "description": "Project prices are clearly visible, with no hidden fees. Operations like obtaining, releasing, and blacklisting numbers are straightforward."
+        },
+        {
+          "title": "Data Transparency",
+          "description": "Order status, code retrieval, and number usage are fully traceable across the entire process, facilitating auditing and troubleshooting."
+        },
+        {
+          "title": "Security Protection",
+          "description": "Supports Token authentication, refresh mechanisms, and security firewall interception to protect API access and business data."
+        },
+        {
+          "title": "Rich Channels",
+          "description": "Multi-country, multi-project, and multi-channel supply flexibly adapting to different business scenarios and verification needs."
+        },
+        {
+          "title": "High Success Rate",
+          "description": "Stable number resources and multi-channel scheduling strategies effectively improve verification code reception success rates and business efficiency."
+        },
+        {
+          "title": "Flexible Callbacks",
+          "description": "Supports both active polling and callback push modes, making it convenient to integrate into automated business workflows."
+        }
+      ]
+    },
+    "stats": {
+      "title": "Core Capabilities",
+      "items": [
+        {
+          "label": "Pricing System",
+          "value": "Transparent & Checkable"
+        },
+        {
+          "label": "Channel Coverage",
+          "value": "Multi-Country & Multi-Project"
+        },
+        {
+          "label": "Receiving Mode",
+          "value": "Polling + Callback"
+        },
+        {
+          "label": "Security Capabilities",
+          "value": "Firewall Interception"
+        }
+      ]
     }
+  },
+  "apiDoc": {
+    "hero": {
+      "title": "API Documentation",
+      "description": "Provides universal API documentation to help developers quickly integrate with this platform and enjoy efficient and stable services.",
+      "cta": "View API Documentation"
+    },
+    "button": {
+      "start": "Start Reading"
+    },
+    "toc": {
+      "title": "Table of Contents",
+      "introduction": "Introduction",
+      "authentication": "Integration Prerequisites & Authentication",
+      "apiStandards": "Universal API Standards",
+      "responseFormat": "Universal Response Format",
+      "apiList": "API Interface List"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "lead": "Before using the project interfaces, please ensure you meet the following conditions:",
+        "items": [
+          "Possess basic knowledge of network requests 😪",
+          "Have developer capabilities 😨",
+          "Be familiar with the dual Token refresh mechanism 😥",
+          "Possess the ability to debug, query logs, and troubleshoot problems 😁"
+        ],
+        "summary": "This project aims to provide a universal API integration solution to help you quickly realize business function integration.",
+        "summaryTitle": "This project should be a Universal API",
+        "summaryItems": [
+          "There is no fixed request address; the request address depends on your account address.",
+          "Usually, the request address is the currently used IP / Domain.",
+          "Please strictly follow the documentation requirements for development.",
+          "If you need technical support, please describe the problem, the bug reproduction process, and provide the request and response messages."
+        ],
+        "note": "The documentation is written quite casually, please go easy on me 💔"
+      },
+      "authentication": {
+        "title": "Integration Prerequisites & Authentication",
+        "lead": "Before integration, you should obtain your APPID and apiKey token from the dashboard backend:",
+        "items": [
+          "appid: The currently used Merchant / User ID.",
+          "apikey: A system-specific encrypted key generated for interface signatures or direct authentication.",
+          "IP Whitelist: Must be configured as your server's outbound request IP; if not configured, you will be directly intercepted by the firewall.",
+          "When configuring multiple IPs, please use English commas to separate them."
+        ]
+      },
+      "apiStandards": {
+        "title": "Universal API Standards",
+        "items": [
+          "Request Address: There is no fixed request address; the request address depends on your assigned account address (usually the currently used IP / Domain).",
+          "Request Method: The POST method is used globally; GET methods are not accepted (unless otherwise specified in the documentation).",
+          "Request Type: The request header Content-Type must strictly be specified as application/json.",
+          "Naming Convention: Most data return fields use camelCase naming; if not, it will be specifically noted in the specific interface documentation."
+        ],
+        "baseUrlLabel": "Current Environment Request Address"
+      },
+      "responseFormat": {
+        "title": "Universal Response Format",
+        "lead": "All interfaces return standard JSON format data. Determine whether the business processing is successful based on the 'code' status code.",
+        "successTitle": "Success Response",
+        "errorTitle": "Error Response",
+        "note": "Note: When the code is not 200/0, it usually means a business or system exception has occurred. Please refer to the 'msg' field for troubleshooting."
+      },
+      "apiList": {
+        "title": "API Interface List",
+        "lead": "Below are the currently open core interfaces. It is recommended to integrate them in calling order.",
+        "summaryTitle": "Summary",
+        "authTitle": "Authentication",
+        "contentTypeTitle": "Content-Type",
+        "paramsTitle": "Request Parameters",
+        "responseTitle": "Response Example",
+        "table": {
+          "name": "Parameter Name",
+          "type": "Type",
+          "required": "Required",
+          "description": "Description",
+          "example": "Example"
+        },
+        "requiredYes": "Yes",
+        "requiredNo": "No",
+        "items": [
+          {
+            "id": "api-token",
+            "title": "Get Token",
+            "path": "/api/auth/getToken",
+            "method": "POST",
+            "summary": "For any operations within the API, you must obtain a token and refreshToken via this interface. This interface supports POST/GET parameter passing and form-data/json inputs; it is recommended to uniformly use json.",
+            "auth": "No",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "appId",
+                "type": "string",
+                "required": true,
+                "desc": "Currently used Account ID",
+                "example": "251"
+              },
+              {
+                "name": "appKey",
+                "type": "string",
+                "required": true,
+                "desc": "The apiKey generated by the platform",
+                "example": "d41d8cd98f00b204e9800998ecf8427e"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Token obtained successfully\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7200\n  },\n  \"time\": 1768428991\n}"
+          },
+          {
+            "id": "api-refresh-token",
+            "title": "Refresh Token",
+            "path": "/api/auth/refreshToken",
+            "method": "POST",
+            "summary": "This interface supports GET/POST requests and takes the parameter refreshToken. It supports form-data/json. Upon successful refresh, you will receive a new token and a new refreshToken.",
+            "auth": "No",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "refreshToken",
+                "type": "string",
+                "required": true,
+                "desc": "The refresh token saved after login",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Operation successful\",\n  \"data\": {\n    \"token\": \"eyJ...\",\n    \"refreshToken\": \"eyJ...\",\n    \"expiresIn\": 7189\n  },\n  \"time\": 1768429572\n}"
+          },
+          {
+            "id": "api-user-info",
+            "title": "Get Account Information",
+            "path": "/api/auth/getUserInfo",
+            "method": "POST",
+            "summary": "Obtains the user's account information. If needed, pass Authorization in the request header; the token can be accompanied by the Bearer {Token} prefix.",
+            "auth": "Yes",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "The token obtained after user login, supports Bearer prefix",
+                "example": "Bearer eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"User info obtained successfully\",\n  \"data\": {\n    \"userName\": \"1008611\",\n    \"gender\": 0,\n    \"phone\": null,\n    \"email\": null,\n    \"avatar\": \"https://hk10000.cn/make/assets/images/avatar.jpg\",\n    \"balance\": 197,\n    \"lastLoginTime\": \"2026-01-15 06:55:09\",\n    \"lastLoginIp\": \"172.17.0.1\",\n    \"lastLoginDevice\": \"Chrome 143.0.0 / Windows 10.0.0\"\n  },\n  \"time\": 1768431333\n}"
+          },
+          {
+            "id": "api-country-code",
+            "title": "Country & Region Library",
+            "path": "/api/business/getCountryCode",
+            "method": "POST",
+            "summary": "Gets the address information library within the system. The country library generally does not change much, so it is recommended to store it locally.",
+            "auth": "Optional",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Optional token request header",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Country list obtained successfully\",\n  \"data\": [\n    {\n      \"id\": 144,\n      \"name\": \"Uzbekistan\",\n      \"code\": \"uzb\",\n      \"flag\": \"flag:uz-4x3\",\n      \"phoneCode\": \"+998\"\n    }\n  ],\n  \"time\": 1768529083\n}"
+          },
+          {
+            "id": "api-project",
+            "title": "Get Active Projects",
+            "path": "/api/business/getProject",
+            "method": "POST",
+            "summary": "Gets currently available online projects.",
+            "auth": "Optional",
+            "requestType": "application/json",
+            "params": [
+              {
+                "name": "Authorization",
+                "type": "header",
+                "required": false,
+                "desc": "Optional token request header",
+                "example": "eyJ0eXAiOiJKV1QiLCJ..."
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Project list obtained successfully\",\n  \"data\": [\n    {\n      \"id\": \"25\",\n      \"name\": \"wsegvwsg\",\n      \"code\": \"phl-1064-88q75\",\n      \"price\": \"1.00\",\n      \"country\": 34\n    }\n  ],\n  \"time\": 1768432316\n}"
+          },
+          {
+            "id": "api-get-phone",
+            "title": "Get Mobile Number",
+            "path": "/api/business/getPhone",
+            "method": "POST",
+            "summary": "Get a mobile number; supports form-data/json. After obtaining the number, the status will change to waiting for verification code. At this time, you need to call the get verification code interface. Newly added return field orderNo, which needs to be passed when getting the verification code.",
+            "auth": "Optional",
+            "requestType": "application/json / application/x-www-form-urlencoded",
+            "params": [
+              {
+                "name": "countryId",
+                "type": "string",
+                "required": true,
+                "desc": "Country ID, corresponding to the country field in projects",
+                "example": "38"
+              },
+              {
+                "name": "projectId",
+                "type": "string",
+                "required": true,
+                "desc": "Project ID",
+                "example": "23"
+              },
+              {
+                "name": "mobile",
+                "type": "string",
+                "required": false,
+                "desc": "Can be passed if you want to continue using the previous number",
+                "example": ""
+              },
+              {
+                "name": "type",
+                "type": "string[]",
+                "required": false,
+                "desc": "Number type, options are sms / voice / incall. Can also be 'all' or empty",
+                "example": "[\"sms\"]"
+              },
+              {
+                "name": "callbackUrl",
+                "type": "string",
+                "required": false,
+                "desc": "SMS callback address",
+                "example": "https://example.com/callback"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Number obtained successfully, balance frozen\",\n  \"data\": {\n    \"pkey\": \"E1E756...\",\n    \"getTime\": \"2026-01-19T03:01:22\",\n    \"country\": \"jpn\",\n    \"countryTel\": \"81\",\n    \"place\": \"89811000...\",\n    \"port\": \"COM104\",\n    \"phone\": \"8027973879\",\n    \"dock\": \"jpn-1260-103r1\",\n    \"orderNo\": \"20260119030118584911\"\n  },\n  \"time\": 1768762878\n}"
+          },
+          {
+            "id": "api-get-code",
+            "title": "Get Verification Code",
+            "path": "/api/business/getPhoneCode",
+            "method": "POST",
+            "summary": "Supports form-data/json. This interface requires regular polling to get the verification code. After returning code=200, the code will not be returned repeatedly subsequently.",
+            "auth": "Optional",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "The unique order number returned by the get number interface",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "The mobile number returned by the get number interface",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "The pkey returned by the get number interface",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Verification code obtained successfully, fee deducted\",\n  \"data\": {\n    \"orderNo\": \"20260119024813601712\",\n    \"phone\": \"9057898482\",\n    \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n    \"codeNum\": \"123456\",\n    \"smsContent\": \"SMS content\",\n    \"deductPrice\": \"0.50\"\n  },\n  \"time\": 1768762116\n}"
+          },
+          {
+            "id": "api-release-phone",
+            "title": "Release Number",
+            "path": "/api/business/setRel",
+            "method": "POST",
+            "summary": "Supports form-data/json. The interface consumer can actively call the release interface to avoid extra charges.",
+            "auth": "Optional",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Order number to be released",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Mobile number to be released",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "The pkey to be released",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Released successfully\",\n  \"data\": [],\n  \"time\": 1768763200\n}"
+          },
+          {
+            "id": "api-black-phone",
+            "title": "Blacklist Number",
+            "path": "/api/business/addBlack",
+            "method": "POST",
+            "summary": "Supports form-data/json. The interface consumer can call this to blacklist a number, and that number will not be retrieved subsequently.",
+            "auth": "Optional",
+            "requestType": "application/json / multipart/form-data",
+            "params": [
+              {
+                "name": "orderNo",
+                "type": "string",
+                "required": true,
+                "desc": "Order number to be blacklisted",
+                "example": "20260119030118584911"
+              },
+              {
+                "name": "phone",
+                "type": "string",
+                "required": true,
+                "desc": "Mobile number to be blacklisted",
+                "example": "7555114644"
+              },
+              {
+                "name": "pkey",
+                "type": "string",
+                "required": true,
+                "desc": "The pkey to be blacklisted",
+                "example": "E1E756BB89D15……"
+              }
+            ],
+            "successExample": "{\n  \"code\": 200,\n  \"msg\": \"Blacklisted successfully\",\n  \"data\": [],\n  \"time\": 1768763300\n}"
+          },
+          {
+            "id": "api-callback",
+            "title": "SMS Callback Push",
+            "path": "callbackUrl",
+            "method": "POST",
+            "summary": "Pass the callbackUrl when fetching a number. The system will actively push to this address when an SMS from operators is received later.",
+            "auth": "URL provided by business side",
+            "requestType": "application/json",
+            "successExample": "{\n  \"orderNo\": \"20260119024813601712\",\n  \"phone\": \"9057898482\",\n  \"pkey\": \"E1E756BB89D15B57DE9B537A8EF0F92D81575038CA07EE88\",\n  \"codeNum\": \"123456\",\n  \"smsContent\": \"SMS content\",\n  \"deductPrice\": \"0.50\"\n}"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "products": {
+        "title": "Products",
+        "items": {
+          "smsPlatform": "SMS Platform",
+          "apiDocs": "API Documentation",
+          "dashboard": "Dashboard",
+          "pricing": "Pricing Plans"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "items": {
+          "helpCenter": "Help Center",
+          "integrationGuide": "Integration Guide",
+          "faq": "FAQ"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "items": {
+          "about": "About Us",
+          "blog": "Blog & News",
+          "contact": "Contact Us",
+          "terms": "Terms of Service",
+          "privacy": "Privacy Policy"
+        }
+      },
+      "resources": {
+        "title": "Resources",
+        "items": {
+          "countryLibrary": "Country & Region Library",
+          "projectList": "Project List",
+          "callbackDocs": "Callback Documentation",
+          "statusPage": "System Status",
+          "security": "Security Statement"
+        }
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you visited does not exist or has been removed.",
+    "backHome": "Back to Home"
   },
   "auth": {
     "sign_in_success": "Welcome back!",
-    "sign_in_success_description": "You have successfully signed in.",
-    "sign_in_failed": "Sign in failed",
-    "sign_up_success": "Account created successfully!",
-    "sign_up_success_description": "Welcome! Your account has been created.",
-    "sign_up_failed": "Sign up failed",
-    "sign_out_success": "Signed out successfully",
-    "sign_out_success_description": "You have been signed out of your account.",
-    "sign_out_failed": "Sign out failed",
+    "sign_in_success_description": "Logged in successfully",
+    "sign_in_failed": "Login failed",
+    "sign_up_success": "Account registered successfully!",
+    "sign_up_success_description": "Welcome to the system",
+    "sign_up_failed": "Registration failed",
+    "sign_out_success": "Logged out",
+    "sign_out_success_description": "You have safely logged out of the current account",
+    "sign_out_failed": "Logout failed",
     "verification_code_sent": "Verification code sent",
-    "verification_code_sent_description": "Please check your email for the verification code.",
+    "verification_code_sent_description": "Please check your email for the verification code",
     "verification_code_resent": "Verification code resent",
-    "verification_code_resent_description": "A new verification code has been sent to your email.",
+    "verification_code_resent_description": "A new verification code has been sent to your email",
     "verification_failed": "Verification failed",
-    "verification_success": "Email verified successfully",
-    "verification_success_description": "Your email has been verified.",
+    "verification_success": "Email verification passed",
+    "verification_success_description": "Your email has been successfully bound and verified",
+    "captcha": {
+      "label": "Graphic Captcha",
+      "placeholder": "Enter Captcha",
+      "image_alt": "Captcha Image",
+      "loading": "Loading...",
+      "required": "Please enter Captcha"
+    },
+    "logout": {
+      "button": "Logout",
+      "title": "Logout",
+      "description": "Are you sure you want to log out of the current account?",
+      "loading": "Logging out...",
+      "confirm": "Confirm Logout"
+    },
     "sign_in": {
-      "title": "Welcome back",
-      "description": "Sign in to your account to continue",
-      "verify_title": "Verify Identity",
-      "verify_description": "Please enter the verification code sent to your email.",
-      "verify_new_device": "For security, please verify your identity on this new device.",
+      "title": "Welcome to Login",
+      "description": "Log in to continue",
+      "verify_title": "Identity Verification",
+      "verify_description": "Please enter the verification code sent to your email",
+      "verify_new_device": "This is a new device login. Identity verification is required.",
+      "account_label": "Email / Username",
+      "account_placeholder": "Enter email or username",
       "email_label": "Email",
-      "password_label": "Password",
-      "password_placeholder": "••••••••",
+      "password_label": "Login Password",
+      "password_placeholder": "Enter password",
+      "remember_password": "Remember password",
       "verification_code_label": "Verification Code",
-      "verification_code_placeholder": "Enter code",
-      "sign_in_button": "Sign In",
-      "signing_in": "Signing in...",
+      "verification_code_placeholder": "Enter verification code",
+      "sign_in_button": "Log In",
+      "signing_in": "Logging in...",
       "verify_button": "Verify",
       "verifying": "Verifying...",
       "resend_code": "Didn't receive the code? Click to resend",
       "no_account": "Don't have an account?",
-      "sign_up_link": "Sign up",
-      "forgot_password": "Forgot your password?",
-      "reset_password_link": "Reset password",
-      "second_factor_required": "Second factor verification required but email code is not available.",
-      "unexpected_status": "Unexpected status"
+      "sign_up_link": "Register Now",
+      "forgot_password": "Forgot password?",
+      "reset_password_link": "Reset Password",
+      "second_factor_required": "Two-factor authentication required. Email verification service is currently unavailable.",
+      "unexpected_status": "Abnormal login status"
     },
     "sign_up": {
-      "title": "Sign Up",
-      "description": "Join thousands of satisfied users who have simplified their email management process.",
-      "verify_title": "Verify Email",
-      "verify_description": "Please enter the verification code sent to your email.",
+      "title": "Account Registration",
+      "description": "Quickly register an account to experience full system features",
+      "verify_title": "Email Verification",
+      "verify_description": "Enter the email verification code to complete registration",
       "first_name_label": "First Name",
-      "first_name_placeholder": "John",
+      "first_name_placeholder": "Enter first name",
       "last_name_label": "Last Name",
-      "last_name_placeholder": "Doe",
+      "last_name_placeholder": "Enter last name",
+      "username_label": "Username",
+      "username_placeholder": "Enter username",
       "email_label": "Email",
-      "password_label": "Password",
-      "password_placeholder": "••••••••",
+      "password_label": "Set Password",
+      "password_placeholder": "Enter password",
       "verification_code_label": "Verification Code",
-      "verification_code_placeholder": "Enter code",
-      "sign_up_button": "Sign Up",
-      "signing_up": "Signing up...",
+      "verification_code_placeholder": "Enter verification code",
+      "sign_up_button": "Register",
+      "signing_up": "Registering...",
       "verify_button": "Verify Email",
       "verifying": "Verifying...",
       "resend_code": "Didn't receive the code? Click to resend",
       "have_account": "Already have an account?",
-      "sign_in_link": "Sign in",
-      "forgot_password": "Forgot your password?",
-      "reset_password_link": "Reset password"
+      "sign_in_link": "Go to Login",
+      "forgot_password": "Forgot password?",
+      "reset_password_link": "Reset Password"
     },
     "reset_password": {
       "title": "Forgot Password",
-      "description": "Enter your email address and we will send you a reset link",
+      "description": "Enter your email to get a verification code and reset your password",
       "reset_title": "Reset Password",
-      "reset_description": "Enter the code sent to your email and your new password",
-      "email_label": "Email",
+      "reset_description": "Enter the email verification code and set a new password",
+      "email_label": "Email Address",
       "code_label": "Verification Code",
-      "code_placeholder": "Enter code from email",
+      "code_placeholder": "Enter the verification code received via email",
       "new_password_label": "New Password",
-      "new_password_placeholder": "••••••••",
-      "send_code_button": "Send Reset Code",
+      "new_password_placeholder": "Please set a new password",
+      "send_code_button": "Send Verification Code",
       "sending": "Sending...",
-      "reset_button": "Reset Password",
+      "reset_button": "Confirm Reset",
       "resetting": "Resetting...",
       "resend_code": "Didn't receive the code? Click to resend",
-      "remember_password": "Remember your password?",
-      "sign_in_link": "Sign in"
+      "remember_password": "Remembered your password?",
+      "sign_in_link": "Return to Login"
     }
   },
   "password_reset": {
     "code_sent": "Reset code sent",
-    "code_sent_description": "Password reset code has been sent to your email.",
+    "code_sent_description": "The password reset verification code has been sent to your email",
     "code_resent": "Reset code resent",
-    "code_resent_description": "A new password reset code has been sent to your email.",
-    "reset_success": "Password reset successful",
-    "reset_success_description": "Your password has been reset successfully. Redirecting...",
+    "code_resent_description": "A new password reset verification code has been sent",
+    "reset_success": "Password reset successfully",
+    "reset_success_description": "Password reset. Redirecting to login page...",
     "reset_failed": "Password reset failed"
   },
   "profile": {
-    "title": "Profile",
-    "description": "View and manage your profile information.",
+    "title": "Personal Center",
+    "description": "View and manage your profile",
     "first_name": "First Name",
     "last_name": "Last Name",
     "username": "Username",
     "member_since": "Member Since",
     "edit_profile": "Edit Profile"
   },
+  "balance": {
+    "title": "Fund Account"
+  },
   "billing": {
-    "title": "Billing",
-    "description": "Manage your subscription and billing information.",
+    "title": "Billing & Subscription",
+    "description": "Manage plan subscriptions and billing payments",
     "current_plan": "Current Plan",
-    "current_plan_description": "You are currently on this plan",
+    "current_plan_description": "The service plan you are currently using",
     "available_plans": "Available Plans",
-    "month": "month",
-    "features": "Features included",
+    "month": "Month",
+    "features": "Plan Features",
     "recommended": "Recommended",
-    "upgrade": "Upgrade",
+    "upgrade": "Upgrade Now",
     "payment_method": "Payment Method",
-    "payment_method_description": "Manage your payment methods",
-    "no_payment_method": "No payment method on file",
+    "payment_method_description": "Manage default payment account",
+    "no_payment_method": "No payment method added yet",
     "add_payment_method": "Add Payment Method",
-    "add_payment_method_description": "Add a payment method to upgrade your plan",
+    "add_payment_method_description": "Bind a payment account to upgrade to a premium plan",
     "billing_history": "Billing History",
-    "billing_history_description": "View your past invoices and payments",
-    "no_invoices": "No invoices yet",
-    "no_invoices_description": "Your billing history will appear here once you make a payment",
+    "billing_history_description": "View historical orders and consumption invoices",
+    "no_invoices": "No invoices",
+    "no_invoices_description": "After a paid order is generated, the record will be displayed here",
     "plans": {
       "free": {
-        "name": "Free",
-        "description": "Perfect for getting started",
-        "feature_1": "Basic feature 1",
-        "feature_2": "Basic feature 2",
-        "feature_3": "Basic feature 3",
-        "feature_4": "Basic feature 4"
+        "name": "Free Plan",
+        "description": "Suitable for beginners to get started",
+        "feature_1": "Basic Feature One",
+        "feature_2": "Basic Feature Two",
+        "feature_3": "Basic Feature Three",
+        "feature_4": "Basic Feature Four"
       },
       "pro": {
-        "name": "Pro",
-        "description": "For professionals and teams",
-        "feature_1": "All Free features",
-        "feature_2": "Advanced feature 1",
-        "feature_3": "Advanced feature 2",
-        "feature_4": "Advanced feature 3",
-        "feature_5": "Advanced feature 4",
-        "feature_6": "Advanced feature 5"
+        "name": "Pro Plan",
+        "description": "Suitable for individuals and small teams",
+        "feature_1": "Includes all Free Plan features",
+        "feature_2": "Advanced Feature One",
+        "feature_3": "Advanced Feature Two",
+        "feature_4": "Advanced Feature Three",
+        "feature_5": "Advanced Feature Four",
+        "feature_6": "Advanced Feature Five"
       },
       "enterprise": {
-        "name": "Enterprise",
-        "description": "For large organizations",
-        "feature_1": "All Pro features",
-        "feature_2": "Enterprise feature 1",
-        "feature_3": "Enterprise feature 2",
-        "feature_4": "Enterprise feature 3",
-        "feature_5": "Enterprise feature 4",
-        "feature_6": "Enterprise feature 5"
+        "name": "Enterprise Plan",
+        "description": "Oriented towards large organizations and enterprises",
+        "feature_1": "Includes all Pro Plan features",
+        "feature_2": "Enterprise Exclusive Feature One",
+        "feature_3": "Enterprise Exclusive Feature Two",
+        "feature_4": "Enterprise Exclusive Feature Three",
+        "feature_5": "Enterprise Exclusive Feature Four",
+        "feature_6": "Enterprise Exclusive Feature Five"
       }
     }
   }

@@ -94,15 +94,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useClerk, useSignIn } from '@clerk/vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { toast } from '@/components/ui/toast'
 import Input from '@/components/ui/input/Input.vue'
 
 const router = useRouter()
-const { isLoaded, signIn } = useSignIn()
-const clerk = useClerk()
 const { t } = useI18n()
 
 const email = ref('')
@@ -112,20 +109,15 @@ const loading = ref(false)
 const error = ref(null)
 const successMessage = ref(null)
 const showResetForm = ref(false)
+const isLoaded = ref(true)
 
 const handleRequestReset = async () => {
-  if (!isLoaded.value) return
-
   loading.value = true
   error.value = null
   successMessage.value = null
 
   try {
-    await signIn.value.create({
-      strategy: 'reset_password_email_code',
-      identifier: email.value,
-    })
-
+    // TODO: Implement actual API call with axios
     showResetForm.value = true
     toast({
       title: t('password_reset.code_sent'),
@@ -133,7 +125,7 @@ const handleRequestReset = async () => {
     })
 
   } catch (err) {
-    error.value = err.errors?.[0]?.long_message || err.errors?.[0]?.message || err.message
+    error.value = err.message
     console.error('Reset request failed:', err)
     toast({
       title: t('password_reset.reset_failed'),
@@ -146,38 +138,22 @@ const handleRequestReset = async () => {
 }
 
 const handleResetPassword = async () => {
-  if (!isLoaded.value) return
-
   loading.value = true
   error.value = null
   successMessage.value = null
 
   try {
-    const result = await signIn.value.attemptFirstFactor({
-      strategy: 'reset_password_email_code',
-      code: code.value,
-      password: newPassword.value,
-    })
-
-    if (result.status === 'complete') {
+     // TODO: Implement actual API call with axios
       toast({
         title: t('password_reset.reset_success'),
         description: t('password_reset.reset_success_description'),
       })
       setTimeout(() => {
-        clerk.value.redirectToAfterSignIn()
+        router.push('/sign-in')
       }, 2000)
-    } else {
-      error.value = `${t('auth.sign_in.unexpected_status')}: ${result.status}`
-      toast({
-        title: t('password_reset.reset_failed'),
-        description: error.value,
-        variant: 'destructive',
-      })
-    }
 
   } catch (err) {
-    error.value = err.errors?.[0]?.long_message || err.errors?.[0]?.message || err.message
+    error.value = err.message
     console.error('Password reset failed:', err)
     toast({
       title: t('password_reset.reset_failed'),
@@ -190,24 +166,21 @@ const handleResetPassword = async () => {
 }
 
 const resendCode = async () => {
-  if (!isLoaded.value || loading.value) return
+  if (loading.value) return
 
   loading.value = true
   error.value = null
   successMessage.value = null
 
   try {
-    await signIn.value.create({
-      strategy: 'reset_password_email_code',
-      identifier: email.value,
-    })
+    // TODO: Implement actual API call with axios
 
     toast({
       title: t('password_reset.code_resent'),
       description: t('password_reset.code_resent_description'),
     })
   } catch (err) {
-    error.value = err.errors?.[0]?.long_message || err.errors?.[0]?.message || err.message
+    error.value = err.message
     console.error('Failed to resend code:', err)
     toast({
       title: t('password_reset.reset_failed'),
