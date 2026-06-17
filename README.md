@@ -1,10 +1,13 @@
-# SmsCode
+# SmsCode - A proprietary SMS verification code and number receiving platform
 
 [中文说明](./README-zh.md)
 
 SmsCode is a Vue 3 frontend application for SMS verification code and phone number services. It is designed for number rental, SMS code receiving, package subscription, order management, balance management, and OpenAPI integration scenarios.
 
 The complete product consists of a backend service, an admin frontend, and this user-facing frontend. The backend handles business logic, the admin frontend manages platform operations, and this frontend provides the user portal and console.
+
+
+![banner](./docs/banner.png)
 
 ## Notes
 
